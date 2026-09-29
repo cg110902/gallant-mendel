@@ -1,0 +1,488 @@
+{
+  "cases": [
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "duration_seconds": 6.866028,
+      "expected_diagnostics": [],
+      "expected_exit_code": 0,
+      "name": "full_unit_suite",
+      "parsed": null,
+      "passed": true,
+      "stderr": "test_cli_reports (test_analytics.AnalyticsTests.test_cli_reports) ... ok\ntest_impact_bfs_structural_radius (test_analytics.AnalyticsTests.test_impact_bfs_structural_radius) ... ok\ntest_impact_depth_guard_and_unknown_object (test_analytics.AnalyticsTests.test_impact_depth_guard_and_unknown_object) ... ok\ntest_tension_is_deterministic (test_analytics.AnalyticsTests.test_tension_is_deterministic) ... ok\ntest_tension_rejects_nonchapter_and_window (test_analytics.AnalyticsTests.test_tension_rejects_nonchapter_and_window) ... ok\ntest_tension_window_counts_and_delta (test_analytics.AnalyticsTests.test_tension_window_counts_and_delta) ... ok\ntest_builder_creates_core_v3_id_time_and_payload_hash (test_events.EventEnvelopeTests.test_builder_creates_core_v3_id_time_and_payload_hash) ... ok\ntest_builder_detaches_mutable_payload_and_evidence (test_events.EventEnvelopeTests.test_builder_detaches_mutable_payload_and_evidence) ... ok\ntest_validation_rejects_missing_and_unknown_fields (test_events.EventEnvelopeTests.test_validation_rejects_missing_and_unknown_fields) ... ok\ntest_validation_rejects_naive_time_bool_sequence_and_forbidden_actor (test_events.EventEnvelopeTests.test_validation_rejects_naive_time_bool_sequence_and_forbidden_actor) ... ok\ntest_validation_rejects_payload_hash_mismatch (test_events.EventEnvelopeTests.test_validation_rejects_payload_hash_mismatch) ... ok\ntest_append_is_canonical_jsonl_and_updates_head (test_events.EventLogTests.test_append_is_canonical_jsonl_and_updates_head) ... ok\ntest_book_id_cannot_change (test_events.EventLogTests.test_book_id_cannot_change) ... ok\ntest_duplicate_event_is_rejected (test_events.EventLogTests.test_duplicate_event_is_rejected) ... ok\ntest_empty_log_verifies (test_events.EventLogTests.test_empty_log_verifies) ... ok\ntest_head_update_failure_keeps_authoritative_event_for_recovery (test_events.EventLogTests.test_head_update_failure_keeps_authoritative_event_for_recovery) ... ok\ntest_new_branch_must_fork_from_existing_event (test_events.EventLogTests.test_new_branch_must_fork_from_existing_event) ... ok\ntest_parent_chain_tampering_is_detected_even_with_valid_hash (test_events.EventLogTests.test_parent_chain_tampering_is_detected_even_with_valid_hash) ... ok\ntest_parent_conflict_does_not_modify_log (test_events.EventLogTests.test_parent_conflict_does_not_modify_log) ... ok\ntest_payload_tampering_is_detected (test_events.EventLogTests.test_payload_tampering_is_detected) ... ok\ntest_sequential_append_and_read (test_events.EventLogTests.test_sequential_append_and_read) ... ok\ntest_stale_head_is_detected_and_rebuilt (test_events.EventLogTests.test_stale_head_is_detected_and_rebuilt) ... ok\ntest_supersedes_must_reference_prior_event (test_events.EventLogTests.test_supersedes_must_reference_prior_event) ... ok\ntest_truncated_tail_is_detected (test_events.EventLogTests.test_truncated_tail_is_detected) ... ok\ntest_branch_inherits_ancestors_without_main_suffix_leak (test_knowledge.KnowledgeBoundaryTests.test_branch_inherits_ancestors_without_main_suffix_leak) ... ok\ntest_chapter_diff_keeps_truth_and_knowledge_separate (test_knowledge.KnowledgeBoundaryTests.test_chapter_diff_keeps_truth_and_knowledge_separate) ... ok\ntest_cli_json_success_and_invalid_holder (test_knowledge.KnowledgeBoundaryTests.test_cli_json_success_and_invalid_holder) ... ok\ntest_disputed_truth_remains_known_but_is_not_truth_set (test_knowledge.KnowledgeBoundaryTests.test_disputed_truth_remains_known_but_is_not_truth_set) ... ok\ntest_duplicate_grant_and_orphan_retraction_are_integrity_errors (test_knowledge.KnowledgeBoundaryTests.test_duplicate_grant_and_orphan_retraction_are_integrity_errors) ... ok\ntest_future_recorded_knowledge_does_not_leak_backward (test_knowledge.KnowledgeBoundaryTests.test_future_recorded_knowledge_does_not_leak_backward) ... ok\ntest_query_is_read_only_and_hash_is_deterministic (test_knowledge.KnowledgeBoundaryTests.test_query_is_read_only_and_hash_is_deterministic) ... ok\ntest_reader_cannot_learn_from_outline_or_scene (test_knowledge.KnowledgeBoundaryTests.test_reader_cannot_learn_from_outline_or_scene) ... ok\ntest_retraction_changes_diff_without_deleting_history (test_knowledge.KnowledgeBoundaryTests.test_retraction_changes_diff_without_deleting_history) ... ok\ntest_doctor_json_contains_checks (test_m0_cli.M0CliTests.test_doctor_json_contains_checks) ... ok\ntest_doctor_no_api_key_returns_zero (test_m0_cli.M0CliTests.test_doctor_no_api_key_returns_zero) ... ok\ntest_doctor_rejects_wrong_working_directory (test_m0_cli.M0CliTests.test_doctor_rejects_wrong_working_directory) ... ok\ntest_exit_code_document_matches_enum (test_m0_cli.M0CliTests.test_exit_code_document_matches_enum) ... ok\ntest_help_and_topic_return_zero (test_m0_cli.M0CliTests.test_help_and_topic_return_zero) ... ok\ntest_init_creates_only_m0_layout (test_m0_cli.M0CliTests.test_init_creates_only_m0_layout) ... ok\ntest_init_does_not_overwrite_without_force (test_m0_cli.M0CliTests.test_init_does_not_overwrite_without_force) ... ok\ntest_init_force_preserves_unknown_files (test_m0_cli.M0CliTests.test_init_force_preserves_unknown_files) ... ok\ntest_invalid_json_fixture_returns_two (test_m0_cli.M0CliTests.test_invalid_json_fixture_returns_two) ... ok\ntest_missing_manifest_returns_one (test_m0_cli.M0CliTests.test_missing_manifest_returns_one) ... ok\ntest_missing_required_field_returns_two (test_m0_cli.M0CliTests.test_missing_required_field_returns_two) ... ok\ntest_readonly_write_probe_returns_five_or_explicit_skip (test_m0_cli.M0CliTests.test_readonly_write_probe_returns_five_or_explicit_skip) ... ok\ntest_unknown_command_returns_one_on_stderr (test_m0_cli.M0CliTests.test_unknown_command_returns_one_on_stderr) ... ok\ntest_valid_fixture_passes (test_m0_cli.M0CliTests.test_valid_fixture_passes) ... ok\ntest_version_json_is_parseable (test_m0_cli.M0CliTests.test_version_json_is_parseable) ... ok\ntest_version_returns_zero (test_m0_cli.M0CliTests.test_version_returns_zero) ... ok\ntest_every_frozen_facet_type_has_a_working_v1_schema (test_objects.FacetValidationTests.test_every_frozen_facet_type_has_a_working_v1_schema) ... ok\ntest_invalid_time_window_and_empty_source_are_rejected (test_objects.FacetValidationTests.test_invalid_time_window_and_empty_source_are_rejected) ... ok\ntest_numeric_fields_reject_bool_nan_and_out_of_range (test_objects.FacetValidationTests.test_numeric_fields_reject_bool_nan_and_out_of_range) ... ok\ntest_payload_missing_or_unknown_field_is_rejected (test_objects.FacetValidationTests.test_payload_missing_or_unknown_field_is_rejected) ... ok\ntest_unknown_facet_type_and_version_are_rejected (test_objects.FacetValidationTests.test_unknown_facet_type_and_version_are_rejected) ... ok\ntest_complete_bundle_resolves_all_references (test_objects.ModelBundleTests.test_complete_bundle_resolves_all_references) ... ok\ntest_duplicate_ids_are_rejected (test_objects.ModelBundleTests.test_duplicate_ids_are_rejected) ... ok\ntest_unknown_object_fact_relation_and_evidence_refs_are_rejected (test_objects.ModelBundleTests.test_unknown_object_fact_relation_and_evidence_refs_are_rejected) ... ok\ntest_object_rejects_alias_collision_and_self_supersede (test_objects.ObjectValidationTests.test_object_rejects_alias_collision_and_self_supersede) ... ok\ntest_object_rejects_unknown_missing_and_bad_id (test_objects.ObjectValidationTests.test_object_rejects_unknown_missing_and_bad_id) ... ok\ntest_valid_object_is_detached_and_unicode_safe (test_objects.ObjectValidationTests.test_valid_object_is_detached_and_unicode_safe) ... ok\ntest_evidence_rejects_bad_hash_locator_and_unknown_locator_field (test_objects.RelationFactEvidenceTests.test_evidence_rejects_bad_hash_locator_and_unknown_locator_field) ... ok\ntest_fact_rejects_nan_and_natural_language_predicate (test_objects.RelationFactEvidenceTests.test_fact_rejects_nan_and_natural_language_predicate) ... ok\ntest_relation_rejects_natural_language_predicate_and_no_evidence (test_objects.RelationFactEvidenceTests.test_relation_rejects_natural_language_predicate_and_no_evidence) ... ok\ntest_valid_relation_fact_and_evidence (test_objects.RelationFactEvidenceTests.test_valid_relation_fact_and_evidence) ... ok\ntest_all_model_schemas_are_parseable_strict_draft_2020_documents (test_objects.SchemaArtifactTests.test_all_model_schemas_are_parseable_strict_draft_2020_documents) ... ok\ntest_as_of_lifecycle_and_no_future_leak (test_obligations.ObligationTests.test_as_of_lifecycle_and_no_future_leak) ... ok\ntest_cli_json_and_invalid_filter (test_obligations.ObligationTests.test_cli_json_and_invalid_filter) ... ok\ntest_defer_moves_window_later_and_can_become_overdue (test_obligations.ObligationTests.test_defer_moves_window_later_and_can_become_overdue) ... ok\ntest_insufficient_clues_block_payoff (test_obligations.ObligationTests.test_insufficient_clues_block_payoff) ... ok\ntest_missing_payoff_requirement_is_blocked (test_obligations.ObligationTests.test_missing_payoff_requirement_is_blocked) ... ok\ntest_query_is_read_only_and_deterministic (test_obligations.ObligationTests.test_query_is_read_only_and_deterministic) ... ok\ntest_status_filters (test_obligations.ObligationTests.test_status_filters) ... ok\ntest_subverted_and_retired_are_expressible (test_obligations.ObligationTests.test_subverted_and_retired_are_expressible) ... ok\ntest_terminal_transition_is_blocked (test_obligations.ObligationTests.test_terminal_transition_is_blocked) ... ok\ntest_json_loader_rejects_duplicate_keys_nan_and_bad_json (test_outline.LoaderTests.test_json_loader_rejects_duplicate_keys_nan_and_bad_json) ... ok\ntest_yaml_loader_has_explicit_missing_dependency_error (test_outline.LoaderTests.test_yaml_loader_has_explicit_missing_dependency_error) ... ok\ntest_minimal_manifest_is_valid_and_detached (test_outline.ManifestValidationTests.test_minimal_manifest_is_valid_and_detached) ... ok\ntest_missing_unknown_version_and_book_mismatch_are_rejected (test_outline.ManifestValidationTests.test_missing_unknown_version_and_book_mismatch_are_rejected) ... ok\ntest_numeric_range_status_and_approval_rules (test_outline.ManifestValidationTests.test_numeric_range_status_and_approval_rules) ... ok\ntest_cli_error_codes_distinguish_layout_and_format (test_outline.OutlineCliTests.test_cli_error_codes_distinguish_layout_and_format) ... ok\ntest_exact_book_command_validates_demo_package (test_outline.OutlineCliTests.test_exact_book_command_validates_demo_package) ... ok\ntest_manifest_schema_artifact_is_strict_draft_2020 (test_outline.OutlineCliTests.test_manifest_schema_artifact_is_strict_draft_2020) ... ok\ntest_studio_outline_validate_json (test_outline.OutlineCliTests.test_studio_outline_validate_json) ... ok\ntest_non_object_or_array_structured_root_is_rejected (test_outline.OutlinePackageTests.test_non_object_or_array_structured_root_is_rejected) ... ok\ntest_package_hash_changes_with_source_bytes (test_outline.OutlinePackageTests.test_package_hash_changes_with_source_bytes) ... ok\ntest_root_and_nested_source_symlinks_are_rejected (test_outline.OutlinePackageTests.test_root_and_nested_source_symlinks_are_rejected) ... ok\ntest_static_broken_fixtures_fail_at_expected_layer (test_outline.OutlinePackageTests.test_static_broken_fixtures_fail_at_expected_layer) ... ok\ntest_valid_json_package_reports_all_files_and_stable_hash (test_outline.OutlinePackageTests.test_valid_json_package_reports_all_files_and_stable_hash) ... ok\ntest_validation_is_read_only_and_creates_no_compiled_or_authority (test_outline.OutlinePackageTests.test_validation_is_read_only_and_creates_no_compiled_or_authority) ... ok\ntest_cli_draft_returns_human_gate_four (test_outline_bootstrap.BootstrapCliTests.test_cli_draft_returns_human_gate_four) ... ok\ntest_cli_first_and_reused_bootstrap (test_outline_bootstrap.BootstrapCliTests.test_cli_first_and_reused_bootstrap) ... ok\ntest_bootstrap_commits_deterministic_batch_and_projection (test_outline_bootstrap.BootstrapTests.test_bootstrap_commits_deterministic_batch_and_projection) ... ok\ntest_bootstrap_creates_no_contextpack_or_prose (test_outline_bootstrap.BootstrapTests.test_bootstrap_creates_no_contextpack_or_prose) ... ok\ntest_compiled_source_mismatch_stops_before_authority (test_outline_bootstrap.BootstrapTests.test_compiled_source_mismatch_stops_before_authority) ... ok\ntest_draft_manifest_stops_at_human_gate_without_authority (test_outline_bootstrap.BootstrapTests.test_draft_manifest_stops_at_human_gate_without_authority) ... ok\ntest_new_compile_after_bootstrap_cannot_reinitialize_authority (test_outline_bootstrap.BootstrapTests.test_new_compile_after_bootstrap_cannot_reinitialize_authority) ... ok\ntest_partial_bootstrap_prefix_is_integrity_failure (test_outline_bootstrap.BootstrapTests.test_partial_bootstrap_prefix_is_integrity_failure) ... ok\ntest_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection (test_outline_bootstrap.BootstrapTests.test_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection) ... ok\ntest_same_approved_generation_has_identical_event_bytes_across_books (test_outline_bootstrap.BootstrapTests.test_same_approved_generation_has_identical_event_bytes_across_books) ... ok\ntest_unrelated_existing_authority_requires_human_resolution (test_outline_bootstrap.BootstrapTests.test_unrelated_existing_authority_requires_human_resolution) ... ok\ntest_cli_compile_json_and_idempotent_second_run (test_outline_compile.OutlineCompileCliTests.test_cli_compile_json_and_idempotent_second_run) ... ok\ntest_cli_integrity_failure_returns_six (test_outline_compile.OutlineCompileCliTests.test_cli_integrity_failure_returns_six) ... ok\ntest_changed_source_publishes_new_generation_and_preserves_old (test_outline_compile.OutlineCompilerTests.test_changed_source_publishes_new_generation_and_preserves_old) ... ok\ntest_compile_creates_no_authority_files (test_outline_compile.OutlineCompilerTests.test_compile_creates_no_authority_files) ... ok\ntest_compile_publishes_content_addressed_generation (test_outline_compile.OutlineCompilerTests.test_compile_publishes_content_addressed_generation) ... ok\ntest_compiled_protocol_schemas_are_strict (test_outline_compile.OutlineCompilerTests.test_compiled_protocol_schemas_are_strict) ... ok\ntest_compiled_symlink_is_rejected (test_outline_compile.OutlineCompilerTests.test_compiled_symlink_is_rejected) ... ok\ntest_invalid_outline_creates_no_compiled_directory (test_outline_compile.OutlineCompilerTests.test_invalid_outline_creates_no_compiled_directory) ... ok\ntest_manifest_is_json_compatible_yaml_and_report_has_no_clock (test_outline_compile.OutlineCompilerTests.test_manifest_is_json_compatible_yaml_and_report_has_no_clock) ... ok\ntest_pointer_fault_preserves_old_pointer_and_removes_new_generation (test_outline_compile.OutlineCompilerTests.test_pointer_fault_preserves_old_pointer_and_removes_new_generation) ... ok\ntest_same_input_is_idempotent_and_reuses_verified_generation (test_outline_compile.OutlineCompilerTests.test_same_input_is_idempotent_and_reuses_verified_generation) ... ok\ntest_tampered_generation_is_rejected_not_overwritten (test_outline_compile.OutlineCompilerTests.test_tampered_generation_is_rejected_not_overwritten) ... ok\ntest_cli_domain_failure_returns_two_and_diagnostics (test_outline_domain.OutlineDomainCliTests.test_cli_domain_failure_returns_two_and_diagnostics) ... ok\ntest_cli_success_includes_domain_summary (test_outline_domain.OutlineDomainCliTests.test_cli_success_includes_domain_summary) ... ok\ntest_arc_requires_states_turns_range_and_obligation_arrays (test_outline_domain.OutlineDomainTests.test_arc_requires_states_turns_range_and_obligation_arrays) ... ok\ntest_beat_requires_valid_word_window_kind_and_complexity (test_outline_domain.OutlineDomainTests.test_beat_requires_valid_word_window_kind_and_complexity) ... ok\ntest_chapter_missing_purpose_and_hook_have_specific_codes (test_outline_domain.OutlineDomainTests.test_chapter_missing_purpose_and_hook_have_specific_codes) ... ok\ntest_character_requires_motive_constraint_state_role_and_arc (test_outline_domain.OutlineDomainTests.test_character_requires_motive_constraint_state_role_and_arc) ... ok\ntest_complete_domain_fixture_has_deterministic_counts (test_outline_domain.OutlineDomainTests.test_complete_domain_fixture_has_deterministic_counts) ... ok\ntest_domain_schema_artifact_defines_nine_record_types (test_outline_domain.OutlineDomainTests.test_domain_schema_artifact_defines_nine_record_types) ... ok\ntest_domain_validation_is_read_only (test_outline_domain.OutlineDomainTests.test_domain_validation_is_read_only) ... ok\ntest_faction_place_and_item_required_boundaries (test_outline_domain.OutlineDomainTests.test_faction_place_and_item_required_boundaries) ... ok\ntest_obligation_resolution_window_weight_and_evidence (test_outline_domain.OutlineDomainTests.test_obligation_resolution_window_weight_and_evidence) ... ok\ntest_thread_turning_point_is_executable (test_outline_domain.OutlineDomainTests.test_thread_turning_point_is_executable) ... ok\ntest_unbounded_character_has_specific_diagnostic (test_outline_domain.OutlineDomainTests.test_unbounded_character_has_specific_diagnostic) ... ok\ntest_unknown_explanatory_fields_are_forward_compatible (test_outline_domain.OutlineDomainTests.test_unknown_explanatory_fields_are_forward_compatible) ... ok\ntest_cli_ready_and_prebootstrap_exit_three (test_outline_readiness.ReadinessCliTests.test_cli_ready_and_prebootstrap_exit_three) ... ok\ntest_first_chapter_prerequisites_are_ready (test_outline_readiness.ReadinessTests.test_first_chapter_prerequisites_are_ready) ... ok\ntest_later_authority_event_does_not_hide_bootstrap_marker (test_outline_readiness.ReadinessTests.test_later_authority_event_does_not_hide_bootstrap_marker) ... ok\ntest_outline_change_after_bootstrap_is_not_ready (test_outline_readiness.ReadinessTests.test_outline_change_after_bootstrap_is_not_ready) ... ok\ntest_readiness_before_bootstrap_is_hard_failure (test_outline_readiness.ReadinessTests.test_readiness_before_bootstrap_is_hard_failure) ... ok\ntest_report_is_deterministic_and_read_only (test_outline_readiness.ReadinessTests.test_report_is_deterministic_and_read_only) ... ok\ntest_tampered_compiled_prerequisite_is_integrity_failure (test_outline_readiness.ReadinessTests.test_tampered_compiled_prerequisite_is_integrity_failure) ... ok\ntest_cli_failure_contains_ordered_diagnostics (test_outline_semantics.OutlineSemanticCliTests.test_cli_failure_contains_ordered_diagnostics) ... ok\ntest_cli_success_contains_semantic_summary (test_outline_semantics.OutlineSemanticCliTests.test_cli_success_contains_semantic_summary) ... ok\ntest_alias_collision_is_scoped_to_object_kind (test_outline_semantics.OutlineSemanticTests.test_alias_collision_is_scoped_to_object_kind) ... ok\ntest_diagnostics_are_deterministic (test_outline_semantics.OutlineSemanticTests.test_diagnostics_are_deterministic) ... ok\ntest_duplicate_id_is_rejected (test_outline_semantics.OutlineSemanticTests.test_duplicate_id_is_rejected) ... ok\ntest_missing_and_wrong_prefix_id_are_rejected (test_outline_semantics.OutlineSemanticTests.test_missing_and_wrong_prefix_id_are_rejected) ... ok\ntest_time_window_and_format_are_checked_without_chapter_monotonicity (test_outline_semantics.OutlineSemanticTests.test_time_window_and_format_are_checked_without_chapter_monotonicity) ... ok\ntest_timeline_cycle_is_rejected (test_outline_semantics.OutlineSemanticTests.test_timeline_cycle_is_rejected) ... ok\ntest_unknown_and_invalid_references_are_distinct (test_outline_semantics.OutlineSemanticTests.test_unknown_and_invalid_references_are_distinct) ... ok\ntest_unrecognized_nonempty_root_is_rejected (test_outline_semantics.OutlineSemanticTests.test_unrecognized_nonempty_root_is_rejected) ... ok\ntest_valid_semantic_package_has_deterministic_summary (test_outline_semantics.OutlineSemanticTests.test_valid_semantic_package_has_deterministic_summary) ... ok\ntest_validation_remains_read_only (test_outline_semantics.OutlineSemanticTests.test_validation_remains_read_only) ... ok\ntest_branch_projection_inherits_only_lineage_ancestors (test_projection.ProjectionTests.test_branch_projection_inherits_only_lineage_ancestors) ... ok\ntest_failed_rebuild_preserves_old_database_bytes (test_projection.ProjectionTests.test_failed_rebuild_preserves_old_database_bytes) ... ok\ntest_get_object_decodes_json_fields (test_projection.ProjectionTests.test_get_object_decodes_json_fields) ... ok\ntest_incremental_update_applies_only_new_suffix (test_projection.ProjectionTests.test_incremental_update_applies_only_new_suffix) ... ok\ntest_invalid_incremental_event_rolls_back_entire_transaction (test_projection.ProjectionTests.test_invalid_incremental_event_rolls_back_entire_transaction) ... ok\ntest_non_business_event_is_audited_without_changing_domain_tables (test_projection.ProjectionTests.test_non_business_event_is_audited_without_changing_domain_tables) ... ok\ntest_rebuild_applies_ten_events_and_current_state (test_projection.ProjectionTests.test_rebuild_applies_ten_events_and_current_state) ... ok\ntest_rebuild_is_logically_deterministic_and_survives_database_deletion (test_projection.ProjectionTests.test_rebuild_is_logically_deterministic_and_survives_database_deletion) ... ok\ntest_schema_metadata_and_foreign_keys_are_frozen (test_projection.ProjectionTests.test_schema_metadata_and_foreign_keys_are_frozen) ... ok\ntest_stale_metadata_is_rejected (test_projection.ProjectionTests.test_stale_metadata_is_rejected) ... ok\ntest_all_seven_classifications_are_deterministic (test_reconcile.ReconcileTests.test_all_seven_classifications_are_deterministic) ... ok\ntest_before_reality_required_items_are_missing (test_reconcile.ReconcileTests.test_before_reality_required_items_are_missing) ... ok\ntest_cli_json_and_unknown_scope (test_reconcile.ReconcileTests.test_cli_json_and_unknown_scope) ... ok\ntest_duplicate_reality_is_integrity_error (test_reconcile.ReconcileTests.test_duplicate_reality_is_integrity_error) ... ok\ntest_future_reality_does_not_leak_to_chapter_zero (test_reconcile.ReconcileTests.test_future_reality_does_not_leak_to_chapter_zero) ... ok\ntest_invalid_approval_reference_is_integrity_error (test_reconcile.ReconcileTests.test_invalid_approval_reference_is_integrity_error) ... ok\ntest_read_only_and_stable_hash (test_reconcile.ReconcileTests.test_read_only_and_stable_hash) ... ok\ntest_reality_source_must_match_committed_chapter (test_reconcile.ReconcileTests.test_reality_source_must_match_committed_chapter) ... ok\ntest_batch_is_fully_validated_before_writing (test_snapshots.BatchAppendTests.test_batch_is_fully_validated_before_writing) ... ok\ntest_batch_results_have_contiguous_lines_and_offsets (test_snapshots.BatchAppendTests.test_batch_results_have_contiguous_lines_and_offsets) ... ok\ntest_artifact_boundary_rejects_reserved_outside_and_symlink (test_snapshots.SnapshotTests.test_artifact_boundary_rejects_reserved_outside_and_symlink) ... ok\ntest_create_and_validate_complete_snapshot (test_snapshots.SnapshotTests.test_create_and_validate_complete_snapshot) ... ok\ntest_event_artifact_and_sqlite_tampering_are_rejected (test_snapshots.SnapshotTests.test_event_artifact_and_sqlite_tampering_are_rejected) ... ok\ntest_failed_publish_cleans_temporary_snapshot_and_preserves_source (test_snapshots.SnapshotTests.test_failed_publish_cleans_temporary_snapshot_and_preserves_source) ... ok\ntest_restore_refuses_existing_target_without_modifying_it (test_snapshots.SnapshotTests.test_restore_refuses_existing_target_without_modifying_it) ... ok\ntest_restore_to_new_book_preserves_head_state_and_artifact (test_snapshots.SnapshotTests.test_restore_to_new_book_preserves_head_state_and_artifact) ... ok\ntest_undeclared_file_and_manifest_unknown_field_are_rejected (test_snapshots.SnapshotTests.test_undeclared_file_and_manifest_unknown_field_are_rejected) ... ok\ntest_validation_is_read_only (test_snapshots.SnapshotTests.test_validation_is_read_only) ... ok\ntest_atomic_json_uses_canonical_protocol_bytes (test_storage.AtomicWriteTests.test_atomic_json_uses_canonical_protocol_bytes) ... ok\ntest_explicit_mode_is_applied (test_storage.AtomicWriteTests.test_explicit_mode_is_applied) ... ok\ntest_fault_before_replace_preserves_old_file_and_cleans_temp (test_storage.AtomicWriteTests.test_fault_before_replace_preserves_old_file_and_cleans_temp) ... ok\ntest_missing_parent_is_rejected_without_side_effect (test_storage.AtomicWriteTests.test_missing_parent_is_rejected_without_side_effect) ... ok\ntest_new_file_is_atomically_written_and_hashed (test_storage.AtomicWriteTests.test_new_file_is_atomically_written_and_hashed) ... ok\ntest_non_file_destination_is_rejected (test_storage.AtomicWriteTests.test_non_file_destination_is_rejected) ... ok\ntest_replace_failure_preserves_old_file (test_storage.AtomicWriteTests.test_replace_failure_preserves_old_file) ... ok\ntest_replacement_reports_previous_hash_and_preserves_mode (test_storage.AtomicWriteTests.test_replacement_reports_previous_hash_and_preserves_mode) ... ok\ntest_quarantine_preserves_bytes_and_writes_metadata (test_storage.QuarantineTests.test_quarantine_preserves_bytes_and_writes_metadata) ... ok\ntest_quarantine_rejects_empty_reason_without_moving_file (test_storage.QuarantineTests.test_quarantine_rejects_empty_reason_without_moving_file) ... ok\ntest_canonical_json_is_stable_utf8_without_newline (test_storage.StorageHashTests.test_canonical_json_is_stable_utf8_without_newline) ... ok\ntest_canonical_json_rejects_nonstandard_nan (test_storage.StorageHashTests.test_canonical_json_rejects_nonstandard_nan) ... ok\ntest_file_hash_streams_and_verifies (test_storage.StorageHashTests.test_file_hash_streams_and_verifies) ... ok\ntest_raw_byte_hash_uses_protocol_format (test_storage.StorageHashTests.test_raw_byte_hash_uses_protocol_format) ... ok\ntest_verify_rejects_malformed_hash (test_storage.StorageHashTests.test_verify_rejects_malformed_hash) ... ok\ntest_chapter_cutoff_is_longest_prefix_and_head_folds_rename (test_temporal.TemporalQueryTests.test_chapter_cutoff_is_longest_prefix_and_head_folds_rename) ... ok\ntest_cli_json_and_exit_codes (test_temporal.TemporalQueryTests.test_cli_json_and_exit_codes) ... ok\ntest_complete_domain_fold_matches_recorded_and_valid_state (test_temporal.TemporalQueryTests.test_complete_domain_fold_matches_recorded_and_valid_state) ... ok\ntest_event_cutoff_prevents_future_recorded_assertion_leak (test_temporal.TemporalQueryTests.test_event_cutoff_prevents_future_recorded_assertion_leak) ... ok\ntest_invalid_selectors_are_input_errors (test_temporal.TemporalQueryTests.test_invalid_selectors_are_input_errors) ... ok\ntest_nonmonotonic_story_sequence_only_blocks_chapter_query (test_temporal.TemporalQueryTests.test_nonmonotonic_story_sequence_only_blocks_chapter_query) ... ok\ntest_query_is_byte_read_only_and_hash_deterministic (test_temporal.TemporalQueryTests.test_query_is_byte_read_only_and_hash_deterministic) ... ok\ntest_valid_window_is_half_open_and_unknown_does_not_match (test_temporal.TemporalQueryTests.test_valid_window_is_half_open_and_unknown_does_not_match) ... ok\n\n----------------------------------------------------------------------\nRan 196 tests in 6.747s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--book",
+        "book_demo",
+        "--json"
+      ],
+      "duration_seconds": 0.059007,
+      "expected_diagnostics": [],
+      "expected_exit_code": 0,
+      "name": "valid_domain_book",
+      "parsed": {
+        "book_id": "book_demo",
+        "domain": {
+          "diagnostics": [],
+          "ok": true,
+          "record_counts": {
+            "arcs": 1,
+            "beats": 1,
+            "chapters": 1,
+            "characters": 2,
+            "factions": 1,
+            "items": 1,
+            "obligations": 1,
+            "places": 1,
+            "threads": 1,
+            "timeline_events": 2,
+            "turning_points": 1
+          },
+          "schema_version": "outline.domain.v1"
+        },
+        "files": [
+          {
+            "bytes": 523,
+            "format": "json",
+            "path": "00-manifest.json",
+            "role": "00-manifest",
+            "sha256": "sha256:5412ab06f3cb2c0ff3b0774e4302285e19c5c8bed32666907a227a5392ba65c3"
+          },
+          {
+            "bytes": 3,
+            "format": "json",
+            "path": "02-theme.json",
+            "role": "02-theme",
+            "sha256": "sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          {
+            "bytes": 3,
+            "format": "json",
+            "path": "03-world.json",
+            "role": "03-world",
+            "sha256": "sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          {
+            "bytes": 898,
+            "format": "json",
+            "path": "04-cast.json",
+            "role": "04-cast",
+            "sha256": "sha256:74d0a47f65e9fa219194020fa08d457f10e7890ac031924a5ccbf45ccdc2baa0"
+          },
+          {
+            "bytes": 337,
+            "format": "json",
+            "path": "05-factions.json",
+            "role": "05-factions",
+            "sha256": "sha256:c9bdfc1ed017163a72052c3cf34bd2828b8dead0ac13149e2e50a1b7539cd255"
+          },
+          {
+            "bytes": 333,
+            "format": "json",
+            "path": "06-places.json",
+            "role": "06-places",
+            "sha256": "sha256:1efeeeaff42c0e95f4e310daddc571106ad1e5d6621bb78d12d9c2816aa3115b"
+          },
+          {
+            "bytes": 318,
+            "format": "json",
+            "path": "07-items.json",
+            "role": "07-items",
+            "sha256": "sha256:15ddc4a8cc2826c614fb9de2153798ea7d67a4d0dec1ccf3b6cedd42a380b529"
+          },
+          {
+            "bytes": 338,
+            "format": "json",
+            "path": "08-timeline.json",
+            "role": "08-timeline",
+            "sha256": "sha256:0260bddf50dc09c4e361da93f6a20c1b302f6345fc79a6cb2fb7c0d3d73304a5"
+          },
+          {
+            "bytes": 670,
+            "format": "json",
+            "path": "09-threads.json",
+            "role": "09-threads",
+            "sha256": "sha256:49c53e5bd07181a7c67ae727ceb83124b40630111c9c10683ccbd5d943606a4a"
+          },
+          {
+            "bytes": 579,
+            "format": "json",
+            "path": "10-obligations.json",
+            "role": "10-obligations",
+            "sha256": "sha256:37549e850b61cc336d93b76d706ac8ced48c62514541bdbac5ae74c4e7b04c81"
+          },
+          {
+            "bytes": 438,
+            "format": "json",
+            "path": "11-arcs.json",
+            "role": "11-arcs",
+            "sha256": "sha256:3b1669a73cdaafea46bd9e6c34238ea19550ddf8a065f455232922d580b9cd76"
+          },
+          {
+            "bytes": 746,
+            "format": "json",
+            "path": "12-chapter-map.json",
+            "role": "12-chapter-map",
+            "sha256": "sha256:208868e32b2616b96b3337e44e9856bfa2b600ac354c9a99251fd1bd39f82d12"
+          },
+          {
+            "bytes": 3,
+            "format": "json",
+            "path": "13-style.json",
+            "role": "13-style",
+            "sha256": "sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          {
+            "bytes": 3,
+            "format": "json",
+            "path": "14-platform.json",
+            "role": "14-platform",
+            "sha256": "sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          {
+            "bytes": 268,
+            "format": "markdown",
+            "path": "01-premise.md",
+            "role": "premise",
+            "sha256": "sha256:2c1b31c7d12508ff4c7ad122b20989eb93f11467f9b6b1004658ffddd4c4ce8c"
+          },
+          {
+            "bytes": 10,
+            "format": "md",
+            "path": "sources/README.md",
+            "role": "source",
+            "sha256": "sha256:0062c9ee8257ba99b69a244de24abd28ea27d19101d62bab5d9584ccb433e56b"
+          }
+        ],
+        "manifest": {
+          "approval": {
+            "approved_at": "2026-09-29T18:00:00+08:00",
+            "owner": "author"
+          },
+          "book_id": "book_demo",
+          "canon_policy": "strict",
+          "chapter_word_range": [
+            2500,
+            4500
+          ],
+          "created_at": "2026-09-29",
+          "genre_profile": "general_serial",
+          "language": "zh-CN",
+          "last_modified_at": "2026-09-29",
+          "planned_chapters": 500,
+          "planned_words": 1000000,
+          "point_of_view": "configurable",
+          "schema_version": "outline.v1",
+          "status": "approved",
+          "tense": "configurable",
+          "title": "示例书"
+        },
+        "manifest_file": "00-manifest.json",
+        "ok": true,
+        "package_hash": "sha256:a5b9a9525b5e7815c263e11b24fc7cb0a96d5a46d6acac38f88c2f28caeda81e",
+        "package_path": "/home/user/gallant-mendel/v2/workspace/book_demo/outline",
+        "schema_version": "outline.v1",
+        "semantic": {
+          "declaration_count": 12,
+          "diagnostics": [],
+          "kind_counts": {
+            "arc": 1,
+            "beat": 1,
+            "chapter": 1,
+            "character": 2,
+            "event": 2,
+            "faction": 1,
+            "item": 1,
+            "obligation": 1,
+            "place": 1,
+            "thread": 1
+          },
+          "ok": true,
+          "reference_count": 22,
+          "schema_version": "outline.semantic.v1",
+          "time_window_count": 3,
+          "timeline_edge_count": 1
+        },
+        "source_file_count": 1,
+        "structured_document_count": 14
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"book_id\": \"book_demo\", \"domain\": {\"diagnostics\": [], \"ok\": true, \"record_counts\": {\"arcs\": 1, \"beats\": 1, \"chapters\": 1, \"characters\": 2, \"factions\": 1, \"items\": 1, \"obligations\": 1, \"places\": 1, \"threads\": 1, \"timeline_events\": 2, \"turning_points\": 1}, \"schema_version\": \"outline.domain.v1\"}, \"files\": [{\"bytes\": 523, \"format\": \"json\", \"path\": \"00-manifest.json\", \"role\": \"00-manifest\", \"sha256\": \"sha256:5412ab06f3cb2c0ff3b0774e4302285e19c5c8bed32666907a227a5392ba65c3\"}, {\"bytes\": 3, \"format\": \"json\", \"path\": \"02-theme.json\", \"role\": \"02-theme\", \"sha256\": \"sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"}, {\"bytes\": 3, \"format\": \"json\", \"path\": \"03-world.json\", \"role\": \"03-world\", \"sha256\": \"sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"}, {\"bytes\": 898, \"format\": \"json\", \"path\": \"04-cast.json\", \"role\": \"04-cast\", \"sha256\": \"sha256:74d0a47f65e9fa219194020fa08d457f10e7890ac031924a5ccbf45ccdc2baa0\"}, {\"bytes\": 337, \"format\": \"json\", \"path\": \"05-factions.json\", \"role\": \"05-factions\", \"sha256\": \"sha256:c9bdfc1ed017163a72052c3cf34bd2828b8dead0ac13149e2e50a1b7539cd255\"}, {\"bytes\": 333, \"format\": \"json\", \"path\": \"06-places.json\", \"role\": \"06-places\", \"sha256\": \"sha256:1efeeeaff42c0e95f4e310daddc571106ad1e5d6621bb78d12d9c2816aa3115b\"}, {\"bytes\": 318, \"format\": \"json\", \"path\": \"07-items.json\", \"role\": \"07-items\", \"sha256\": \"sha256:15ddc4a8cc2826c614fb9de2153798ea7d67a4d0dec1ccf3b6cedd42a380b529\"}, {\"bytes\": 338, \"format\": \"json\", \"path\": \"08-timeline.json\", \"role\": \"08-timeline\", \"sha256\": \"sha256:0260bddf50dc09c4e361da93f6a20c1b302f6345fc79a6cb2fb7c0d3d73304a5\"}, {\"bytes\": 670, \"format\": \"json\", \"path\": \"09-threads.json\", \"role\": \"09-threads\", \"sha256\": \"sha256:49c53e5bd07181a7c67ae727ceb83124b40630111c9c10683ccbd5d943606a4a\"}, {\"bytes\": 579, \"format\": \"json\", \"path\": \"10-obligations.json\", \"role\": \"10-obligations\", \"sha256\": \"sha256:37549e850b61cc336d93b76d706ac8ced48c62514541bdbac5ae74c4e7b04c81\"}, {\"bytes\": 438, \"format\": \"json\", \"path\": \"11-arcs.json\", \"role\": \"11-arcs\", \"sha256\": \"sha256:3b1669a73cdaafea46bd9e6c34238ea19550ddf8a065f455232922d580b9cd76\"}, {\"bytes\": 746, \"format\": \"json\", \"path\": \"12-chapter-map.json\", \"role\": \"12-chapter-map\", \"sha256\": \"sha256:208868e32b2616b96b3337e44e9856bfa2b600ac354c9a99251fd1bd39f82d12\"}, {\"bytes\": 3, \"format\": \"json\", \"path\": \"13-style.json\", \"role\": \"13-style\", \"sha256\": \"sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"}, {\"bytes\": 3, \"format\": \"json\", \"path\": \"14-platform.json\", \"role\": \"14-platform\", \"sha256\": \"sha256:ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"}, {\"bytes\": 268, \"format\": \"markdown\", \"path\": \"01-premise.md\", \"role\": \"premise\", \"sha256\": \"sha256:2c1b31c7d12508ff4c7ad122b20989eb93f11467f9b6b1004658ffddd4c4ce8c\"}, {\"bytes\": 10, \"format\": \"md\", \"path\": \"sources/README.md\", \"role\": \"source\", \"sha256\": \"sha256:0062c9ee8257ba99b69a244de24abd28ea27d19101d62bab5d9584ccb433e56b\"}], \"manifest\": {\"approval\": {\"approved_at\": \"2026-09-29T18:00:00+08:00\", \"owner\": \"author\"}, \"book_id\": \"book_demo\", \"canon_policy\": \"strict\", \"chapter_word_range\": [2500, 4500], \"created_at\": \"2026-09-29\", \"genre_profile\": \"general_serial\", \"language\": \"zh-CN\", \"last_modified_at\": \"2026-09-29\", \"planned_chapters\": 500, \"planned_words\": 1000000, \"point_of_view\": \"configurable\", \"schema_version\": \"outline.v1\", \"status\": \"approved\", \"tense\": \"configurable\", \"title\": \"示例书\"}, \"manifest_file\": \"00-manifest.json\", \"ok\": true, \"package_hash\": \"sha256:a5b9a9525b5e7815c263e11b24fc7cb0a96d5a46d6acac38f88c2f28caeda81e\", \"package_path\": \"/home/user/gallant-mendel/v2/workspace/book_demo/outline\", \"schema_version\": \"outline.v1\", \"semantic\": {\"declaration_count\": 12, \"diagnostics\": [], \"kind_counts\": {\"arc\": 1, \"beat\": 1, \"chapter\": 1, \"character\": 2, \"event\": 2, \"faction\": 1, \"item\": 1, \"obligation\": 1, \"place\": 1, \"thread\": 1}, \"ok\": true, \"reference_count\": 22, \"schema_version\": \"outline.semantic.v1\", \"time_window_count\": 3, \"timeline_edge_count\": 1}, \"source_file_count\": 1, \"structured_document_count\": 14}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/character/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.062719,
+      "expected_diagnostics": [
+        "UNBOUNDED_CHARACTER"
+      ],
+      "expected_exit_code": 2,
+      "name": "unbounded_character",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "UNBOUNDED_CHARACTER",
+            "message": "character requires non-empty capabilities or resources",
+            "path": "04-cast.json#0"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): UNBOUNDED_CHARACTER at 04-cast.json#0: character requires non-empty capabilities or resources",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"UNBOUNDED_CHARACTER\", \"message\": \"character requires non-empty capabilities or resources\", \"path\": \"04-cast.json#0\"}], \"error\": \"outline domain validation failed (1 diagnostics): UNBOUNDED_CHARACTER at 04-cast.json#0: character requires non-empty capabilities or resources\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/faction/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.062213,
+      "expected_diagnostics": [
+        "DOMAIN_SCHEMA_ERROR"
+      ],
+      "expected_exit_code": 2,
+      "name": "faction_without_resources",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "DOMAIN_SCHEMA_ERROR",
+            "message": "must be non-empty",
+            "path": "05-factions.json#0.resources"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 05-factions.json#0.resources: must be non-empty",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"DOMAIN_SCHEMA_ERROR\", \"message\": \"must be non-empty\", \"path\": \"05-factions.json#0.resources\"}], \"error\": \"outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 05-factions.json#0.resources: must be non-empty\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/thread/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.059752,
+      "expected_diagnostics": [
+        "DOMAIN_SCHEMA_ERROR"
+      ],
+      "expected_exit_code": 2,
+      "name": "thread_without_turns",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "DOMAIN_SCHEMA_ERROR",
+            "message": "must be non-empty",
+            "path": "09-threads.json#0.turning_points"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 09-threads.json#0.turning_points: must be non-empty",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"DOMAIN_SCHEMA_ERROR\", \"message\": \"must be non-empty\", \"path\": \"09-threads.json#0.turning_points\"}], \"error\": \"outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 09-threads.json#0.turning_points: must be non-empty\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/obligation/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.056312,
+      "expected_diagnostics": [
+        "OBLIGATION_WITHOUT_RESOLUTION"
+      ],
+      "expected_exit_code": 2,
+      "name": "obligation_without_resolution",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "OBLIGATION_WITHOUT_RESOLUTION",
+            "message": "must be non-empty",
+            "path": "10-obligations.json#0.allowed_resolution"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): OBLIGATION_WITHOUT_RESOLUTION at 10-obligations.json#0.allowed_resolution: must be non-empty",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"OBLIGATION_WITHOUT_RESOLUTION\", \"message\": \"must be non-empty\", \"path\": \"10-obligations.json#0.allowed_resolution\"}], \"error\": \"outline domain validation failed (1 diagnostics): OBLIGATION_WITHOUT_RESOLUTION at 10-obligations.json#0.allowed_resolution: must be non-empty\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/arc/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.056101,
+      "expected_diagnostics": [
+        "DOMAIN_SCHEMA_ERROR"
+      ],
+      "expected_exit_code": 2,
+      "name": "arc_reverse_range",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "DOMAIN_SCHEMA_ERROR",
+            "message": "window lower bound exceeds upper bound",
+            "path": "11-arcs.json#0.range"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 11-arcs.json#0.range: window lower bound exceeds upper bound",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"DOMAIN_SCHEMA_ERROR\", \"message\": \"window lower bound exceeds upper bound\", \"path\": \"11-arcs.json#0.range\"}], \"error\": \"outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 11-arcs.json#0.range: window lower bound exceeds upper bound\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/chapter/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.056987,
+      "expected_diagnostics": [
+        "CHAPTER_WITHOUT_PURPOSE",
+        "CHAPTER_WITHOUT_HOOK"
+      ],
+      "expected_exit_code": 2,
+      "name": "chapter_purpose_and_hook",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "CHAPTER_WITHOUT_HOOK",
+            "message": "must be a non-empty string",
+            "path": "12-chapter-map.json#0.intent.required_hook"
+          },
+          {
+            "code": "CHAPTER_WITHOUT_PURPOSE",
+            "message": "must be a non-empty string",
+            "path": "12-chapter-map.json#0.purpose"
+          }
+        ],
+        "error": "outline domain validation failed (2 diagnostics): CHAPTER_WITHOUT_HOOK at 12-chapter-map.json#0.intent.required_hook: must be a non-empty string",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"CHAPTER_WITHOUT_HOOK\", \"message\": \"must be a non-empty string\", \"path\": \"12-chapter-map.json#0.intent.required_hook\"}, {\"code\": \"CHAPTER_WITHOUT_PURPOSE\", \"message\": \"must be a non-empty string\", \"path\": \"12-chapter-map.json#0.purpose\"}], \"error\": \"outline domain validation failed (2 diagnostics): CHAPTER_WITHOUT_HOOK at 12-chapter-map.json#0.intent.required_hook: must be a non-empty string\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "validate",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M2.3/tmp/verify-u9z7ff65/beat/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.055764,
+      "expected_diagnostics": [
+        "DOMAIN_SCHEMA_ERROR"
+      ],
+      "expected_exit_code": 2,
+      "name": "beat_reverse_word_window",
+      "parsed": {
+        "diagnostics": [
+          {
+            "code": "DOMAIN_SCHEMA_ERROR",
+            "message": "window lower bound exceeds upper bound",
+            "path": "12-chapter-map.json#0.beats[0].target_words"
+          }
+        ],
+        "error": "outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 12-chapter-map.json#0.beats[0].target_words: window lower bound exceeds upper bound",
+        "exit_code": 2,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"diagnostics\": [{\"code\": \"DOMAIN_SCHEMA_ERROR\", \"message\": \"window lower bound exceeds upper bound\", \"path\": \"12-chapter-map.json#0.beats[0].target_words\"}], \"error\": \"outline domain validation failed (1 diagnostics): DOMAIN_SCHEMA_ERROR at 12-chapter-map.json#0.beats[0].target_words: window lower bound exceeds upper bound\", \"exit_code\": 2, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "filesystem observation"
+      ],
+      "duration_seconds": 0,
+      "expected_diagnostics": [],
+      "expected_exit_code": 0,
+      "name": "no_authority_or_compiled_output",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "[]"
+    }
+  ],
+  "completed_at": "2026-09-29T11:27:09.480073+00:00",
+  "milestone": "M2.3",
+  "schema_version": "m2.3.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 10,
+    "total": 10
+  }
+}

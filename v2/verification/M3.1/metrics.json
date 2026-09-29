@@ -1,0 +1,13 @@
+{
+  "authority_event_count": 26,
+  "book_tree_hash": "sha256:81a79f8adc121f4d4929c996f60f62fd87e640cd2a88b195a3239cac6eeec32f",
+  "cases_passed": 15,
+  "cases_total": 15,
+  "milestone": "M3.1",
+  "output_schema": "temporal-state.v1",
+  "query_authority": "event-log-lineage",
+  "state_hash": "sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5",
+  "temporary_database_created": false,
+  "unexpected_failures": 0,
+  "unit_tests": 196
+}
