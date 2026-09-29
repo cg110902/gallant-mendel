@@ -1,0 +1,9 @@
+{
+  "cases_passed": 5,
+  "cases_total": 5,
+  "hard_exit_injected": true,
+  "milestone": "M1.1",
+  "old_state_survived_hard_exit": true,
+  "third_party_dependencies": 0,
+  "unexpected_failures": 0
+}

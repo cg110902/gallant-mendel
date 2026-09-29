@@ -1,0 +1,51 @@
+[
+  {
+    "id": "char_lin_yun",
+    "name": "凌云",
+    "aliases": [
+      "云舟"
+    ],
+    "role": "protagonist",
+    "initial_state": {
+      "age": 19,
+      "location": "place_border_town",
+      "status": "unknown_disciple"
+    },
+    "motives": {
+      "primary": "找回师父遗骨"
+    },
+    "fears": [
+      "发现自己被利用"
+    ],
+    "capabilities": [
+      "sword_basic"
+    ],
+    "constraints": [
+      "cannot_read_ancient_script"
+    ],
+    "arc_refs": [
+      "arc_main_01"
+    ]
+  },
+  {
+    "id": "char_master",
+    "name": "师父",
+    "role": "mentor",
+    "initial_state": {
+      "location": "place_border_town",
+      "status": "missing"
+    },
+    "motives": {
+      "primary": "保护真相"
+    },
+    "capabilities": [
+      "sword_mastery"
+    ],
+    "constraints": [
+      "cannot_return_openly"
+    ],
+    "arc_refs": [
+      "arc_main_01"
+    ]
+  }
+]
