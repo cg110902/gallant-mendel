@@ -1,0 +1,11 @@
+{
+  "authority_files_created": 0,
+  "cases_passed": 10,
+  "cases_total": 10,
+  "core_third_party_dependencies": 0,
+  "milestone": "M2.3",
+  "sample_beats": 1,
+  "sample_turning_points": 1,
+  "unexpected_failures": 0,
+  "validated_domain_types": 9
+}
