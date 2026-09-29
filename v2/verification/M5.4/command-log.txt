@@ -1,0 +1,15 @@
+[py_compile] 0 PASS
+[soft_audit_units] 0 PASS
+[full_units] 0 PASS
+[audit_help] 0 PASS
+[strict_soft_audit_schemas] 0 PASS
+[semantic_is_descriptive] 0 PASS
+[style_is_descriptive] 0 PASS
+[no_quality_claim] 0 PASS
+[no_model_judge] 0 PASS
+[hash_bound_human_gate] 0 PASS
+[hard_failure_cannot_approve] 0 PASS
+[report_order_independent] 0 PASS
+[idempotent_reports] 0 PASS
+[authority_write_absent] 0 PASS
+[commit_scope_absent] 0 PASS

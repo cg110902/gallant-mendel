@@ -1,0 +1,579 @@
+{
+  "$id": "https://novel-production-os.local/schemas/facet.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "identity"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "identity_kind": {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              },
+              "legal_name": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "pronouns": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "identity_kind"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "appearance"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "markers": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "description"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "psychology"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "cognitive_bias": {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              },
+              "current_motive": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "fear": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "fear_threshold": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "want": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "current_motive",
+              "want",
+              "fear"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "capability"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "capabilities": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+              },
+              "limitations": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "capabilities"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "voice"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "forbidden_patterns": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              },
+              "style_markers": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "style_markers"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "knowledge"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "fact_ids": {
+                "items": {
+                  "pattern": "^fact_[a-z0-9][a-z0-9_-]{0,95}$",
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              },
+              "uncertain_fact_ids": {
+                "items": {
+                  "pattern": "^fact_[a-z0-9][a-z0-9_-]{0,95}$",
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "fact_ids"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "resource"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "resources": {
+                "minProperties": 1,
+                "type": "object"
+              },
+              "unit": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "resources"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "location"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "arrival_story_seq": {
+                "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+                "type": "string"
+              },
+              "place_id": {
+                "pattern": "^place_[a-z0-9][a-z0-9_-]{0,95}$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "place_id"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "relationship"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "relation_ids": {
+                "items": {
+                  "pattern": "^rel_[a-z0-9][a-z0-9_-]{0,95}$",
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "relation_ids"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "status"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "detail": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "state": {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "state"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "arc"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "goal": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "progress": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "stage": {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "stage"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "style"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "avoid": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              },
+              "directives": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "directives"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "facet_type": {
+            "const": "constraint"
+          }
+        },
+        "required": [
+          "facet_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "additionalProperties": false,
+            "properties": {
+              "rules": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+              },
+              "severity": {
+                "enum": [
+                  "warning",
+                  "hard"
+                ]
+              }
+            },
+            "required": [
+              "rules"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "facet_type": {
+      "enum": [
+        "identity",
+        "appearance",
+        "psychology",
+        "capability",
+        "voice",
+        "knowledge",
+        "resource",
+        "location",
+        "relationship",
+        "status",
+        "arc",
+        "style",
+        "constraint"
+      ]
+    },
+    "facet_version": {
+      "const": 1
+    },
+    "object_id": {
+      "pattern": "^(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "recorded_event": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "source_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "valid_from": {
+      "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+      "type": "string"
+    },
+    "valid_to": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "object_id",
+    "facet_type",
+    "facet_version",
+    "payload",
+    "valid_from",
+    "valid_to",
+    "source_refs",
+    "recorded_event"
+  ],
+  "title": "core.v3 Facet v1",
+  "type": "object"
+}
