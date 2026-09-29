@@ -1,0 +1,10 @@
+{
+  "cases_passed": 6,
+  "cases_total": 6,
+  "dangling_reference_rejected": true,
+  "facet_schemas": 13,
+  "milestone": "M1.3",
+  "model_schemas": 5,
+  "third_party_dependencies": 0,
+  "unexpected_failures": 0
+}

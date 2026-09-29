@@ -1,0 +1,13 @@
+{
+  "authority_files_created": 0,
+  "cases_passed": 9,
+  "cases_total": 9,
+  "core_third_party_dependencies": 0,
+  "deterministic_diagnostic_order": true,
+  "milestone": "M2.2",
+  "sample_declarations": 12,
+  "sample_references": 22,
+  "sample_time_windows": 3,
+  "sample_timeline_edges": 1,
+  "unexpected_failures": 0
+}
