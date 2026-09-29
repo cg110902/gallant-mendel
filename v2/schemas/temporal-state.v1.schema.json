@@ -1,0 +1,32 @@
+{
+  "$id": "https://novel-production-os.local/schemas/temporal-state.v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Temporal State Query v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ok", "schema_version", "book_id", "branch_id", "cutoff", "valid_at", "objects", "facets", "facts", "relations", "retired_object_count", "state_hash"],
+  "properties": {
+    "ok": {"const": true},
+    "schema_version": {"const": "temporal-state.v1"},
+    "book_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"},
+    "cutoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["selector", "event_id", "lineage_index", "story_seq"],
+      "properties": {
+        "selector": {"type": "string", "minLength": 1},
+        "event_id": {"type": "string", "pattern": "^event_[0-9a-f]{32}$"},
+        "lineage_index": {"type": "integer", "minimum": 1},
+        "story_seq": {"type": "integer", "minimum": 0}
+      }
+    },
+    "valid_at": {"type": ["string", "null"], "pattern": "^story:.+$"},
+    "objects": {"type": "array", "items": {"$ref": "object.schema.json"}},
+    "facets": {"type": "array", "items": {"$ref": "facet.schema.json"}},
+    "facts": {"type": "array", "items": {"$ref": "fact.schema.json"}},
+    "relations": {"type": "array", "items": {"$ref": "relation.schema.json"}},
+    "retired_object_count": {"type": "integer", "minimum": 0},
+    "state_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

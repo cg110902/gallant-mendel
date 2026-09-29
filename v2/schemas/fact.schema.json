@@ -1,0 +1,77 @@
+{
+  "$id": "https://novel-production-os.local/schemas/fact.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence": {
+      "enum": [
+        "confirmed",
+        "probable",
+        "disputed",
+        "candidate"
+      ]
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "fact_id": {
+      "pattern": "^fact_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "predicate": {
+      "pattern": "^[a-z][a-z0-9_]{0,63}$",
+      "type": "string"
+    },
+    "recorded_event": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "asserted",
+        "disputed",
+        "superseded"
+      ]
+    },
+    "subject_id": {
+      "pattern": "^(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "valid_from": {
+      "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+      "type": "string"
+    },
+    "valid_to": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+          "type": "string"
+        }
+      ]
+    },
+    "value": {}
+  },
+  "required": [
+    "fact_id",
+    "subject_id",
+    "predicate",
+    "value",
+    "valid_from",
+    "valid_to",
+    "recorded_event",
+    "confidence",
+    "status",
+    "evidence_refs"
+  ],
+  "title": "core.v3 Fact v1",
+  "type": "object"
+}

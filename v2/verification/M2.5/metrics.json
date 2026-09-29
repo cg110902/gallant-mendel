@@ -1,0 +1,14 @@
+{
+  "bootstrap_events": 25,
+  "cases_passed": 10,
+  "cases_total": 10,
+  "core_third_party_dependencies": 0,
+  "human_gate_verified": true,
+  "idempotent_recovery": true,
+  "milestone": "M2.5",
+  "projected_facets": 11,
+  "projected_facts": 1,
+  "projected_objects": 9,
+  "projected_relations": 2,
+  "unexpected_failures": 0
+}

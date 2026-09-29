@@ -1,0 +1,530 @@
+{
+  "$defs": {
+    "arc": {
+      "additionalProperties": true,
+      "properties": {
+        "core_question": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "entry_state": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "exit_state": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^arc_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "obligations_created": {
+          "type": "array"
+        },
+        "obligations_resolved": {
+          "type": "array"
+        },
+        "range": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "minimum": 1,
+              "type": "integer"
+            }
+          ],
+          "type": "array"
+        },
+        "required_turns": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "volume": {
+          "pattern": "^vol_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "volume",
+        "range",
+        "entry_state",
+        "exit_state",
+        "core_question",
+        "required_turns",
+        "obligations_created",
+        "obligations_resolved"
+      ],
+      "type": "object"
+    },
+    "beat": {
+      "additionalProperties": true,
+      "properties": {
+        "complexity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^beat_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "target_words": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "minimum": 1,
+              "type": "integer"
+            }
+          ],
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "target_words",
+        "complexity"
+      ],
+      "type": "object"
+    },
+    "chapter": {
+      "additionalProperties": true,
+      "properties": {
+        "arc": {
+          "pattern": "^arc_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "beats": {
+          "items": {
+            "$ref": "#/$defs/beat"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^ch_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "intent": {
+          "required": [
+            "required_events",
+            "required_changes",
+            "required_hook",
+            "forbidden"
+          ],
+          "type": "object"
+        },
+        "location": {
+          "pattern": "^place_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "pov": {
+          "pattern": "^char_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "purpose": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "required": [
+            "start",
+            "end"
+          ],
+          "type": "object"
+        },
+        "volume": {
+          "pattern": "^vol_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "volume",
+        "arc",
+        "purpose",
+        "pov",
+        "location",
+        "time",
+        "intent",
+        "beats"
+      ],
+      "type": "object"
+    },
+    "character": {
+      "additionalProperties": true,
+      "properties": {
+        "arc_refs": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "capabilities": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "constraints": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^char_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "initial_state": {
+          "minProperties": 1,
+          "type": "object"
+        },
+        "motives": {
+          "oneOf": [
+            {
+              "minProperties": 1,
+              "type": "object"
+            },
+            {
+              "minItems": 1,
+              "type": "array"
+            }
+          ]
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resources": {
+          "minProperties": 1,
+          "type": "object"
+        },
+        "role": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "role",
+        "initial_state",
+        "motives",
+        "constraints",
+        "arc_refs"
+      ],
+      "type": "object"
+    },
+    "faction": {
+      "additionalProperties": true,
+      "properties": {
+        "external_relations": {},
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "hierarchy": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^faction_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "internal_conflict": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "known_information_boundary": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resources": {}
+      },
+      "required": [
+        "id",
+        "name",
+        "goal",
+        "resources",
+        "hierarchy",
+        "external_relations",
+        "internal_conflict",
+        "known_information_boundary"
+      ],
+      "type": "object"
+    },
+    "item": {
+      "additionalProperties": true,
+      "properties": {
+        "foreshadowing_carrier": {
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^item_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "transfer_rules": {}
+      },
+      "required": [
+        "id",
+        "name",
+        "source",
+        "transfer_rules",
+        "foreshadowing_carrier"
+      ],
+      "type": "object"
+    },
+    "obligation": {
+      "additionalProperties": true,
+      "properties": {
+        "allowed_resolution": {
+          "items": {
+            "enum": [
+              "fulfilled",
+              "subverted",
+              "deferred",
+              "retired"
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "character_visibility": {
+          "minProperties": 1,
+          "type": "object"
+        },
+        "evidence_requirement": {
+          "type": "object"
+        },
+        "expected_window": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "minimum": 1,
+              "type": "integer"
+            }
+          ],
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^ob_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "planted_chapter": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "reader_visibility": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_thread": {
+          "pattern": "^thread_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "weight": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "source_thread",
+        "planted_chapter",
+        "expected_window",
+        "weight",
+        "allowed_resolution",
+        "reader_visibility",
+        "character_visibility",
+        "evidence_requirement"
+      ],
+      "type": "object"
+    },
+    "place": {
+      "additionalProperties": true,
+      "properties": {
+        "accessibility": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "allowed_actions": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "environment_constraints": {
+          "minItems": 1,
+          "type": "array"
+        },
+        "first_appearance_chapter": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "id": {
+          "pattern": "^place_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "location": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "location",
+        "accessibility",
+        "environment_constraints",
+        "allowed_actions",
+        "first_appearance_chapter"
+      ],
+      "type": "object"
+    },
+    "thread": {
+      "additionalProperties": true,
+      "properties": {
+        "forbidden_resolution": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^thread_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^char_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        },
+        "progress_metric": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resolution_condition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "start_condition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "turning_points": {
+          "items": {
+            "$ref": "#/$defs/turning_point"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "owner",
+        "start_condition",
+        "progress_metric",
+        "turning_points",
+        "resolution_condition",
+        "forbidden_resolution"
+      ],
+      "type": "object"
+    },
+    "turning_point": {
+      "additionalProperties": true,
+      "properties": {
+        "action": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "irreversible_change": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "target_chapter": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "target_chapter",
+        "action",
+        "irreversible_change"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://novel-production-os.local/schemas/outline-domain.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/character"
+    },
+    {
+      "$ref": "#/$defs/faction"
+    },
+    {
+      "$ref": "#/$defs/place"
+    },
+    {
+      "$ref": "#/$defs/item"
+    },
+    {
+      "$ref": "#/$defs/thread"
+    },
+    {
+      "$ref": "#/$defs/obligation"
+    },
+    {
+      "$ref": "#/$defs/arc"
+    },
+    {
+      "$ref": "#/$defs/chapter"
+    },
+    {
+      "$ref": "#/$defs/beat"
+    }
+  ],
+  "title": "Outline Domain Records v1"
+}

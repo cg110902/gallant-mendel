@@ -1,0 +1,13 @@
+{
+  "authority_event_count": 8,
+  "book_tree_hash": "sha256:7b5d3390ee96cbde62a6b6e0ba5c0ffe2fbfc1b3dc84bcde3d91f19b32a52fd9",
+  "cases_passed": 15,
+  "cases_total": 15,
+  "knowledge_hash": "sha256:4c528ff2ccca0cc75385ee1c6b8e16bf9da6a712e8ba4e09b7c8102ee834e890",
+  "milestone": "M3.2",
+  "output_schema": "knowledge-diff.v1",
+  "query_authority": "event-log-lineage",
+  "temporary_database_created": false,
+  "unexpected_failures": 0,
+  "unit_tests": 196
+}
