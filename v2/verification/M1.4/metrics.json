@@ -1,0 +1,10 @@
+{
+  "cases_passed": 14,
+  "cases_total": 14,
+  "delete_and_rebuild_same_hash": true,
+  "failed_rebuild_preserved_old_database": true,
+  "milestone": "M1.4",
+  "replayed_events": 10,
+  "third_party_dependencies": 0,
+  "unexpected_failures": 0
+}

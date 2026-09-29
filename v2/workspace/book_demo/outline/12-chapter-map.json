@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ch_001",
+    "volume": "vol_01",
+    "arc": "arc_main_01",
+    "purpose": "introduce_conflict",
+    "pov": "char_lin_yun",
+    "location": "place_border_town",
+    "time": {
+      "start": "story:0019-04-01T08:00",
+      "end": "story:0019-04-01T12:00"
+    },
+    "intent": {
+      "required_events": [
+        "event_first_attack"
+      ],
+      "required_changes": [
+        "char_lin_yun.status=exposed"
+      ],
+      "required_hook": "hook_escape_or_truth",
+      "forbidden": [
+        "new_unregistered_faction"
+      ]
+    },
+    "beats": [
+      {
+        "id": "beat_001_01",
+        "kind": "action",
+        "target_words": [
+          500,
+          900
+        ],
+        "complexity": "medium"
+      }
+    ]
+  }
+]

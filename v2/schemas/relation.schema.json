@@ -1,0 +1,79 @@
+{
+  "$id": "https://novel-production-os.local/schemas/relation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence": {
+      "enum": [
+        "confirmed",
+        "probable",
+        "disputed",
+        "candidate"
+      ]
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "object_id": {
+      "pattern": "^(?:(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}|fact_[a-z0-9][a-z0-9_-]{0,95})$",
+      "type": "string"
+    },
+    "predicate": {
+      "enum": [
+        "belongs_to",
+        "knows",
+        "owes",
+        "located_at",
+        "opposes",
+        "possesses",
+        "affects"
+      ]
+    },
+    "recorded_event": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "relation_id": {
+      "pattern": "^rel_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "subject_id": {
+      "pattern": "^(?:(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}|fact_[a-z0-9][a-z0-9_-]{0,95})$",
+      "type": "string"
+    },
+    "valid_from": {
+      "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+      "type": "string"
+    },
+    "valid_to": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^(?:unknown|story:[A-Za-z0-9][A-Za-z0-9:._-]{0,127})$",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "relation_id",
+    "subject_id",
+    "predicate",
+    "object_id",
+    "valid_from",
+    "valid_to",
+    "recorded_event",
+    "confidence",
+    "evidence_refs"
+  ],
+  "title": "core.v3 Relation v1",
+  "type": "object"
+}
