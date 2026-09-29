@@ -1,0 +1,93 @@
+{
+  "$id": "https://novel-production-os.local/schemas/snapshot.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "book_id": {
+      "pattern": "^book_[a-z0-9][a-z0-9_-]{0,62}$",
+      "type": "string"
+    },
+    "branch_id": {
+      "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "files": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "bytes": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "event-lineage",
+              "sqlite-projection",
+              "artifact-manifest"
+            ]
+          },
+          "sha256": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "role",
+          "bytes",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    },
+    "head_event_id": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "label": {
+      "maxLength": 200,
+      "minLength": 1,
+      "type": "string"
+    },
+    "lineage_event_count": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "projection_state_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "snapshot.v1"
+    },
+    "snapshot_id": {
+      "pattern": "^snapshot_[0-9a-f]{32}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "book_id",
+    "branch_id",
+    "label",
+    "created_at",
+    "head_event_id",
+    "lineage_event_count",
+    "projection_state_hash",
+    "files"
+  ],
+  "title": "snapshot.v1 manifest",
+  "type": "object"
+}

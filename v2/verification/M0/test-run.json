@@ -1,0 +1,245 @@
+{
+  "cases": [
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "version"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.042749,
+      "expected_exit_code": 0,
+      "name": "version",
+      "passed": true,
+      "stderr": "",
+      "stdout": "Novel Production OS 0.1.0-dev | phase M3.1 | Python >= 3.11 | API key required: no\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "version",
+        "--json"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.040445,
+      "expected_exit_code": 0,
+      "name": "version_json",
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"api_required\": false, \"phase\": \"M3.1\", \"project\": \"novel-production-os\", \"python_min\": \"3.11\", \"version\": \"0.1.0-dev\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "help"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.043827,
+      "expected_exit_code": 0,
+      "name": "help",
+      "passed": true,
+      "stderr": "",
+      "stdout": "Novel Production OS — deterministic CLI\n\nUsage:\n  python studio.py <command> [options]\n\nAvailable commands:\n  version [--json]                  Show engineering version metadata\n  help [command]                    Show this help or command help\n  doctor [--no-api-key] [--json]    Diagnose the M0 environment\n         [--fixture PATH] [--write-probe PATH]\n  init --path PATH [--force]        Create an M0 workspace skeleton\n  outline validate (--book ID | --path PATH) [--json]\n                                      Validate M2.1–M2.3 outline contracts\n  outline compile (--book ID | --path PATH) [--json]\n                                      Publish an M2.4 compiled generation\n  outline bootstrap (--book ID | --path PATH) [--json]\n                                      Commit an approved M2.5 initial authority batch\n  outline readiness (--book ID | --path PATH) [--json]\n                                      Assess M2.6 first-chapter prerequisites\n  state query (--book ID | --path PATH) --as-of SELECTOR\n              [--valid-at STORY_TIME] [--branch ID] [--json]\n                                      Query M3.1 bitemporal authority state\n\nExamples:\n  python studio.py version --json\n  python studio.py doctor --no-api-key\n  python studio.py init --path workspace/book_demo\n  python studio.py outline validate --book book_demo\n  python studio.py outline compile --book book_demo\n  python studio.py outline bootstrap --book book_demo\n  python studio.py outline readiness --book book_demo\n  python studio.py state query --book book_demo --as-of ch_001\n\nM3.1 state query is read-only and keeps recorded, world, and narrative time separate.\n\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--no-api-key"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.039259,
+      "expected_exit_code": 0,
+      "name": "doctor_no_api_key",
+      "passed": true,
+      "stderr": "",
+      "stdout": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[PASS] temporary_write: write probe passed: /home/user/gallant-mendel/v2\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: no-api-key-ready\ndoctor: PASS\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--no-api-key",
+        "--json"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.039861,
+      "expected_exit_code": 0,
+      "name": "doctor_json",
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"api_key_required\": false, \"checks\": [{\"exit_code_if_failed\": 5, \"id\": \"python_version\", \"message\": \"Python 3.11; minimum is 3.11\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"engineering_root\", \"message\": \"current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agents_file\", \"message\": \"AGENTS.md exists\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"base_directories\", \"message\": \"all M0 base directories exist\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 2, \"id\": \"version_metadata\", \"message\": \"version metadata is readable\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"temporary_write\", \"message\": \"write probe passed: /home/user/gallant-mendel/v2\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"stdlib_json\", \"message\": \"standard-library JSON is available\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"api_key\", \"message\": \"no-api-key-ready\", \"status\": \"pass\"}], \"ok\": true, \"phase\": \"M3.1\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--fixture",
+        "/home/user/gallant-mendel/v2/workspace/_fixture/valid"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.0398,
+      "expected_exit_code": 0,
+      "name": "valid_fixture",
+      "passed": true,
+      "stderr": "",
+      "stdout": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[PASS] temporary_write: write probe passed: /home/user/gallant-mendel/v2\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: API key is optional and was not inspected\n[PASS] fixture_manifest: fixture is valid: /home/user/gallant-mendel/v2/workspace/_fixture/valid\ndoctor: PASS\n"
+    },
+    {
+      "actual_exit_code": 1,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--fixture",
+        "/home/user/gallant-mendel/v2/workspace/_fixture/broken_missing_manifest"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.0426,
+      "expected_exit_code": 1,
+      "name": "missing_manifest",
+      "passed": true,
+      "stderr": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[PASS] temporary_write: write probe passed: /home/user/gallant-mendel/v2\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: API key is optional and was not inspected\n[FAIL] fixture_manifest: fixture manifest is missing: /home/user/gallant-mendel/v2/workspace/_fixture/broken_missing_manifest/manifest.json\ndoctor: FAIL (exit 1)\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--fixture",
+        "/home/user/gallant-mendel/v2/workspace/_fixture/broken_invalid_json"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.040799,
+      "expected_exit_code": 2,
+      "name": "invalid_json",
+      "passed": true,
+      "stderr": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[PASS] temporary_write: write probe passed: /home/user/gallant-mendel/v2\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: API key is optional and was not inspected\n[FAIL] fixture_manifest: fixture manifest is invalid JSON at line 6, column 1\ndoctor: FAIL (exit 2)\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 2,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--fixture",
+        "/home/user/gallant-mendel/v2/workspace/_fixture/broken_missing_field"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.03718,
+      "expected_exit_code": 2,
+      "name": "missing_field",
+      "passed": true,
+      "stderr": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[PASS] temporary_write: write probe passed: /home/user/gallant-mendel/v2\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: API key is optional and was not inspected\n[FAIL] fixture_manifest: fixture manifest is missing field: fixture_id\ndoctor: FAIL (exit 2)\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 1,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "not-a-command"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.036259,
+      "expected_exit_code": 1,
+      "name": "unknown_command",
+      "passed": true,
+      "stderr": "error: unknown command: not-a-command\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 5.030202,
+      "expected_exit_code": 0,
+      "name": "unit_tests",
+      "passed": true,
+      "stderr": "test_builder_creates_core_v3_id_time_and_payload_hash (test_events.EventEnvelopeTests.test_builder_creates_core_v3_id_time_and_payload_hash) ... ok\ntest_builder_detaches_mutable_payload_and_evidence (test_events.EventEnvelopeTests.test_builder_detaches_mutable_payload_and_evidence) ... ok\ntest_validation_rejects_missing_and_unknown_fields (test_events.EventEnvelopeTests.test_validation_rejects_missing_and_unknown_fields) ... ok\ntest_validation_rejects_naive_time_bool_sequence_and_forbidden_actor (test_events.EventEnvelopeTests.test_validation_rejects_naive_time_bool_sequence_and_forbidden_actor) ... ok\ntest_validation_rejects_payload_hash_mismatch (test_events.EventEnvelopeTests.test_validation_rejects_payload_hash_mismatch) ... ok\ntest_append_is_canonical_jsonl_and_updates_head (test_events.EventLogTests.test_append_is_canonical_jsonl_and_updates_head) ... ok\ntest_book_id_cannot_change (test_events.EventLogTests.test_book_id_cannot_change) ... ok\ntest_duplicate_event_is_rejected (test_events.EventLogTests.test_duplicate_event_is_rejected) ... ok\ntest_empty_log_verifies (test_events.EventLogTests.test_empty_log_verifies) ... ok\ntest_head_update_failure_keeps_authoritative_event_for_recovery (test_events.EventLogTests.test_head_update_failure_keeps_authoritative_event_for_recovery) ... ok\ntest_new_branch_must_fork_from_existing_event (test_events.EventLogTests.test_new_branch_must_fork_from_existing_event) ... ok\ntest_parent_chain_tampering_is_detected_even_with_valid_hash (test_events.EventLogTests.test_parent_chain_tampering_is_detected_even_with_valid_hash) ... ok\ntest_parent_conflict_does_not_modify_log (test_events.EventLogTests.test_parent_conflict_does_not_modify_log) ... ok\ntest_payload_tampering_is_detected (test_events.EventLogTests.test_payload_tampering_is_detected) ... ok\ntest_sequential_append_and_read (test_events.EventLogTests.test_sequential_append_and_read) ... ok\ntest_stale_head_is_detected_and_rebuilt (test_events.EventLogTests.test_stale_head_is_detected_and_rebuilt) ... ok\ntest_supersedes_must_reference_prior_event (test_events.EventLogTests.test_supersedes_must_reference_prior_event) ... ok\ntest_truncated_tail_is_detected (test_events.EventLogTests.test_truncated_tail_is_detected) ... ok\ntest_doctor_json_contains_checks (test_m0_cli.M0CliTests.test_doctor_json_contains_checks) ... ok\ntest_doctor_no_api_key_returns_zero (test_m0_cli.M0CliTests.test_doctor_no_api_key_returns_zero) ... ok\ntest_doctor_rejects_wrong_working_directory (test_m0_cli.M0CliTests.test_doctor_rejects_wrong_working_directory) ... ok\ntest_exit_code_document_matches_enum (test_m0_cli.M0CliTests.test_exit_code_document_matches_enum) ... ok\ntest_help_and_topic_return_zero (test_m0_cli.M0CliTests.test_help_and_topic_return_zero) ... ok\ntest_init_creates_only_m0_layout (test_m0_cli.M0CliTests.test_init_creates_only_m0_layout) ... ok\ntest_init_does_not_overwrite_without_force (test_m0_cli.M0CliTests.test_init_does_not_overwrite_without_force) ... ok\ntest_init_force_preserves_unknown_files (test_m0_cli.M0CliTests.test_init_force_preserves_unknown_files) ... ok\ntest_invalid_json_fixture_returns_two (test_m0_cli.M0CliTests.test_invalid_json_fixture_returns_two) ... ok\ntest_missing_manifest_returns_one (test_m0_cli.M0CliTests.test_missing_manifest_returns_one) ... ok\ntest_missing_required_field_returns_two (test_m0_cli.M0CliTests.test_missing_required_field_returns_two) ... ok\ntest_readonly_write_probe_returns_five_or_explicit_skip (test_m0_cli.M0CliTests.test_readonly_write_probe_returns_five_or_explicit_skip) ... ok\ntest_unknown_command_returns_one_on_stderr (test_m0_cli.M0CliTests.test_unknown_command_returns_one_on_stderr) ... ok\ntest_valid_fixture_passes (test_m0_cli.M0CliTests.test_valid_fixture_passes) ... ok\ntest_version_json_is_parseable (test_m0_cli.M0CliTests.test_version_json_is_parseable) ... ok\ntest_version_returns_zero (test_m0_cli.M0CliTests.test_version_returns_zero) ... ok\ntest_every_frozen_facet_type_has_a_working_v1_schema (test_objects.FacetValidationTests.test_every_frozen_facet_type_has_a_working_v1_schema) ... ok\ntest_invalid_time_window_and_empty_source_are_rejected (test_objects.FacetValidationTests.test_invalid_time_window_and_empty_source_are_rejected) ... ok\ntest_numeric_fields_reject_bool_nan_and_out_of_range (test_objects.FacetValidationTests.test_numeric_fields_reject_bool_nan_and_out_of_range) ... ok\ntest_payload_missing_or_unknown_field_is_rejected (test_objects.FacetValidationTests.test_payload_missing_or_unknown_field_is_rejected) ... ok\ntest_unknown_facet_type_and_version_are_rejected (test_objects.FacetValidationTests.test_unknown_facet_type_and_version_are_rejected) ... ok\ntest_complete_bundle_resolves_all_references (test_objects.ModelBundleTests.test_complete_bundle_resolves_all_references) ... ok\ntest_duplicate_ids_are_rejected (test_objects.ModelBundleTests.test_duplicate_ids_are_rejected) ... ok\ntest_unknown_object_fact_relation_and_evidence_refs_are_rejected (test_objects.ModelBundleTests.test_unknown_object_fact_relation_and_evidence_refs_are_rejected) ... ok\ntest_object_rejects_alias_collision_and_self_supersede (test_objects.ObjectValidationTests.test_object_rejects_alias_collision_and_self_supersede) ... ok\ntest_object_rejects_unknown_missing_and_bad_id (test_objects.ObjectValidationTests.test_object_rejects_unknown_missing_and_bad_id) ... ok\ntest_valid_object_is_detached_and_unicode_safe (test_objects.ObjectValidationTests.test_valid_object_is_detached_and_unicode_safe) ... ok\ntest_evidence_rejects_bad_hash_locator_and_unknown_locator_field (test_objects.RelationFactEvidenceTests.test_evidence_rejects_bad_hash_locator_and_unknown_locator_field) ... ok\ntest_fact_rejects_nan_and_natural_language_predicate (test_objects.RelationFactEvidenceTests.test_fact_rejects_nan_and_natural_language_predicate) ... ok\ntest_relation_rejects_natural_language_predicate_and_no_evidence (test_objects.RelationFactEvidenceTests.test_relation_rejects_natural_language_predicate_and_no_evidence) ... ok\ntest_valid_relation_fact_and_evidence (test_objects.RelationFactEvidenceTests.test_valid_relation_fact_and_evidence) ... ok\ntest_all_model_schemas_are_parseable_strict_draft_2020_documents (test_objects.SchemaArtifactTests.test_all_model_schemas_are_parseable_strict_draft_2020_documents) ... ok\ntest_json_loader_rejects_duplicate_keys_nan_and_bad_json (test_outline.LoaderTests.test_json_loader_rejects_duplicate_keys_nan_and_bad_json) ... ok\ntest_yaml_loader_has_explicit_missing_dependency_error (test_outline.LoaderTests.test_yaml_loader_has_explicit_missing_dependency_error) ... ok\ntest_minimal_manifest_is_valid_and_detached (test_outline.ManifestValidationTests.test_minimal_manifest_is_valid_and_detached) ... ok\ntest_missing_unknown_version_and_book_mismatch_are_rejected (test_outline.ManifestValidationTests.test_missing_unknown_version_and_book_mismatch_are_rejected) ... ok\ntest_numeric_range_status_and_approval_rules (test_outline.ManifestValidationTests.test_numeric_range_status_and_approval_rules) ... ok\ntest_cli_error_codes_distinguish_layout_and_format (test_outline.OutlineCliTests.test_cli_error_codes_distinguish_layout_and_format) ... ok\ntest_exact_book_command_validates_demo_package (test_outline.OutlineCliTests.test_exact_book_command_validates_demo_package) ... ok\ntest_manifest_schema_artifact_is_strict_draft_2020 (test_outline.OutlineCliTests.test_manifest_schema_artifact_is_strict_draft_2020) ... ok\ntest_studio_outline_validate_json (test_outline.OutlineCliTests.test_studio_outline_validate_json) ... ok\ntest_non_object_or_array_structured_root_is_rejected (test_outline.OutlinePackageTests.test_non_object_or_array_structured_root_is_rejected) ... ok\ntest_package_hash_changes_with_source_bytes (test_outline.OutlinePackageTests.test_package_hash_changes_with_source_bytes) ... ok\ntest_root_and_nested_source_symlinks_are_rejected (test_outline.OutlinePackageTests.test_root_and_nested_source_symlinks_are_rejected) ... ok\ntest_static_broken_fixtures_fail_at_expected_layer (test_outline.OutlinePackageTests.test_static_broken_fixtures_fail_at_expected_layer) ... ok\ntest_valid_json_package_reports_all_files_and_stable_hash (test_outline.OutlinePackageTests.test_valid_json_package_reports_all_files_and_stable_hash) ... ok\ntest_validation_is_read_only_and_creates_no_compiled_or_authority (test_outline.OutlinePackageTests.test_validation_is_read_only_and_creates_no_compiled_or_authority) ... ok\ntest_cli_draft_returns_human_gate_four (test_outline_bootstrap.BootstrapCliTests.test_cli_draft_returns_human_gate_four) ... ok\ntest_cli_first_and_reused_bootstrap (test_outline_bootstrap.BootstrapCliTests.test_cli_first_and_reused_bootstrap) ... ok\ntest_bootstrap_commits_deterministic_batch_and_projection (test_outline_bootstrap.BootstrapTests.test_bootstrap_commits_deterministic_batch_and_projection) ... ok\ntest_bootstrap_creates_no_contextpack_or_prose (test_outline_bootstrap.BootstrapTests.test_bootstrap_creates_no_contextpack_or_prose) ... ok\ntest_compiled_source_mismatch_stops_before_authority (test_outline_bootstrap.BootstrapTests.test_compiled_source_mismatch_stops_before_authority) ... ok\ntest_draft_manifest_stops_at_human_gate_without_authority (test_outline_bootstrap.BootstrapTests.test_draft_manifest_stops_at_human_gate_without_authority) ... ok\ntest_new_compile_after_bootstrap_cannot_reinitialize_authority (test_outline_bootstrap.BootstrapTests.test_new_compile_after_bootstrap_cannot_reinitialize_authority) ... ok\ntest_partial_bootstrap_prefix_is_integrity_failure (test_outline_bootstrap.BootstrapTests.test_partial_bootstrap_prefix_is_integrity_failure) ... ok\ntest_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection (test_outline_bootstrap.BootstrapTests.test_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection) ... ok\ntest_same_approved_generation_has_identical_event_bytes_across_books (test_outline_bootstrap.BootstrapTests.test_same_approved_generation_has_identical_event_bytes_across_books) ... ok\ntest_unrelated_existing_authority_requires_human_resolution (test_outline_bootstrap.BootstrapTests.test_unrelated_existing_authority_requires_human_resolution) ... ok\ntest_cli_compile_json_and_idempotent_second_run (test_outline_compile.OutlineCompileCliTests.test_cli_compile_json_and_idempotent_second_run) ... ok\ntest_cli_integrity_failure_returns_six (test_outline_compile.OutlineCompileCliTests.test_cli_integrity_failure_returns_six) ... ok\ntest_changed_source_publishes_new_generation_and_preserves_old (test_outline_compile.OutlineCompilerTests.test_changed_source_publishes_new_generation_and_preserves_old) ... ok\ntest_compile_creates_no_authority_files (test_outline_compile.OutlineCompilerTests.test_compile_creates_no_authority_files) ... ok\ntest_compile_publishes_content_addressed_generation (test_outline_compile.OutlineCompilerTests.test_compile_publishes_content_addressed_generation) ... ok\ntest_compiled_protocol_schemas_are_strict (test_outline_compile.OutlineCompilerTests.test_compiled_protocol_schemas_are_strict) ... ok\ntest_compiled_symlink_is_rejected (test_outline_compile.OutlineCompilerTests.test_compiled_symlink_is_rejected) ... ok\ntest_invalid_outline_creates_no_compiled_directory (test_outline_compile.OutlineCompilerTests.test_invalid_outline_creates_no_compiled_directory) ... ok\ntest_manifest_is_json_compatible_yaml_and_report_has_no_clock (test_outline_compile.OutlineCompilerTests.test_manifest_is_json_compatible_yaml_and_report_has_no_clock) ... ok\ntest_pointer_fault_preserves_old_pointer_and_removes_new_generation (test_outline_compile.OutlineCompilerTests.test_pointer_fault_preserves_old_pointer_and_removes_new_generation) ... ok\ntest_same_input_is_idempotent_and_reuses_verified_generation (test_outline_compile.OutlineCompilerTests.test_same_input_is_idempotent_and_reuses_verified_generation) ... ok\ntest_tampered_generation_is_rejected_not_overwritten (test_outline_compile.OutlineCompilerTests.test_tampered_generation_is_rejected_not_overwritten) ... ok\ntest_cli_domain_failure_returns_two_and_diagnostics (test_outline_domain.OutlineDomainCliTests.test_cli_domain_failure_returns_two_and_diagnostics) ... ok\ntest_cli_success_includes_domain_summary (test_outline_domain.OutlineDomainCliTests.test_cli_success_includes_domain_summary) ... ok\ntest_arc_requires_states_turns_range_and_obligation_arrays (test_outline_domain.OutlineDomainTests.test_arc_requires_states_turns_range_and_obligation_arrays) ... ok\ntest_beat_requires_valid_word_window_kind_and_complexity (test_outline_domain.OutlineDomainTests.test_beat_requires_valid_word_window_kind_and_complexity) ... ok\ntest_chapter_missing_purpose_and_hook_have_specific_codes (test_outline_domain.OutlineDomainTests.test_chapter_missing_purpose_and_hook_have_specific_codes) ... ok\ntest_character_requires_motive_constraint_state_role_and_arc (test_outline_domain.OutlineDomainTests.test_character_requires_motive_constraint_state_role_and_arc) ... ok\ntest_complete_domain_fixture_has_deterministic_counts (test_outline_domain.OutlineDomainTests.test_complete_domain_fixture_has_deterministic_counts) ... ok\ntest_domain_schema_artifact_defines_nine_record_types (test_outline_domain.OutlineDomainTests.test_domain_schema_artifact_defines_nine_record_types) ... ok\ntest_domain_validation_is_read_only (test_outline_domain.OutlineDomainTests.test_domain_validation_is_read_only) ... ok\ntest_faction_place_and_item_required_boundaries (test_outline_domain.OutlineDomainTests.test_faction_place_and_item_required_boundaries) ... ok\ntest_obligation_resolution_window_weight_and_evidence (test_outline_domain.OutlineDomainTests.test_obligation_resolution_window_weight_and_evidence) ... ok\ntest_thread_turning_point_is_executable (test_outline_domain.OutlineDomainTests.test_thread_turning_point_is_executable) ... ok\ntest_unbounded_character_has_specific_diagnostic (test_outline_domain.OutlineDomainTests.test_unbounded_character_has_specific_diagnostic) ... ok\ntest_unknown_explanatory_fields_are_forward_compatible (test_outline_domain.OutlineDomainTests.test_unknown_explanatory_fields_are_forward_compatible) ... ok\ntest_cli_ready_and_prebootstrap_exit_three (test_outline_readiness.ReadinessCliTests.test_cli_ready_and_prebootstrap_exit_three) ... ok\ntest_first_chapter_prerequisites_are_ready (test_outline_readiness.ReadinessTests.test_first_chapter_prerequisites_are_ready) ... ok\ntest_later_authority_event_does_not_hide_bootstrap_marker (test_outline_readiness.ReadinessTests.test_later_authority_event_does_not_hide_bootstrap_marker) ... ok\ntest_outline_change_after_bootstrap_is_not_ready (test_outline_readiness.ReadinessTests.test_outline_change_after_bootstrap_is_not_ready) ... ok\ntest_readiness_before_bootstrap_is_hard_failure (test_outline_readiness.ReadinessTests.test_readiness_before_bootstrap_is_hard_failure) ... ok\ntest_report_is_deterministic_and_read_only (test_outline_readiness.ReadinessTests.test_report_is_deterministic_and_read_only) ... ok\ntest_tampered_compiled_prerequisite_is_integrity_failure (test_outline_readiness.ReadinessTests.test_tampered_compiled_prerequisite_is_integrity_failure) ... ok\ntest_cli_failure_contains_ordered_diagnostics (test_outline_semantics.OutlineSemanticCliTests.test_cli_failure_contains_ordered_diagnostics) ... ok\ntest_cli_success_contains_semantic_summary (test_outline_semantics.OutlineSemanticCliTests.test_cli_success_contains_semantic_summary) ... ok\ntest_alias_collision_is_scoped_to_object_kind (test_outline_semantics.OutlineSemanticTests.test_alias_collision_is_scoped_to_object_kind) ... ok\ntest_diagnostics_are_deterministic (test_outline_semantics.OutlineSemanticTests.test_diagnostics_are_deterministic) ... ok\ntest_duplicate_id_is_rejected (test_outline_semantics.OutlineSemanticTests.test_duplicate_id_is_rejected) ... ok\ntest_missing_and_wrong_prefix_id_are_rejected (test_outline_semantics.OutlineSemanticTests.test_missing_and_wrong_prefix_id_are_rejected) ... ok\ntest_time_window_and_format_are_checked_without_chapter_monotonicity (test_outline_semantics.OutlineSemanticTests.test_time_window_and_format_are_checked_without_chapter_monotonicity) ... ok\ntest_timeline_cycle_is_rejected (test_outline_semantics.OutlineSemanticTests.test_timeline_cycle_is_rejected) ... ok\ntest_unknown_and_invalid_references_are_distinct (test_outline_semantics.OutlineSemanticTests.test_unknown_and_invalid_references_are_distinct) ... ok\ntest_unrecognized_nonempty_root_is_rejected (test_outline_semantics.OutlineSemanticTests.test_unrecognized_nonempty_root_is_rejected) ... ok\ntest_valid_semantic_package_has_deterministic_summary (test_outline_semantics.OutlineSemanticTests.test_valid_semantic_package_has_deterministic_summary) ... ok\ntest_validation_remains_read_only (test_outline_semantics.OutlineSemanticTests.test_validation_remains_read_only) ... ok\ntest_branch_projection_inherits_only_lineage_ancestors (test_projection.ProjectionTests.test_branch_projection_inherits_only_lineage_ancestors) ... ok\ntest_failed_rebuild_preserves_old_database_bytes (test_projection.ProjectionTests.test_failed_rebuild_preserves_old_database_bytes) ... ok\ntest_get_object_decodes_json_fields (test_projection.ProjectionTests.test_get_object_decodes_json_fields) ... ok\ntest_incremental_update_applies_only_new_suffix (test_projection.ProjectionTests.test_incremental_update_applies_only_new_suffix) ... ok\ntest_invalid_incremental_event_rolls_back_entire_transaction (test_projection.ProjectionTests.test_invalid_incremental_event_rolls_back_entire_transaction) ... ok\ntest_non_business_event_is_audited_without_changing_domain_tables (test_projection.ProjectionTests.test_non_business_event_is_audited_without_changing_domain_tables) ... ok\ntest_rebuild_applies_ten_events_and_current_state (test_projection.ProjectionTests.test_rebuild_applies_ten_events_and_current_state) ... ok\ntest_rebuild_is_logically_deterministic_and_survives_database_deletion (test_projection.ProjectionTests.test_rebuild_is_logically_deterministic_and_survives_database_deletion) ... ok\ntest_schema_metadata_and_foreign_keys_are_frozen (test_projection.ProjectionTests.test_schema_metadata_and_foreign_keys_are_frozen) ... ok\ntest_stale_metadata_is_rejected (test_projection.ProjectionTests.test_stale_metadata_is_rejected) ... ok\ntest_batch_is_fully_validated_before_writing (test_snapshots.BatchAppendTests.test_batch_is_fully_validated_before_writing) ... ok\ntest_batch_results_have_contiguous_lines_and_offsets (test_snapshots.BatchAppendTests.test_batch_results_have_contiguous_lines_and_offsets) ... ok\ntest_artifact_boundary_rejects_reserved_outside_and_symlink (test_snapshots.SnapshotTests.test_artifact_boundary_rejects_reserved_outside_and_symlink) ... ok\ntest_create_and_validate_complete_snapshot (test_snapshots.SnapshotTests.test_create_and_validate_complete_snapshot) ... ok\ntest_event_artifact_and_sqlite_tampering_are_rejected (test_snapshots.SnapshotTests.test_event_artifact_and_sqlite_tampering_are_rejected) ... ok\ntest_failed_publish_cleans_temporary_snapshot_and_preserves_source (test_snapshots.SnapshotTests.test_failed_publish_cleans_temporary_snapshot_and_preserves_source) ... ok\ntest_restore_refuses_existing_target_without_modifying_it (test_snapshots.SnapshotTests.test_restore_refuses_existing_target_without_modifying_it) ... ok\ntest_restore_to_new_book_preserves_head_state_and_artifact (test_snapshots.SnapshotTests.test_restore_to_new_book_preserves_head_state_and_artifact) ... ok\ntest_undeclared_file_and_manifest_unknown_field_are_rejected (test_snapshots.SnapshotTests.test_undeclared_file_and_manifest_unknown_field_are_rejected) ... ok\ntest_validation_is_read_only (test_snapshots.SnapshotTests.test_validation_is_read_only) ... ok\ntest_atomic_json_uses_canonical_protocol_bytes (test_storage.AtomicWriteTests.test_atomic_json_uses_canonical_protocol_bytes) ... ok\ntest_explicit_mode_is_applied (test_storage.AtomicWriteTests.test_explicit_mode_is_applied) ... ok\ntest_fault_before_replace_preserves_old_file_and_cleans_temp (test_storage.AtomicWriteTests.test_fault_before_replace_preserves_old_file_and_cleans_temp) ... ok\ntest_missing_parent_is_rejected_without_side_effect (test_storage.AtomicWriteTests.test_missing_parent_is_rejected_without_side_effect) ... ok\ntest_new_file_is_atomically_written_and_hashed (test_storage.AtomicWriteTests.test_new_file_is_atomically_written_and_hashed) ... ok\ntest_non_file_destination_is_rejected (test_storage.AtomicWriteTests.test_non_file_destination_is_rejected) ... ok\ntest_replace_failure_preserves_old_file (test_storage.AtomicWriteTests.test_replace_failure_preserves_old_file) ... ok\ntest_replacement_reports_previous_hash_and_preserves_mode (test_storage.AtomicWriteTests.test_replacement_reports_previous_hash_and_preserves_mode) ... ok\ntest_quarantine_preserves_bytes_and_writes_metadata (test_storage.QuarantineTests.test_quarantine_preserves_bytes_and_writes_metadata) ... ok\ntest_quarantine_rejects_empty_reason_without_moving_file (test_storage.QuarantineTests.test_quarantine_rejects_empty_reason_without_moving_file) ... ok\ntest_canonical_json_is_stable_utf8_without_newline (test_storage.StorageHashTests.test_canonical_json_is_stable_utf8_without_newline) ... ok\ntest_canonical_json_rejects_nonstandard_nan (test_storage.StorageHashTests.test_canonical_json_rejects_nonstandard_nan) ... ok\ntest_file_hash_streams_and_verifies (test_storage.StorageHashTests.test_file_hash_streams_and_verifies) ... ok\ntest_raw_byte_hash_uses_protocol_format (test_storage.StorageHashTests.test_raw_byte_hash_uses_protocol_format) ... ok\ntest_verify_rejects_malformed_hash (test_storage.StorageHashTests.test_verify_rejects_malformed_hash) ... ok\ntest_chapter_cutoff_is_longest_prefix_and_head_folds_rename (test_temporal.TemporalQueryTests.test_chapter_cutoff_is_longest_prefix_and_head_folds_rename) ... ok\ntest_cli_json_and_exit_codes (test_temporal.TemporalQueryTests.test_cli_json_and_exit_codes) ... ok\ntest_complete_domain_fold_matches_recorded_and_valid_state (test_temporal.TemporalQueryTests.test_complete_domain_fold_matches_recorded_and_valid_state) ... ok\ntest_event_cutoff_prevents_future_recorded_assertion_leak (test_temporal.TemporalQueryTests.test_event_cutoff_prevents_future_recorded_assertion_leak) ... ok\ntest_invalid_selectors_are_input_errors (test_temporal.TemporalQueryTests.test_invalid_selectors_are_input_errors) ... ok\ntest_nonmonotonic_story_sequence_only_blocks_chapter_query (test_temporal.TemporalQueryTests.test_nonmonotonic_story_sequence_only_blocks_chapter_query) ... ok\ntest_query_is_byte_read_only_and_hash_deterministic (test_temporal.TemporalQueryTests.test_query_is_byte_read_only_and_hash_deterministic) ... ok\ntest_valid_window_is_half_open_and_unknown_does_not_match (test_temporal.TemporalQueryTests.test_valid_window_is_half_open_and_unknown_does_not_match) ... ok\n\n----------------------------------------------------------------------\nRan 164 tests in 4.931s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "init",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/initialized"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.038181,
+      "expected_exit_code": 0,
+      "name": "init",
+      "passed": true,
+      "stderr": "",
+      "stdout": "initialized M0 workspace: /home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/initialized\n"
+    },
+    {
+      "actual_exit_code": 1,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "init",
+        "--path",
+        "/home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/initialized"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.038666,
+      "expected_exit_code": 1,
+      "name": "duplicate_init",
+      "passed": true,
+      "stderr": "error: target already exists; use --force to refresh it: /home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/initialized\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 5,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "doctor",
+        "--write-probe",
+        "/home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/readonly"
+      ],
+      "cwd": "/home/user/gallant-mendel/v2",
+      "duration_seconds": 0.038242,
+      "expected_exit_code": 5,
+      "name": "readonly_probe",
+      "passed": true,
+      "stderr": "[PASS] python_version: Python 3.11; minimum is 3.11\n[PASS] engineering_root: current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\n[PASS] agents_file: AGENTS.md exists\n[PASS] base_directories: all M0 base directories exist\n[PASS] version_metadata: version metadata is readable\n[FAIL] temporary_write: write probe failed at /home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/readonly: [Errno 13] Permission denied: '/home/user/gallant-mendel/v2/verification/M0/tmp/verify-fgh5x35b/readonly/m0-doctor-epmmde2p'\n[PASS] stdlib_json: standard-library JSON is available\n[PASS] api_key: API key is optional and was not inspected\ndoctor: FAIL (exit 5)\n",
+      "stdout": ""
+    }
+  ],
+  "completed_at": "2026-09-29T10:46:34.287758+00:00",
+  "milestone": "M0",
+  "python": "3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]",
+  "schema_version": "m0.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 14,
+    "total": 14
+  }
+}
