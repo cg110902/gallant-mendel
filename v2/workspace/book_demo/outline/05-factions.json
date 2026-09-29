@@ -1,0 +1,15 @@
+[
+  {
+    "id": "faction_sword_sect",
+    "name": "剑宗",
+    "goal": "维持边境秩序",
+    "resources": [
+      "disciples",
+      "archives"
+    ],
+    "hierarchy": "sect_ranks",
+    "external_relations": [],
+    "internal_conflict": "守旧派与改革派冲突",
+    "known_information_boundary": "仅长老知晓旧案"
+  }
+]

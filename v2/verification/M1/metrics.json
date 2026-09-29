@@ -1,0 +1,16 @@
+{
+  "append_seconds": 0.3114518470000007,
+  "cases_passed": 3,
+  "cases_total": 3,
+  "event_log_bytes": 4677752,
+  "events_appended": 10000,
+  "milestone": "M1",
+  "projection_seconds": 1.2711873579999917,
+  "rebuild_seconds": 1.124316475000029,
+  "replay_seconds": 0.4656589850000046,
+  "restore_seconds": 1.0531357209999896,
+  "restored_head_matches": true,
+  "snapshot_seconds": 1.3218838920000167,
+  "third_party_dependencies": 0,
+  "unexpected_failures": 0
+}

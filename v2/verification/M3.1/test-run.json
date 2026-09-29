@@ -1,0 +1,1580 @@
+{
+  "cases": [
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "py_compile",
+        "studio.py",
+        "novel_kernel/temporal.py"
+      ],
+      "duration_seconds": 0.031323,
+      "expected_exit_code": 0,
+      "name": "py_compile",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "unittest",
+        "tests/test_temporal.py",
+        "-v"
+      ],
+      "duration_seconds": 0.28766,
+      "expected_exit_code": 0,
+      "name": "temporal_unit_suite",
+      "parsed": null,
+      "passed": true,
+      "stderr": "test_chapter_cutoff_is_longest_prefix_and_head_folds_rename (tests.test_temporal.TemporalQueryTests.test_chapter_cutoff_is_longest_prefix_and_head_folds_rename) ... ok\ntest_cli_json_and_exit_codes (tests.test_temporal.TemporalQueryTests.test_cli_json_and_exit_codes) ... ok\ntest_complete_domain_fold_matches_recorded_and_valid_state (tests.test_temporal.TemporalQueryTests.test_complete_domain_fold_matches_recorded_and_valid_state) ... ok\ntest_event_cutoff_prevents_future_recorded_assertion_leak (tests.test_temporal.TemporalQueryTests.test_event_cutoff_prevents_future_recorded_assertion_leak) ... ok\ntest_invalid_selectors_are_input_errors (tests.test_temporal.TemporalQueryTests.test_invalid_selectors_are_input_errors) ... ok\ntest_nonmonotonic_story_sequence_only_blocks_chapter_query (tests.test_temporal.TemporalQueryTests.test_nonmonotonic_story_sequence_only_blocks_chapter_query) ... ok\ntest_query_is_byte_read_only_and_hash_deterministic (tests.test_temporal.TemporalQueryTests.test_query_is_byte_read_only_and_hash_deterministic) ... ok\ntest_valid_window_is_half_open_and_unknown_does_not_match (tests.test_temporal.TemporalQueryTests.test_valid_window_is_half_open_and_unknown_does_not_match) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.231s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "duration_seconds": 9.170454,
+      "expected_exit_code": 0,
+      "name": "full_regression_suite",
+      "parsed": null,
+      "passed": true,
+      "stderr": "test_cli_reports (test_analytics.AnalyticsTests.test_cli_reports) ... ok\ntest_impact_bfs_structural_radius (test_analytics.AnalyticsTests.test_impact_bfs_structural_radius) ... ok\ntest_impact_depth_guard_and_unknown_object (test_analytics.AnalyticsTests.test_impact_depth_guard_and_unknown_object) ... ok\ntest_tension_is_deterministic (test_analytics.AnalyticsTests.test_tension_is_deterministic) ... ok\ntest_tension_rejects_nonchapter_and_window (test_analytics.AnalyticsTests.test_tension_rejects_nonchapter_and_window) ... ok\ntest_tension_window_counts_and_delta (test_analytics.AnalyticsTests.test_tension_window_counts_and_delta) ... ok\ntest_builder_creates_core_v3_id_time_and_payload_hash (test_events.EventEnvelopeTests.test_builder_creates_core_v3_id_time_and_payload_hash) ... ok\ntest_builder_detaches_mutable_payload_and_evidence (test_events.EventEnvelopeTests.test_builder_detaches_mutable_payload_and_evidence) ... ok\ntest_validation_rejects_missing_and_unknown_fields (test_events.EventEnvelopeTests.test_validation_rejects_missing_and_unknown_fields) ... ok\ntest_validation_rejects_naive_time_bool_sequence_and_forbidden_actor (test_events.EventEnvelopeTests.test_validation_rejects_naive_time_bool_sequence_and_forbidden_actor) ... ok\ntest_validation_rejects_payload_hash_mismatch (test_events.EventEnvelopeTests.test_validation_rejects_payload_hash_mismatch) ... ok\ntest_append_is_canonical_jsonl_and_updates_head (test_events.EventLogTests.test_append_is_canonical_jsonl_and_updates_head) ... ok\ntest_book_id_cannot_change (test_events.EventLogTests.test_book_id_cannot_change) ... ok\ntest_duplicate_event_is_rejected (test_events.EventLogTests.test_duplicate_event_is_rejected) ... ok\ntest_empty_log_verifies (test_events.EventLogTests.test_empty_log_verifies) ... ok\ntest_head_update_failure_keeps_authoritative_event_for_recovery (test_events.EventLogTests.test_head_update_failure_keeps_authoritative_event_for_recovery) ... ok\ntest_new_branch_must_fork_from_existing_event (test_events.EventLogTests.test_new_branch_must_fork_from_existing_event) ... ok\ntest_parent_chain_tampering_is_detected_even_with_valid_hash (test_events.EventLogTests.test_parent_chain_tampering_is_detected_even_with_valid_hash) ... ok\ntest_parent_conflict_does_not_modify_log (test_events.EventLogTests.test_parent_conflict_does_not_modify_log) ... ok\ntest_payload_tampering_is_detected (test_events.EventLogTests.test_payload_tampering_is_detected) ... ok\ntest_sequential_append_and_read (test_events.EventLogTests.test_sequential_append_and_read) ... ok\ntest_stale_head_is_detected_and_rebuilt (test_events.EventLogTests.test_stale_head_is_detected_and_rebuilt) ... ok\ntest_supersedes_must_reference_prior_event (test_events.EventLogTests.test_supersedes_must_reference_prior_event) ... ok\ntest_truncated_tail_is_detected (test_events.EventLogTests.test_truncated_tail_is_detected) ... ok\ntest_approved_prose_change_is_stale (test_extraction.ExtractionTests.test_approved_prose_change_is_stale) ... ok\ntest_cli_extract (test_extraction.ExtractionTests.test_cli_extract) ... ok\ntest_extracts_registered_mentions_claim_delta_and_exact_evidence (test_extraction.ExtractionTests.test_extracts_registered_mentions_claim_delta_and_exact_evidence) ... ok\ntest_idempotence_and_conflicting_artifact (test_extraction.ExtractionTests.test_idempotence_and_conflicting_artifact) ... ok\ntest_plain_prose_is_conservative_not_semantically_complete (test_extraction.ExtractionTests.test_plain_prose_is_conservative_not_semantically_complete) ... ok\ntest_unknown_subject_and_duplicate_json_key_are_rejected (test_extraction.ExtractionTests.test_unknown_subject_and_duplicate_json_key_are_rejected) ... ok\ntest_branch_inherits_ancestors_without_main_suffix_leak (test_knowledge.KnowledgeBoundaryTests.test_branch_inherits_ancestors_without_main_suffix_leak) ... ok\ntest_chapter_diff_keeps_truth_and_knowledge_separate (test_knowledge.KnowledgeBoundaryTests.test_chapter_diff_keeps_truth_and_knowledge_separate) ... ok\ntest_cli_json_success_and_invalid_holder (test_knowledge.KnowledgeBoundaryTests.test_cli_json_success_and_invalid_holder) ... ok\ntest_disputed_truth_remains_known_but_is_not_truth_set (test_knowledge.KnowledgeBoundaryTests.test_disputed_truth_remains_known_but_is_not_truth_set) ... ok\ntest_duplicate_grant_and_orphan_retraction_are_integrity_errors (test_knowledge.KnowledgeBoundaryTests.test_duplicate_grant_and_orphan_retraction_are_integrity_errors) ... ok\ntest_future_recorded_knowledge_does_not_leak_backward (test_knowledge.KnowledgeBoundaryTests.test_future_recorded_knowledge_does_not_leak_backward) ... ok\ntest_query_is_read_only_and_hash_is_deterministic (test_knowledge.KnowledgeBoundaryTests.test_query_is_read_only_and_hash_is_deterministic) ... ok\ntest_reader_cannot_learn_from_outline_or_scene (test_knowledge.KnowledgeBoundaryTests.test_reader_cannot_learn_from_outline_or_scene) ... ok\ntest_retraction_changes_diff_without_deleting_history (test_knowledge.KnowledgeBoundaryTests.test_retraction_changes_diff_without_deleting_history) ... ok\ntest_doctor_json_contains_checks (test_m0_cli.M0CliTests.test_doctor_json_contains_checks) ... ok\ntest_doctor_no_api_key_returns_zero (test_m0_cli.M0CliTests.test_doctor_no_api_key_returns_zero) ... ok\ntest_doctor_rejects_wrong_working_directory (test_m0_cli.M0CliTests.test_doctor_rejects_wrong_working_directory) ... ok\ntest_exit_code_document_matches_enum (test_m0_cli.M0CliTests.test_exit_code_document_matches_enum) ... ok\ntest_help_and_topic_return_zero (test_m0_cli.M0CliTests.test_help_and_topic_return_zero) ... ok\ntest_init_creates_only_m0_layout (test_m0_cli.M0CliTests.test_init_creates_only_m0_layout) ... ok\ntest_init_does_not_overwrite_without_force (test_m0_cli.M0CliTests.test_init_does_not_overwrite_without_force) ... ok\ntest_init_force_preserves_unknown_files (test_m0_cli.M0CliTests.test_init_force_preserves_unknown_files) ... ok\ntest_invalid_json_fixture_returns_two (test_m0_cli.M0CliTests.test_invalid_json_fixture_returns_two) ... ok\ntest_missing_manifest_returns_one (test_m0_cli.M0CliTests.test_missing_manifest_returns_one) ... ok\ntest_missing_required_field_returns_two (test_m0_cli.M0CliTests.test_missing_required_field_returns_two) ... ok\ntest_readonly_write_probe_returns_five_or_explicit_skip (test_m0_cli.M0CliTests.test_readonly_write_probe_returns_five_or_explicit_skip) ... ok\ntest_unknown_command_returns_one_on_stderr (test_m0_cli.M0CliTests.test_unknown_command_returns_one_on_stderr) ... ok\ntest_valid_fixture_passes (test_m0_cli.M0CliTests.test_valid_fixture_passes) ... ok\ntest_version_json_is_parseable (test_m0_cli.M0CliTests.test_version_json_is_parseable) ... ok\ntest_version_returns_zero (test_m0_cli.M0CliTests.test_version_returns_zero) ... ok\ntest_every_frozen_facet_type_has_a_working_v1_schema (test_objects.FacetValidationTests.test_every_frozen_facet_type_has_a_working_v1_schema) ... ok\ntest_invalid_time_window_and_empty_source_are_rejected (test_objects.FacetValidationTests.test_invalid_time_window_and_empty_source_are_rejected) ... ok\ntest_numeric_fields_reject_bool_nan_and_out_of_range (test_objects.FacetValidationTests.test_numeric_fields_reject_bool_nan_and_out_of_range) ... ok\ntest_payload_missing_or_unknown_field_is_rejected (test_objects.FacetValidationTests.test_payload_missing_or_unknown_field_is_rejected) ... ok\ntest_unknown_facet_type_and_version_are_rejected (test_objects.FacetValidationTests.test_unknown_facet_type_and_version_are_rejected) ... ok\ntest_complete_bundle_resolves_all_references (test_objects.ModelBundleTests.test_complete_bundle_resolves_all_references) ... ok\ntest_duplicate_ids_are_rejected (test_objects.ModelBundleTests.test_duplicate_ids_are_rejected) ... ok\ntest_unknown_object_fact_relation_and_evidence_refs_are_rejected (test_objects.ModelBundleTests.test_unknown_object_fact_relation_and_evidence_refs_are_rejected) ... ok\ntest_object_rejects_alias_collision_and_self_supersede (test_objects.ObjectValidationTests.test_object_rejects_alias_collision_and_self_supersede) ... ok\ntest_object_rejects_unknown_missing_and_bad_id (test_objects.ObjectValidationTests.test_object_rejects_unknown_missing_and_bad_id) ... ok\ntest_valid_object_is_detached_and_unicode_safe (test_objects.ObjectValidationTests.test_valid_object_is_detached_and_unicode_safe) ... ok\ntest_evidence_rejects_bad_hash_locator_and_unknown_locator_field (test_objects.RelationFactEvidenceTests.test_evidence_rejects_bad_hash_locator_and_unknown_locator_field) ... ok\ntest_fact_rejects_nan_and_natural_language_predicate (test_objects.RelationFactEvidenceTests.test_fact_rejects_nan_and_natural_language_predicate) ... ok\ntest_relation_rejects_natural_language_predicate_and_no_evidence (test_objects.RelationFactEvidenceTests.test_relation_rejects_natural_language_predicate_and_no_evidence) ... ok\ntest_valid_relation_fact_and_evidence (test_objects.RelationFactEvidenceTests.test_valid_relation_fact_and_evidence) ... ok\ntest_all_model_schemas_are_parseable_strict_draft_2020_documents (test_objects.SchemaArtifactTests.test_all_model_schemas_are_parseable_strict_draft_2020_documents) ... ok\ntest_as_of_lifecycle_and_no_future_leak (test_obligations.ObligationTests.test_as_of_lifecycle_and_no_future_leak) ... ok\ntest_cli_json_and_invalid_filter (test_obligations.ObligationTests.test_cli_json_and_invalid_filter) ... ok\ntest_defer_moves_window_later_and_can_become_overdue (test_obligations.ObligationTests.test_defer_moves_window_later_and_can_become_overdue) ... ok\ntest_insufficient_clues_block_payoff (test_obligations.ObligationTests.test_insufficient_clues_block_payoff) ... ok\ntest_missing_payoff_requirement_is_blocked (test_obligations.ObligationTests.test_missing_payoff_requirement_is_blocked) ... ok\ntest_query_is_read_only_and_deterministic (test_obligations.ObligationTests.test_query_is_read_only_and_deterministic) ... ok\ntest_status_filters (test_obligations.ObligationTests.test_status_filters) ... ok\ntest_subverted_and_retired_are_expressible (test_obligations.ObligationTests.test_subverted_and_retired_are_expressible) ... ok\ntest_terminal_transition_is_blocked (test_obligations.ObligationTests.test_terminal_transition_is_blocked) ... ok\ntest_json_loader_rejects_duplicate_keys_nan_and_bad_json (test_outline.LoaderTests.test_json_loader_rejects_duplicate_keys_nan_and_bad_json) ... ok\ntest_yaml_loader_has_explicit_missing_dependency_error (test_outline.LoaderTests.test_yaml_loader_has_explicit_missing_dependency_error) ... ok\ntest_minimal_manifest_is_valid_and_detached (test_outline.ManifestValidationTests.test_minimal_manifest_is_valid_and_detached) ... ok\ntest_missing_unknown_version_and_book_mismatch_are_rejected (test_outline.ManifestValidationTests.test_missing_unknown_version_and_book_mismatch_are_rejected) ... ok\ntest_numeric_range_status_and_approval_rules (test_outline.ManifestValidationTests.test_numeric_range_status_and_approval_rules) ... ok\ntest_cli_error_codes_distinguish_layout_and_format (test_outline.OutlineCliTests.test_cli_error_codes_distinguish_layout_and_format) ... ok\ntest_exact_book_command_validates_demo_package (test_outline.OutlineCliTests.test_exact_book_command_validates_demo_package) ... ok\ntest_manifest_schema_artifact_is_strict_draft_2020 (test_outline.OutlineCliTests.test_manifest_schema_artifact_is_strict_draft_2020) ... ok\ntest_studio_outline_validate_json (test_outline.OutlineCliTests.test_studio_outline_validate_json) ... ok\ntest_non_object_or_array_structured_root_is_rejected (test_outline.OutlinePackageTests.test_non_object_or_array_structured_root_is_rejected) ... ok\ntest_package_hash_changes_with_source_bytes (test_outline.OutlinePackageTests.test_package_hash_changes_with_source_bytes) ... ok\ntest_root_and_nested_source_symlinks_are_rejected (test_outline.OutlinePackageTests.test_root_and_nested_source_symlinks_are_rejected) ... ok\ntest_static_broken_fixtures_fail_at_expected_layer (test_outline.OutlinePackageTests.test_static_broken_fixtures_fail_at_expected_layer) ... ok\ntest_valid_json_package_reports_all_files_and_stable_hash (test_outline.OutlinePackageTests.test_valid_json_package_reports_all_files_and_stable_hash) ... ok\ntest_validation_is_read_only_and_creates_no_compiled_or_authority (test_outline.OutlinePackageTests.test_validation_is_read_only_and_creates_no_compiled_or_authority) ... ok\ntest_cli_draft_returns_human_gate_four (test_outline_bootstrap.BootstrapCliTests.test_cli_draft_returns_human_gate_four) ... ok\ntest_cli_first_and_reused_bootstrap (test_outline_bootstrap.BootstrapCliTests.test_cli_first_and_reused_bootstrap) ... ok\ntest_bootstrap_commits_deterministic_batch_and_projection (test_outline_bootstrap.BootstrapTests.test_bootstrap_commits_deterministic_batch_and_projection) ... ok\ntest_bootstrap_creates_no_contextpack_or_prose (test_outline_bootstrap.BootstrapTests.test_bootstrap_creates_no_contextpack_or_prose) ... ok\ntest_compiled_source_mismatch_stops_before_authority (test_outline_bootstrap.BootstrapTests.test_compiled_source_mismatch_stops_before_authority) ... ok\ntest_draft_manifest_stops_at_human_gate_without_authority (test_outline_bootstrap.BootstrapTests.test_draft_manifest_stops_at_human_gate_without_authority) ... ok\ntest_new_compile_after_bootstrap_cannot_reinitialize_authority (test_outline_bootstrap.BootstrapTests.test_new_compile_after_bootstrap_cannot_reinitialize_authority) ... ok\ntest_partial_bootstrap_prefix_is_integrity_failure (test_outline_bootstrap.BootstrapTests.test_partial_bootstrap_prefix_is_integrity_failure) ... ok\ntest_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection (test_outline_bootstrap.BootstrapTests.test_repeated_bootstrap_is_idempotent_and_recovers_deleted_projection) ... ok\ntest_same_approved_generation_has_identical_event_bytes_across_books (test_outline_bootstrap.BootstrapTests.test_same_approved_generation_has_identical_event_bytes_across_books) ... ok\ntest_unrelated_existing_authority_requires_human_resolution (test_outline_bootstrap.BootstrapTests.test_unrelated_existing_authority_requires_human_resolution) ... ok\ntest_cli_compile_json_and_idempotent_second_run (test_outline_compile.OutlineCompileCliTests.test_cli_compile_json_and_idempotent_second_run) ... ok\ntest_cli_integrity_failure_returns_six (test_outline_compile.OutlineCompileCliTests.test_cli_integrity_failure_returns_six) ... ok\ntest_changed_source_publishes_new_generation_and_preserves_old (test_outline_compile.OutlineCompilerTests.test_changed_source_publishes_new_generation_and_preserves_old) ... ok\ntest_compile_creates_no_authority_files (test_outline_compile.OutlineCompilerTests.test_compile_creates_no_authority_files) ... ok\ntest_compile_publishes_content_addressed_generation (test_outline_compile.OutlineCompilerTests.test_compile_publishes_content_addressed_generation) ... ok\ntest_compiled_protocol_schemas_are_strict (test_outline_compile.OutlineCompilerTests.test_compiled_protocol_schemas_are_strict) ... ok\ntest_compiled_symlink_is_rejected (test_outline_compile.OutlineCompilerTests.test_compiled_symlink_is_rejected) ... ok\ntest_invalid_outline_creates_no_compiled_directory (test_outline_compile.OutlineCompilerTests.test_invalid_outline_creates_no_compiled_directory) ... ok\ntest_manifest_is_json_compatible_yaml_and_report_has_no_clock (test_outline_compile.OutlineCompilerTests.test_manifest_is_json_compatible_yaml_and_report_has_no_clock) ... ok\ntest_pointer_fault_preserves_old_pointer_and_removes_new_generation (test_outline_compile.OutlineCompilerTests.test_pointer_fault_preserves_old_pointer_and_removes_new_generation) ... ok\ntest_same_input_is_idempotent_and_reuses_verified_generation (test_outline_compile.OutlineCompilerTests.test_same_input_is_idempotent_and_reuses_verified_generation) ... ok\ntest_tampered_generation_is_rejected_not_overwritten (test_outline_compile.OutlineCompilerTests.test_tampered_generation_is_rejected_not_overwritten) ... ok\ntest_cli_domain_failure_returns_two_and_diagnostics (test_outline_domain.OutlineDomainCliTests.test_cli_domain_failure_returns_two_and_diagnostics) ... ok\ntest_cli_success_includes_domain_summary (test_outline_domain.OutlineDomainCliTests.test_cli_success_includes_domain_summary) ... ok\ntest_arc_requires_states_turns_range_and_obligation_arrays (test_outline_domain.OutlineDomainTests.test_arc_requires_states_turns_range_and_obligation_arrays) ... ok\ntest_beat_requires_valid_word_window_kind_and_complexity (test_outline_domain.OutlineDomainTests.test_beat_requires_valid_word_window_kind_and_complexity) ... ok\ntest_chapter_missing_purpose_and_hook_have_specific_codes (test_outline_domain.OutlineDomainTests.test_chapter_missing_purpose_and_hook_have_specific_codes) ... ok\ntest_character_requires_motive_constraint_state_role_and_arc (test_outline_domain.OutlineDomainTests.test_character_requires_motive_constraint_state_role_and_arc) ... ok\ntest_complete_domain_fixture_has_deterministic_counts (test_outline_domain.OutlineDomainTests.test_complete_domain_fixture_has_deterministic_counts) ... ok\ntest_domain_schema_artifact_defines_nine_record_types (test_outline_domain.OutlineDomainTests.test_domain_schema_artifact_defines_nine_record_types) ... ok\ntest_domain_validation_is_read_only (test_outline_domain.OutlineDomainTests.test_domain_validation_is_read_only) ... ok\ntest_faction_place_and_item_required_boundaries (test_outline_domain.OutlineDomainTests.test_faction_place_and_item_required_boundaries) ... ok\ntest_obligation_resolution_window_weight_and_evidence (test_outline_domain.OutlineDomainTests.test_obligation_resolution_window_weight_and_evidence) ... ok\ntest_thread_turning_point_is_executable (test_outline_domain.OutlineDomainTests.test_thread_turning_point_is_executable) ... ok\ntest_unbounded_character_has_specific_diagnostic (test_outline_domain.OutlineDomainTests.test_unbounded_character_has_specific_diagnostic) ... ok\ntest_unknown_explanatory_fields_are_forward_compatible (test_outline_domain.OutlineDomainTests.test_unknown_explanatory_fields_are_forward_compatible) ... ok\ntest_cli_ready_and_prebootstrap_exit_three (test_outline_readiness.ReadinessCliTests.test_cli_ready_and_prebootstrap_exit_three) ... ok\ntest_first_chapter_prerequisites_are_ready (test_outline_readiness.ReadinessTests.test_first_chapter_prerequisites_are_ready) ... ok\ntest_later_authority_event_does_not_hide_bootstrap_marker (test_outline_readiness.ReadinessTests.test_later_authority_event_does_not_hide_bootstrap_marker) ... ok\ntest_outline_change_after_bootstrap_is_not_ready (test_outline_readiness.ReadinessTests.test_outline_change_after_bootstrap_is_not_ready) ... ok\ntest_readiness_before_bootstrap_is_hard_failure (test_outline_readiness.ReadinessTests.test_readiness_before_bootstrap_is_hard_failure) ... ok\ntest_report_is_deterministic_and_read_only (test_outline_readiness.ReadinessTests.test_report_is_deterministic_and_read_only) ... ok\ntest_tampered_compiled_prerequisite_is_integrity_failure (test_outline_readiness.ReadinessTests.test_tampered_compiled_prerequisite_is_integrity_failure) ... ok\ntest_cli_failure_contains_ordered_diagnostics (test_outline_semantics.OutlineSemanticCliTests.test_cli_failure_contains_ordered_diagnostics) ... ok\ntest_cli_success_contains_semantic_summary (test_outline_semantics.OutlineSemanticCliTests.test_cli_success_contains_semantic_summary) ... ok\ntest_alias_collision_is_scoped_to_object_kind (test_outline_semantics.OutlineSemanticTests.test_alias_collision_is_scoped_to_object_kind) ... ok\ntest_diagnostics_are_deterministic (test_outline_semantics.OutlineSemanticTests.test_diagnostics_are_deterministic) ... ok\ntest_duplicate_id_is_rejected (test_outline_semantics.OutlineSemanticTests.test_duplicate_id_is_rejected) ... ok\ntest_missing_and_wrong_prefix_id_are_rejected (test_outline_semantics.OutlineSemanticTests.test_missing_and_wrong_prefix_id_are_rejected) ... ok\ntest_time_window_and_format_are_checked_without_chapter_monotonicity (test_outline_semantics.OutlineSemanticTests.test_time_window_and_format_are_checked_without_chapter_monotonicity) ... ok\ntest_timeline_cycle_is_rejected (test_outline_semantics.OutlineSemanticTests.test_timeline_cycle_is_rejected) ... ok\ntest_unknown_and_invalid_references_are_distinct (test_outline_semantics.OutlineSemanticTests.test_unknown_and_invalid_references_are_distinct) ... ok\ntest_unrecognized_nonempty_root_is_rejected (test_outline_semantics.OutlineSemanticTests.test_unrecognized_nonempty_root_is_rejected) ... ok\ntest_valid_semantic_package_has_deterministic_summary (test_outline_semantics.OutlineSemanticTests.test_valid_semantic_package_has_deterministic_summary) ... ok\ntest_validation_remains_read_only (test_outline_semantics.OutlineSemanticTests.test_validation_remains_read_only) ... ok\ntest_cli_plan_and_build (test_production.ProductionTests.test_cli_plan_and_build) ... ok\ntest_dag_has_future_gates (test_production.ProductionTests.test_dag_has_future_gates) ... ok\ntest_only_next_ready_chapter_can_plan (test_production.ProductionTests.test_only_next_ready_chapter_can_plan) ... ok\ntest_plan_and_context_are_deterministic_and_scoped (test_production.ProductionTests.test_plan_and_context_are_deterministic_and_scoped) ... ok\ntest_stale_compile_pointer_blocks_context (test_production.ProductionTests.test_stale_compile_pointer_blocks_context) ... ok\ntest_stale_head_blocks_context (test_production.ProductionTests.test_stale_head_blocks_context) ... ok\ntest_branch_projection_inherits_only_lineage_ancestors (test_projection.ProjectionTests.test_branch_projection_inherits_only_lineage_ancestors) ... ok\ntest_failed_rebuild_preserves_old_database_bytes (test_projection.ProjectionTests.test_failed_rebuild_preserves_old_database_bytes) ... ok\ntest_get_object_decodes_json_fields (test_projection.ProjectionTests.test_get_object_decodes_json_fields) ... ok\ntest_incremental_update_applies_only_new_suffix (test_projection.ProjectionTests.test_incremental_update_applies_only_new_suffix) ... ok\ntest_invalid_incremental_event_rolls_back_entire_transaction (test_projection.ProjectionTests.test_invalid_incremental_event_rolls_back_entire_transaction) ... ok\ntest_non_business_event_is_audited_without_changing_domain_tables (test_projection.ProjectionTests.test_non_business_event_is_audited_without_changing_domain_tables) ... ok\ntest_rebuild_applies_ten_events_and_current_state (test_projection.ProjectionTests.test_rebuild_applies_ten_events_and_current_state) ... ok\ntest_rebuild_is_logically_deterministic_and_survives_database_deletion (test_projection.ProjectionTests.test_rebuild_is_logically_deterministic_and_survives_database_deletion) ... ok\ntest_schema_metadata_and_foreign_keys_are_frozen (test_projection.ProjectionTests.test_schema_metadata_and_foreign_keys_are_frozen) ... ok\ntest_stale_metadata_is_rejected (test_projection.ProjectionTests.test_stale_metadata_is_rejected) ... ok\ntest_context_budget_is_checked_before_transport (test_provider_runtime.ProviderRuntimeTests.test_context_budget_is_checked_before_transport) ... ok\ntest_endpoint_and_credentials_are_validated (test_provider_runtime.ProviderRuntimeTests.test_endpoint_and_credentials_are_validated) ... ok\ntest_http_failure_does_not_capture_body_or_key (test_provider_runtime.ProviderRuntimeTests.test_http_failure_does_not_capture_body_or_key) ... ok\ntest_output_and_usage_budget_are_hard_failures (test_provider_runtime.ProviderRuntimeTests.test_output_and_usage_budget_are_hard_failures) ... ok\ntest_success_has_bounded_request_and_usage (test_provider_runtime.ProviderRuntimeTests.test_success_has_bounded_request_and_usage) ... ok\ntest_all_seven_classifications_are_deterministic (test_reconcile.ReconcileTests.test_all_seven_classifications_are_deterministic) ... ok\ntest_before_reality_required_items_are_missing (test_reconcile.ReconcileTests.test_before_reality_required_items_are_missing) ... ok\ntest_cli_json_and_unknown_scope (test_reconcile.ReconcileTests.test_cli_json_and_unknown_scope) ... ok\ntest_duplicate_reality_is_integrity_error (test_reconcile.ReconcileTests.test_duplicate_reality_is_integrity_error) ... ok\ntest_future_reality_does_not_leak_to_chapter_zero (test_reconcile.ReconcileTests.test_future_reality_does_not_leak_to_chapter_zero) ... ok\ntest_invalid_approval_reference_is_integrity_error (test_reconcile.ReconcileTests.test_invalid_approval_reference_is_integrity_error) ... ok\ntest_read_only_and_stable_hash (test_reconcile.ReconcileTests.test_read_only_and_stable_hash) ... ok\ntest_reality_source_must_match_committed_chapter (test_reconcile.ReconcileTests.test_reality_source_must_match_committed_chapter) ... ok\ntest_batch_is_fully_validated_before_writing (test_snapshots.BatchAppendTests.test_batch_is_fully_validated_before_writing) ... ok\ntest_batch_results_have_contiguous_lines_and_offsets (test_snapshots.BatchAppendTests.test_batch_results_have_contiguous_lines_and_offsets) ... ok\ntest_artifact_boundary_rejects_reserved_outside_and_symlink (test_snapshots.SnapshotTests.test_artifact_boundary_rejects_reserved_outside_and_symlink) ... ok\ntest_create_and_validate_complete_snapshot (test_snapshots.SnapshotTests.test_create_and_validate_complete_snapshot) ... ok\ntest_event_artifact_and_sqlite_tampering_are_rejected (test_snapshots.SnapshotTests.test_event_artifact_and_sqlite_tampering_are_rejected) ... ok\ntest_failed_publish_cleans_temporary_snapshot_and_preserves_source (test_snapshots.SnapshotTests.test_failed_publish_cleans_temporary_snapshot_and_preserves_source) ... ok\ntest_restore_refuses_existing_target_without_modifying_it (test_snapshots.SnapshotTests.test_restore_refuses_existing_target_without_modifying_it) ... ok\ntest_restore_to_new_book_preserves_head_state_and_artifact (test_snapshots.SnapshotTests.test_restore_to_new_book_preserves_head_state_and_artifact) ... ok\ntest_undeclared_file_and_manifest_unknown_field_are_rejected (test_snapshots.SnapshotTests.test_undeclared_file_and_manifest_unknown_field_are_rejected) ... ok\ntest_validation_is_read_only (test_snapshots.SnapshotTests.test_validation_is_read_only) ... ok\ntest_atomic_json_uses_canonical_protocol_bytes (test_storage.AtomicWriteTests.test_atomic_json_uses_canonical_protocol_bytes) ... ok\ntest_explicit_mode_is_applied (test_storage.AtomicWriteTests.test_explicit_mode_is_applied) ... ok\ntest_fault_before_replace_preserves_old_file_and_cleans_temp (test_storage.AtomicWriteTests.test_fault_before_replace_preserves_old_file_and_cleans_temp) ... ok\ntest_missing_parent_is_rejected_without_side_effect (test_storage.AtomicWriteTests.test_missing_parent_is_rejected_without_side_effect) ... ok\ntest_new_file_is_atomically_written_and_hashed (test_storage.AtomicWriteTests.test_new_file_is_atomically_written_and_hashed) ... ok\ntest_non_file_destination_is_rejected (test_storage.AtomicWriteTests.test_non_file_destination_is_rejected) ... ok\ntest_replace_failure_preserves_old_file (test_storage.AtomicWriteTests.test_replace_failure_preserves_old_file) ... ok\ntest_replacement_reports_previous_hash_and_preserves_mode (test_storage.AtomicWriteTests.test_replacement_reports_previous_hash_and_preserves_mode) ... ok\ntest_quarantine_preserves_bytes_and_writes_metadata (test_storage.QuarantineTests.test_quarantine_preserves_bytes_and_writes_metadata) ... ok\ntest_quarantine_rejects_empty_reason_without_moving_file (test_storage.QuarantineTests.test_quarantine_rejects_empty_reason_without_moving_file) ... ok\ntest_canonical_json_is_stable_utf8_without_newline (test_storage.StorageHashTests.test_canonical_json_is_stable_utf8_without_newline) ... ok\ntest_canonical_json_rejects_nonstandard_nan (test_storage.StorageHashTests.test_canonical_json_rejects_nonstandard_nan) ... ok\ntest_file_hash_streams_and_verifies (test_storage.StorageHashTests.test_file_hash_streams_and_verifies) ... ok\ntest_raw_byte_hash_uses_protocol_format (test_storage.StorageHashTests.test_raw_byte_hash_uses_protocol_format) ... ok\ntest_verify_rejects_malformed_hash (test_storage.StorageHashTests.test_verify_rejects_malformed_hash) ... ok\ntest_chapter_cutoff_is_longest_prefix_and_head_folds_rename (test_temporal.TemporalQueryTests.test_chapter_cutoff_is_longest_prefix_and_head_folds_rename) ... ok\ntest_cli_json_and_exit_codes (test_temporal.TemporalQueryTests.test_cli_json_and_exit_codes) ... ok\ntest_complete_domain_fold_matches_recorded_and_valid_state (test_temporal.TemporalQueryTests.test_complete_domain_fold_matches_recorded_and_valid_state) ... ok\ntest_event_cutoff_prevents_future_recorded_assertion_leak (test_temporal.TemporalQueryTests.test_event_cutoff_prevents_future_recorded_assertion_leak) ... ok\ntest_invalid_selectors_are_input_errors (test_temporal.TemporalQueryTests.test_invalid_selectors_are_input_errors) ... ok\ntest_nonmonotonic_story_sequence_only_blocks_chapter_query (test_temporal.TemporalQueryTests.test_nonmonotonic_story_sequence_only_blocks_chapter_query) ... ok\ntest_query_is_byte_read_only_and_hash_deterministic (test_temporal.TemporalQueryTests.test_query_is_byte_read_only_and_hash_deterministic) ... ok\ntest_valid_window_is_half_open_and_unknown_does_not_match (test_temporal.TemporalQueryTests.test_valid_window_is_half_open_and_unknown_does_not_match) ... ok\ntest_abort_is_idempotent_and_blocks_start (test_writer_runtime.WriterRuntimeTests.test_abort_is_idempotent_and_blocks_start) ... ok\ntest_authority_mutation_is_detected_and_blocks_run (test_writer_runtime.WriterRuntimeTests.test_authority_mutation_is_detected_and_blocks_run) ... ok\ntest_cli_review_and_decide (test_writer_runtime.WriterRuntimeTests.test_cli_review_and_decide) ... ok\ntest_cli_start_status_and_invalid_transition (test_writer_runtime.WriterRuntimeTests.test_cli_start_status_and_invalid_transition) ... ok\ntest_context_tamper_and_unknown_runtime_are_rejected (test_writer_runtime.WriterRuntimeTests.test_context_tamper_and_unknown_runtime_are_rejected) ... ok\ntest_failed_attempt_is_evidenced_and_resume_uses_new_attempt (test_writer_runtime.WriterRuntimeTests.test_failed_attempt_is_evidenced_and_resume_uses_new_attempt) ... ok\ntest_human_review_approve_binds_prose_hash (test_writer_runtime.WriterRuntimeTests.test_human_review_approve_binds_prose_hash) ... ok\ntest_human_review_detects_edit_and_rework_can_resume (test_writer_runtime.WriterRuntimeTests.test_human_review_detects_edit_and_rework_can_resume) ... ok\ntest_offline_start_writes_only_candidate_run_artifacts (test_writer_runtime.WriterRuntimeTests.test_offline_start_writes_only_candidate_run_artifacts) ... ok\n\n----------------------------------------------------------------------\nRan 222 tests in 9.055s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "filesystem/protocol observation"
+      ],
+      "duration_seconds": 0,
+      "expected_exit_code": 0,
+      "name": "strict_output_schema",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"$id\": \"https://novel-production-os.local/schemas/temporal-state.v1.schema.json\", \"$schema\": \"https://json-schema.org/draft/2020-12/schema\", \"additionalProperties\": false, \"properties\": {\"book_id\": {\"minLength\": 1, \"type\": \"string\"}, \"branch_id\": {\"pattern\": \"^[a-z][a-z0-9_-]{0,63}$\", \"type\": \"string\"}, \"cutoff\": {\"additionalProperties\": false, \"properties\": {\"event_id\": {\"pattern\": \"^event_[0-9a-f]{32}$\", \"type\": \"string\"}, \"lineage_index\": {\"minimum\": 1, \"type\": \"integer\"}, \"selector\": {\"minLength\": 1, \"type\": \"string\"}, \"story_seq\": {\"minimum\": 0, \"type\": \"integer\"}}, \"required\": [\"selector\", \"event_id\", \"lineage_index\", \"story_seq\"], \"type\": \"object\"}, \"facets\": {\"items\": {\"$ref\": \"facet.schema.json\"}, \"type\": \"array\"}, \"facts\": {\"items\": {\"$ref\": \"fact.schema.json\"}, \"type\": \"array\"}, \"objects\": {\"items\": {\"$ref\": \"object.schema.json\"}, \"type\": \"array\"}, \"ok\": {\"const\": true}, \"relations\": {\"items\": {\"$ref\": \"relation.schema.json\"}, \"type\": \"array\"}, \"retired_object_count\": {\"minimum\": 0, \"type\": \"integer\"}, \"schema_version\": {\"const\": \"temporal-state.v1\"}, \"state_hash\": {\"pattern\": \"^sha256:[0-9a-f]{64}$\", \"type\": \"string\"}, \"valid_at\": {\"pattern\": \"^story:.+$\", \"type\": [\"string\", \"null\"]}}, \"required\": [\"ok\", \"schema_version\", \"book_id\", \"branch_id\", \"cutoff\", \"valid_at\", \"objects\", \"facets\", \"facts\", \"relations\", \"retired_object_count\", \"state_hash\"], \"title\": \"Temporal State Query v1\", \"type\": \"object\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "help",
+        "state"
+      ],
+      "duration_seconds": 0.040859,
+      "expected_exit_code": 0,
+      "name": "state_help",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "Usage: python studio.py state query (--book ID | --path PATH) --as-of SELECTOR [--valid-at STORY_TIME] [--branch ID] [--json]\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "compile",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.066067,
+      "expected_exit_code": 0,
+      "name": "compile_fixture",
+      "parsed": {
+        "artifact_count": 7,
+        "artifact_index_hash": "sha256:9e15d091e36f96cdc90c34df183c0f047b33eb6eaf6a736b34c4454b4a498889",
+        "book_id": "book_demo",
+        "compile_id": "sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3",
+        "current_path": "/tmp/m3-1-y749a16_/book_acceptance/compiled/current.json",
+        "generation_path": "/tmp/m3-1-y749a16_/book_acceptance/compiled/generations/e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3",
+        "ok": true,
+        "previous_compile_id": null,
+        "reused_generation": false,
+        "schema_version": "outline.compiled.v1",
+        "source_package_hash": "sha256:78cdfc2bd4b0530e76d90c11e86232cecae3b7391e94099c4f7b71b2332db928"
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"artifact_count\": 7, \"artifact_index_hash\": \"sha256:9e15d091e36f96cdc90c34df183c0f047b33eb6eaf6a736b34c4454b4a498889\", \"book_id\": \"book_demo\", \"compile_id\": \"sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3\", \"current_path\": \"/tmp/m3-1-y749a16_/book_acceptance/compiled/current.json\", \"generation_path\": \"/tmp/m3-1-y749a16_/book_acceptance/compiled/generations/e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3\", \"ok\": true, \"previous_compile_id\": null, \"reused_generation\": false, \"schema_version\": \"outline.compiled.v1\", \"source_package_hash\": \"sha256:78cdfc2bd4b0530e76d90c11e86232cecae3b7391e94099c4f7b71b2332db928\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "outline",
+        "bootstrap",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance/outline",
+        "--json"
+      ],
+      "duration_seconds": 0.136487,
+      "expected_exit_code": 0,
+      "name": "bootstrap_fixture",
+      "parsed": {
+        "approval_owner": "author",
+        "approval_time": "2026-09-29T18:00:00+08:00",
+        "book_id": "book_demo",
+        "compile_id": "sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3",
+        "event_count": 26,
+        "head_event_id": "event_f2bd16e723c370b6d8e295af7410a8a2",
+        "ok": true,
+        "projection_state_hash": "sha256:0872cbdf96fb71af7e3955eb276fb9d4f2d6514acf4c2456fefa0b090fb6a986",
+        "reused_bootstrap": false,
+        "schema_version": "outline.bootstrap.v1"
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"approval_owner\": \"author\", \"approval_time\": \"2026-09-29T18:00:00+08:00\", \"book_id\": \"book_demo\", \"compile_id\": \"sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3\", \"event_count\": 26, \"head_event_id\": \"event_f2bd16e723c370b6d8e295af7410a8a2\", \"ok\": true, \"projection_state_hash\": \"sha256:0872cbdf96fb71af7e3955eb276fb9d4f2d6514acf4c2456fefa0b090fb6a986\", \"reused_bootstrap\": false, \"schema_version\": \"outline.bootstrap.v1\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "state",
+        "query",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance",
+        "--as-of",
+        "head",
+        "--json"
+      ],
+      "duration_seconds": 0.056256,
+      "expected_exit_code": 0,
+      "name": "query_head",
+      "parsed": {
+        "book_id": "book_demo",
+        "branch_id": "main",
+        "cutoff": {
+          "event_id": "event_f2bd16e723c370b6d8e295af7410a8a2",
+          "lineage_index": 26,
+          "selector": "head",
+          "story_seq": 0
+        },
+        "facets": [
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_39beaff501b6aaccbb1d8973a303d758",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "capabilities": [
+                "sword_basic"
+              ],
+              "limitations": [
+                "cannot_read_ancient_script"
+              ]
+            },
+            "recorded_event": "event_5c61f5aba4540cacb5f10069c476a7b1",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "rules": [
+                "cannot_read_ancient_script"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_30833f294b06741dcb6f768405a0d2fc",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_036625f7bad01875ef4c0f4e1672ffda",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "psychology",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "current_motive": "找回师父遗骨",
+              "fear": "发现自己被利用",
+              "want": "找回师父遗骨"
+            },
+            "recorded_event": "event_f81328810733fa6611175d8f7a5d334a",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "state": "unknown_disciple"
+            },
+            "recorded_event": "event_56878a3fb160dbffcdd4100d8cf873a4",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_7001ffb733238bbb51abcba890ce9949",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "capabilities": [
+                "sword_mastery"
+              ],
+              "limitations": [
+                "cannot_return_openly"
+              ]
+            },
+            "recorded_event": "event_1d6a5b9d3b76d321489eb93858edf5e0",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "rules": [
+                "cannot_return_openly"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_a13fdd42a0e3dc096793cbff0329ca96",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_690996dbca4c9b4eb08799b69e1e7897",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "state": "missing"
+            },
+            "recorded_event": "event_78c7458485a11b5a7053494567140e5f",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "facts": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "fact_id": "fact_bootstrap_eb9403118610d3d2",
+            "predicate": "age",
+            "recorded_event": "event_eb9403118610d3d2eb994b6ac3388d67",
+            "status": "asserted",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null,
+            "value": 19
+          }
+        ],
+        "objects": [
+          {
+            "aliases": [],
+            "canonical_name": "arc_main_01",
+            "created_event": "event_618b441ff311bd245894eaeb32d50a18",
+            "object_id": "arc_main_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "arc"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "beat_001_01",
+            "created_event": "event_3b9d0cab42ed5f6cac1d5f1377e2a712",
+            "object_id": "beat_001_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "beat"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "ch_001",
+            "created_event": "event_bd34e975a590def580c5413da4237352",
+            "object_id": "ch_001",
+            "status": "active",
+            "supersedes": null,
+            "type": "chapter"
+          },
+          {
+            "aliases": [
+              "云舟"
+            ],
+            "canonical_name": "凌云",
+            "created_event": "event_83a633af426247f8f6c8d5fd1947baa7",
+            "object_id": "char_lin_yun",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师父",
+            "created_event": "event_ff44495f18aa5b8c1a7bc4bb00b64442",
+            "object_id": "char_master",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "剑宗",
+            "created_event": "event_aedfe7567e2e544c05e7f37bbd4fa27b",
+            "object_id": "faction_sword_sect",
+            "status": "active",
+            "supersedes": null,
+            "type": "faction"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "掌门印",
+            "created_event": "event_f30f538ceafcfe39719ca16a497c0dd8",
+            "object_id": "item_seal",
+            "status": "active",
+            "supersedes": null,
+            "type": "item"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "边城",
+            "created_event": "event_e82287f2dab800da55bdd66abdf4f4f3",
+            "object_id": "place_border_town",
+            "status": "active",
+            "supersedes": null,
+            "type": "place"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师门真相",
+            "created_event": "event_08f5cdd488bada9761d3a609b829d395",
+            "object_id": "thread_master_betrayal",
+            "status": "active",
+            "supersedes": null,
+            "type": "thread"
+          }
+        ],
+        "ok": true,
+        "relations": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal"
+            ],
+            "object_id": "item_seal",
+            "predicate": "possesses",
+            "recorded_event": "event_0244d5ea33ede9306b7bca2378b37fde",
+            "relation_id": "rel_bootstrap_0244d5ea33ede930",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect"
+            ],
+            "object_id": "faction_sword_sect",
+            "predicate": "belongs_to",
+            "recorded_event": "event_b0b10e149b1fbdfe542d3f70c10dc58f",
+            "relation_id": "rel_bootstrap_b0b10e149b1fbdfe",
+            "subject_id": "place_border_town",
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "retired_object_count": 0,
+        "schema_version": "temporal-state.v1",
+        "state_hash": "sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5",
+        "valid_at": null
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"book_id\": \"book_demo\", \"branch_id\": \"main\", \"cutoff\": {\"event_id\": \"event_f2bd16e723c370b6d8e295af7410a8a2\", \"lineage_index\": 26, \"selector\": \"head\", \"story_seq\": 0}, \"facets\": [{\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_39beaff501b6aaccbb1d8973a303d758\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"capabilities\": [\"sword_basic\"], \"limitations\": [\"cannot_read_ancient_script\"]}, \"recorded_event\": \"event_5c61f5aba4540cacb5f10069c476a7b1\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"rules\": [\"cannot_read_ancient_script\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_30833f294b06741dcb6f768405a0d2fc\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_036625f7bad01875ef4c0f4e1672ffda\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"psychology\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"current_motive\": \"找回师父遗骨\", \"fear\": \"发现自己被利用\", \"want\": \"找回师父遗骨\"}, \"recorded_event\": \"event_f81328810733fa6611175d8f7a5d334a\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"state\": \"unknown_disciple\"}, \"recorded_event\": \"event_56878a3fb160dbffcdd4100d8cf873a4\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_7001ffb733238bbb51abcba890ce9949\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"capabilities\": [\"sword_mastery\"], \"limitations\": [\"cannot_return_openly\"]}, \"recorded_event\": \"event_1d6a5b9d3b76d321489eb93858edf5e0\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"rules\": [\"cannot_return_openly\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_a13fdd42a0e3dc096793cbff0329ca96\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_690996dbca4c9b4eb08799b69e1e7897\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"state\": \"missing\"}, \"recorded_event\": \"event_78c7458485a11b5a7053494567140e5f\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}], \"facts\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"fact_id\": \"fact_bootstrap_eb9403118610d3d2\", \"predicate\": \"age\", \"recorded_event\": \"event_eb9403118610d3d2eb994b6ac3388d67\", \"status\": \"asserted\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null, \"value\": 19}], \"objects\": [{\"aliases\": [], \"canonical_name\": \"arc_main_01\", \"created_event\": \"event_618b441ff311bd245894eaeb32d50a18\", \"object_id\": \"arc_main_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"arc\"}, {\"aliases\": [], \"canonical_name\": \"beat_001_01\", \"created_event\": \"event_3b9d0cab42ed5f6cac1d5f1377e2a712\", \"object_id\": \"beat_001_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"beat\"}, {\"aliases\": [], \"canonical_name\": \"ch_001\", \"created_event\": \"event_bd34e975a590def580c5413da4237352\", \"object_id\": \"ch_001\", \"status\": \"active\", \"supersedes\": null, \"type\": \"chapter\"}, {\"aliases\": [\"云舟\"], \"canonical_name\": \"凌云\", \"created_event\": \"event_83a633af426247f8f6c8d5fd1947baa7\", \"object_id\": \"char_lin_yun\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"师父\", \"created_event\": \"event_ff44495f18aa5b8c1a7bc4bb00b64442\", \"object_id\": \"char_master\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"剑宗\", \"created_event\": \"event_aedfe7567e2e544c05e7f37bbd4fa27b\", \"object_id\": \"faction_sword_sect\", \"status\": \"active\", \"supersedes\": null, \"type\": \"faction\"}, {\"aliases\": [], \"canonical_name\": \"掌门印\", \"created_event\": \"event_f30f538ceafcfe39719ca16a497c0dd8\", \"object_id\": \"item_seal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"item\"}, {\"aliases\": [], \"canonical_name\": \"边城\", \"created_event\": \"event_e82287f2dab800da55bdd66abdf4f4f3\", \"object_id\": \"place_border_town\", \"status\": \"active\", \"supersedes\": null, \"type\": \"place\"}, {\"aliases\": [], \"canonical_name\": \"师门真相\", \"created_event\": \"event_08f5cdd488bada9761d3a609b829d395\", \"object_id\": \"thread_master_betrayal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"thread\"}], \"ok\": true, \"relations\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal\"], \"object_id\": \"item_seal\", \"predicate\": \"possesses\", \"recorded_event\": \"event_0244d5ea33ede9306b7bca2378b37fde\", \"relation_id\": \"rel_bootstrap_0244d5ea33ede930\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect\"], \"object_id\": \"faction_sword_sect\", \"predicate\": \"belongs_to\", \"recorded_event\": \"event_b0b10e149b1fbdfe542d3f70c10dc58f\", \"relation_id\": \"rel_bootstrap_b0b10e149b1fbdfe\", \"subject_id\": \"place_border_town\", \"valid_from\": \"story:initial\", \"valid_to\": null}], \"retired_object_count\": 0, \"schema_version\": \"temporal-state.v1\", \"state_hash\": \"sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5\", \"valid_at\": null}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "state",
+        "query",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance",
+        "--as-of",
+        "ch_001",
+        "--json"
+      ],
+      "duration_seconds": 0.055414,
+      "expected_exit_code": 0,
+      "name": "query_chapter_leading_zero",
+      "parsed": {
+        "book_id": "book_demo",
+        "branch_id": "main",
+        "cutoff": {
+          "event_id": "event_f2bd16e723c370b6d8e295af7410a8a2",
+          "lineage_index": 26,
+          "selector": "ch_001",
+          "story_seq": 0
+        },
+        "facets": [
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_39beaff501b6aaccbb1d8973a303d758",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "capabilities": [
+                "sword_basic"
+              ],
+              "limitations": [
+                "cannot_read_ancient_script"
+              ]
+            },
+            "recorded_event": "event_5c61f5aba4540cacb5f10069c476a7b1",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "rules": [
+                "cannot_read_ancient_script"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_30833f294b06741dcb6f768405a0d2fc",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_036625f7bad01875ef4c0f4e1672ffda",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "psychology",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "current_motive": "找回师父遗骨",
+              "fear": "发现自己被利用",
+              "want": "找回师父遗骨"
+            },
+            "recorded_event": "event_f81328810733fa6611175d8f7a5d334a",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "state": "unknown_disciple"
+            },
+            "recorded_event": "event_56878a3fb160dbffcdd4100d8cf873a4",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_7001ffb733238bbb51abcba890ce9949",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "capabilities": [
+                "sword_mastery"
+              ],
+              "limitations": [
+                "cannot_return_openly"
+              ]
+            },
+            "recorded_event": "event_1d6a5b9d3b76d321489eb93858edf5e0",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "rules": [
+                "cannot_return_openly"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_a13fdd42a0e3dc096793cbff0329ca96",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_690996dbca4c9b4eb08799b69e1e7897",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "state": "missing"
+            },
+            "recorded_event": "event_78c7458485a11b5a7053494567140e5f",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "facts": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "fact_id": "fact_bootstrap_eb9403118610d3d2",
+            "predicate": "age",
+            "recorded_event": "event_eb9403118610d3d2eb994b6ac3388d67",
+            "status": "asserted",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null,
+            "value": 19
+          }
+        ],
+        "objects": [
+          {
+            "aliases": [],
+            "canonical_name": "arc_main_01",
+            "created_event": "event_618b441ff311bd245894eaeb32d50a18",
+            "object_id": "arc_main_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "arc"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "beat_001_01",
+            "created_event": "event_3b9d0cab42ed5f6cac1d5f1377e2a712",
+            "object_id": "beat_001_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "beat"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "ch_001",
+            "created_event": "event_bd34e975a590def580c5413da4237352",
+            "object_id": "ch_001",
+            "status": "active",
+            "supersedes": null,
+            "type": "chapter"
+          },
+          {
+            "aliases": [
+              "云舟"
+            ],
+            "canonical_name": "凌云",
+            "created_event": "event_83a633af426247f8f6c8d5fd1947baa7",
+            "object_id": "char_lin_yun",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师父",
+            "created_event": "event_ff44495f18aa5b8c1a7bc4bb00b64442",
+            "object_id": "char_master",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "剑宗",
+            "created_event": "event_aedfe7567e2e544c05e7f37bbd4fa27b",
+            "object_id": "faction_sword_sect",
+            "status": "active",
+            "supersedes": null,
+            "type": "faction"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "掌门印",
+            "created_event": "event_f30f538ceafcfe39719ca16a497c0dd8",
+            "object_id": "item_seal",
+            "status": "active",
+            "supersedes": null,
+            "type": "item"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "边城",
+            "created_event": "event_e82287f2dab800da55bdd66abdf4f4f3",
+            "object_id": "place_border_town",
+            "status": "active",
+            "supersedes": null,
+            "type": "place"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师门真相",
+            "created_event": "event_08f5cdd488bada9761d3a609b829d395",
+            "object_id": "thread_master_betrayal",
+            "status": "active",
+            "supersedes": null,
+            "type": "thread"
+          }
+        ],
+        "ok": true,
+        "relations": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal"
+            ],
+            "object_id": "item_seal",
+            "predicate": "possesses",
+            "recorded_event": "event_0244d5ea33ede9306b7bca2378b37fde",
+            "relation_id": "rel_bootstrap_0244d5ea33ede930",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect"
+            ],
+            "object_id": "faction_sword_sect",
+            "predicate": "belongs_to",
+            "recorded_event": "event_b0b10e149b1fbdfe542d3f70c10dc58f",
+            "relation_id": "rel_bootstrap_b0b10e149b1fbdfe",
+            "subject_id": "place_border_town",
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "retired_object_count": 0,
+        "schema_version": "temporal-state.v1",
+        "state_hash": "sha256:2c618e5fe291ef3e0a1686505a4975017147f8bf0a926bb72a00b7ce65f54db3",
+        "valid_at": null
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"book_id\": \"book_demo\", \"branch_id\": \"main\", \"cutoff\": {\"event_id\": \"event_f2bd16e723c370b6d8e295af7410a8a2\", \"lineage_index\": 26, \"selector\": \"ch_001\", \"story_seq\": 0}, \"facets\": [{\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_39beaff501b6aaccbb1d8973a303d758\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"capabilities\": [\"sword_basic\"], \"limitations\": [\"cannot_read_ancient_script\"]}, \"recorded_event\": \"event_5c61f5aba4540cacb5f10069c476a7b1\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"rules\": [\"cannot_read_ancient_script\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_30833f294b06741dcb6f768405a0d2fc\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_036625f7bad01875ef4c0f4e1672ffda\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"psychology\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"current_motive\": \"找回师父遗骨\", \"fear\": \"发现自己被利用\", \"want\": \"找回师父遗骨\"}, \"recorded_event\": \"event_f81328810733fa6611175d8f7a5d334a\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"state\": \"unknown_disciple\"}, \"recorded_event\": \"event_56878a3fb160dbffcdd4100d8cf873a4\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_7001ffb733238bbb51abcba890ce9949\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"capabilities\": [\"sword_mastery\"], \"limitations\": [\"cannot_return_openly\"]}, \"recorded_event\": \"event_1d6a5b9d3b76d321489eb93858edf5e0\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"rules\": [\"cannot_return_openly\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_a13fdd42a0e3dc096793cbff0329ca96\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_690996dbca4c9b4eb08799b69e1e7897\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"state\": \"missing\"}, \"recorded_event\": \"event_78c7458485a11b5a7053494567140e5f\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}], \"facts\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"fact_id\": \"fact_bootstrap_eb9403118610d3d2\", \"predicate\": \"age\", \"recorded_event\": \"event_eb9403118610d3d2eb994b6ac3388d67\", \"status\": \"asserted\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null, \"value\": 19}], \"objects\": [{\"aliases\": [], \"canonical_name\": \"arc_main_01\", \"created_event\": \"event_618b441ff311bd245894eaeb32d50a18\", \"object_id\": \"arc_main_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"arc\"}, {\"aliases\": [], \"canonical_name\": \"beat_001_01\", \"created_event\": \"event_3b9d0cab42ed5f6cac1d5f1377e2a712\", \"object_id\": \"beat_001_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"beat\"}, {\"aliases\": [], \"canonical_name\": \"ch_001\", \"created_event\": \"event_bd34e975a590def580c5413da4237352\", \"object_id\": \"ch_001\", \"status\": \"active\", \"supersedes\": null, \"type\": \"chapter\"}, {\"aliases\": [\"云舟\"], \"canonical_name\": \"凌云\", \"created_event\": \"event_83a633af426247f8f6c8d5fd1947baa7\", \"object_id\": \"char_lin_yun\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"师父\", \"created_event\": \"event_ff44495f18aa5b8c1a7bc4bb00b64442\", \"object_id\": \"char_master\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"剑宗\", \"created_event\": \"event_aedfe7567e2e544c05e7f37bbd4fa27b\", \"object_id\": \"faction_sword_sect\", \"status\": \"active\", \"supersedes\": null, \"type\": \"faction\"}, {\"aliases\": [], \"canonical_name\": \"掌门印\", \"created_event\": \"event_f30f538ceafcfe39719ca16a497c0dd8\", \"object_id\": \"item_seal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"item\"}, {\"aliases\": [], \"canonical_name\": \"边城\", \"created_event\": \"event_e82287f2dab800da55bdd66abdf4f4f3\", \"object_id\": \"place_border_town\", \"status\": \"active\", \"supersedes\": null, \"type\": \"place\"}, {\"aliases\": [], \"canonical_name\": \"师门真相\", \"created_event\": \"event_08f5cdd488bada9761d3a609b829d395\", \"object_id\": \"thread_master_betrayal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"thread\"}], \"ok\": true, \"relations\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal\"], \"object_id\": \"item_seal\", \"predicate\": \"possesses\", \"recorded_event\": \"event_0244d5ea33ede9306b7bca2378b37fde\", \"relation_id\": \"rel_bootstrap_0244d5ea33ede930\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect\"], \"object_id\": \"faction_sword_sect\", \"predicate\": \"belongs_to\", \"recorded_event\": \"event_b0b10e149b1fbdfe542d3f70c10dc58f\", \"relation_id\": \"rel_bootstrap_b0b10e149b1fbdfe\", \"subject_id\": \"place_border_town\", \"valid_from\": \"story:initial\", \"valid_to\": null}], \"retired_object_count\": 0, \"schema_version\": \"temporal-state.v1\", \"state_hash\": \"sha256:2c618e5fe291ef3e0a1686505a4975017147f8bf0a926bb72a00b7ce65f54db3\", \"valid_at\": null}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "state",
+        "query",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance",
+        "--as-of",
+        "head",
+        "--valid-at",
+        "story:initial",
+        "--json"
+      ],
+      "duration_seconds": 0.055523,
+      "expected_exit_code": 0,
+      "name": "query_world_time",
+      "parsed": {
+        "book_id": "book_demo",
+        "branch_id": "main",
+        "cutoff": {
+          "event_id": "event_f2bd16e723c370b6d8e295af7410a8a2",
+          "lineage_index": 26,
+          "selector": "head",
+          "story_seq": 0
+        },
+        "facets": [
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_39beaff501b6aaccbb1d8973a303d758",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "capabilities": [
+                "sword_basic"
+              ],
+              "limitations": [
+                "cannot_read_ancient_script"
+              ]
+            },
+            "recorded_event": "event_5c61f5aba4540cacb5f10069c476a7b1",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "rules": [
+                "cannot_read_ancient_script"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_30833f294b06741dcb6f768405a0d2fc",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_036625f7bad01875ef4c0f4e1672ffda",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "psychology",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "current_motive": "找回师父遗骨",
+              "fear": "发现自己被利用",
+              "want": "找回师父遗骨"
+            },
+            "recorded_event": "event_f81328810733fa6611175d8f7a5d334a",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "state": "unknown_disciple"
+            },
+            "recorded_event": "event_56878a3fb160dbffcdd4100d8cf873a4",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_7001ffb733238bbb51abcba890ce9949",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "capabilities": [
+                "sword_mastery"
+              ],
+              "limitations": [
+                "cannot_return_openly"
+              ]
+            },
+            "recorded_event": "event_1d6a5b9d3b76d321489eb93858edf5e0",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "rules": [
+                "cannot_return_openly"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_a13fdd42a0e3dc096793cbff0329ca96",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_690996dbca4c9b4eb08799b69e1e7897",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "state": "missing"
+            },
+            "recorded_event": "event_78c7458485a11b5a7053494567140e5f",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "facts": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "fact_id": "fact_bootstrap_eb9403118610d3d2",
+            "predicate": "age",
+            "recorded_event": "event_eb9403118610d3d2eb994b6ac3388d67",
+            "status": "asserted",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null,
+            "value": 19
+          }
+        ],
+        "objects": [
+          {
+            "aliases": [],
+            "canonical_name": "arc_main_01",
+            "created_event": "event_618b441ff311bd245894eaeb32d50a18",
+            "object_id": "arc_main_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "arc"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "beat_001_01",
+            "created_event": "event_3b9d0cab42ed5f6cac1d5f1377e2a712",
+            "object_id": "beat_001_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "beat"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "ch_001",
+            "created_event": "event_bd34e975a590def580c5413da4237352",
+            "object_id": "ch_001",
+            "status": "active",
+            "supersedes": null,
+            "type": "chapter"
+          },
+          {
+            "aliases": [
+              "云舟"
+            ],
+            "canonical_name": "凌云",
+            "created_event": "event_83a633af426247f8f6c8d5fd1947baa7",
+            "object_id": "char_lin_yun",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师父",
+            "created_event": "event_ff44495f18aa5b8c1a7bc4bb00b64442",
+            "object_id": "char_master",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "剑宗",
+            "created_event": "event_aedfe7567e2e544c05e7f37bbd4fa27b",
+            "object_id": "faction_sword_sect",
+            "status": "active",
+            "supersedes": null,
+            "type": "faction"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "掌门印",
+            "created_event": "event_f30f538ceafcfe39719ca16a497c0dd8",
+            "object_id": "item_seal",
+            "status": "active",
+            "supersedes": null,
+            "type": "item"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "边城",
+            "created_event": "event_e82287f2dab800da55bdd66abdf4f4f3",
+            "object_id": "place_border_town",
+            "status": "active",
+            "supersedes": null,
+            "type": "place"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师门真相",
+            "created_event": "event_08f5cdd488bada9761d3a609b829d395",
+            "object_id": "thread_master_betrayal",
+            "status": "active",
+            "supersedes": null,
+            "type": "thread"
+          }
+        ],
+        "ok": true,
+        "relations": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal"
+            ],
+            "object_id": "item_seal",
+            "predicate": "possesses",
+            "recorded_event": "event_0244d5ea33ede9306b7bca2378b37fde",
+            "relation_id": "rel_bootstrap_0244d5ea33ede930",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect"
+            ],
+            "object_id": "faction_sword_sect",
+            "predicate": "belongs_to",
+            "recorded_event": "event_b0b10e149b1fbdfe542d3f70c10dc58f",
+            "relation_id": "rel_bootstrap_b0b10e149b1fbdfe",
+            "subject_id": "place_border_town",
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "retired_object_count": 0,
+        "schema_version": "temporal-state.v1",
+        "state_hash": "sha256:69cb3724d53563c84af897b98b0c112243fe4ea9a42f239387659910b4b6f4ff",
+        "valid_at": "story:initial"
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"book_id\": \"book_demo\", \"branch_id\": \"main\", \"cutoff\": {\"event_id\": \"event_f2bd16e723c370b6d8e295af7410a8a2\", \"lineage_index\": 26, \"selector\": \"head\", \"story_seq\": 0}, \"facets\": [{\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_39beaff501b6aaccbb1d8973a303d758\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"capabilities\": [\"sword_basic\"], \"limitations\": [\"cannot_read_ancient_script\"]}, \"recorded_event\": \"event_5c61f5aba4540cacb5f10069c476a7b1\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"rules\": [\"cannot_read_ancient_script\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_30833f294b06741dcb6f768405a0d2fc\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_036625f7bad01875ef4c0f4e1672ffda\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"psychology\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"current_motive\": \"找回师父遗骨\", \"fear\": \"发现自己被利用\", \"want\": \"找回师父遗骨\"}, \"recorded_event\": \"event_f81328810733fa6611175d8f7a5d334a\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"state\": \"unknown_disciple\"}, \"recorded_event\": \"event_56878a3fb160dbffcdd4100d8cf873a4\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_7001ffb733238bbb51abcba890ce9949\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"capabilities\": [\"sword_mastery\"], \"limitations\": [\"cannot_return_openly\"]}, \"recorded_event\": \"event_1d6a5b9d3b76d321489eb93858edf5e0\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"rules\": [\"cannot_return_openly\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_a13fdd42a0e3dc096793cbff0329ca96\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_690996dbca4c9b4eb08799b69e1e7897\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"state\": \"missing\"}, \"recorded_event\": \"event_78c7458485a11b5a7053494567140e5f\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}], \"facts\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"fact_id\": \"fact_bootstrap_eb9403118610d3d2\", \"predicate\": \"age\", \"recorded_event\": \"event_eb9403118610d3d2eb994b6ac3388d67\", \"status\": \"asserted\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null, \"value\": 19}], \"objects\": [{\"aliases\": [], \"canonical_name\": \"arc_main_01\", \"created_event\": \"event_618b441ff311bd245894eaeb32d50a18\", \"object_id\": \"arc_main_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"arc\"}, {\"aliases\": [], \"canonical_name\": \"beat_001_01\", \"created_event\": \"event_3b9d0cab42ed5f6cac1d5f1377e2a712\", \"object_id\": \"beat_001_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"beat\"}, {\"aliases\": [], \"canonical_name\": \"ch_001\", \"created_event\": \"event_bd34e975a590def580c5413da4237352\", \"object_id\": \"ch_001\", \"status\": \"active\", \"supersedes\": null, \"type\": \"chapter\"}, {\"aliases\": [\"云舟\"], \"canonical_name\": \"凌云\", \"created_event\": \"event_83a633af426247f8f6c8d5fd1947baa7\", \"object_id\": \"char_lin_yun\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"师父\", \"created_event\": \"event_ff44495f18aa5b8c1a7bc4bb00b64442\", \"object_id\": \"char_master\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"剑宗\", \"created_event\": \"event_aedfe7567e2e544c05e7f37bbd4fa27b\", \"object_id\": \"faction_sword_sect\", \"status\": \"active\", \"supersedes\": null, \"type\": \"faction\"}, {\"aliases\": [], \"canonical_name\": \"掌门印\", \"created_event\": \"event_f30f538ceafcfe39719ca16a497c0dd8\", \"object_id\": \"item_seal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"item\"}, {\"aliases\": [], \"canonical_name\": \"边城\", \"created_event\": \"event_e82287f2dab800da55bdd66abdf4f4f3\", \"object_id\": \"place_border_town\", \"status\": \"active\", \"supersedes\": null, \"type\": \"place\"}, {\"aliases\": [], \"canonical_name\": \"师门真相\", \"created_event\": \"event_08f5cdd488bada9761d3a609b829d395\", \"object_id\": \"thread_master_betrayal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"thread\"}], \"ok\": true, \"relations\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal\"], \"object_id\": \"item_seal\", \"predicate\": \"possesses\", \"recorded_event\": \"event_0244d5ea33ede9306b7bca2378b37fde\", \"relation_id\": \"rel_bootstrap_0244d5ea33ede930\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect\"], \"object_id\": \"faction_sword_sect\", \"predicate\": \"belongs_to\", \"recorded_event\": \"event_b0b10e149b1fbdfe542d3f70c10dc58f\", \"relation_id\": \"rel_bootstrap_b0b10e149b1fbdfe\", \"subject_id\": \"place_border_town\", \"valid_from\": \"story:initial\", \"valid_to\": null}], \"retired_object_count\": 0, \"schema_version\": \"temporal-state.v1\", \"state_hash\": \"sha256:69cb3724d53563c84af897b98b0c112243fe4ea9a42f239387659910b4b6f4ff\", \"valid_at\": \"story:initial\"}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "state",
+        "query",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance",
+        "--as-of",
+        "head",
+        "--json"
+      ],
+      "duration_seconds": 0.056032,
+      "expected_exit_code": 0,
+      "name": "repeat_query_determinism",
+      "parsed": {
+        "book_id": "book_demo",
+        "branch_id": "main",
+        "cutoff": {
+          "event_id": "event_f2bd16e723c370b6d8e295af7410a8a2",
+          "lineage_index": 26,
+          "selector": "head",
+          "story_seq": 0
+        },
+        "facets": [
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_39beaff501b6aaccbb1d8973a303d758",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "capabilities": [
+                "sword_basic"
+              ],
+              "limitations": [
+                "cannot_read_ancient_script"
+              ]
+            },
+            "recorded_event": "event_5c61f5aba4540cacb5f10069c476a7b1",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "rules": [
+                "cannot_read_ancient_script"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_30833f294b06741dcb6f768405a0d2fc",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_036625f7bad01875ef4c0f4e1672ffda",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "psychology",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "current_motive": "找回师父遗骨",
+              "fear": "发现自己被利用",
+              "want": "找回师父遗骨"
+            },
+            "recorded_event": "event_f81328810733fa6611175d8f7a5d334a",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_lin_yun",
+            "payload": {
+              "state": "unknown_disciple"
+            },
+            "recorded_event": "event_56878a3fb160dbffcdd4100d8cf873a4",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "arc",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "stage": "arc_main_01"
+            },
+            "recorded_event": "event_7001ffb733238bbb51abcba890ce9949",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "capability",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "capabilities": [
+                "sword_mastery"
+              ],
+              "limitations": [
+                "cannot_return_openly"
+              ]
+            },
+            "recorded_event": "event_1d6a5b9d3b76d321489eb93858edf5e0",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "constraint",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "rules": [
+                "cannot_return_openly"
+              ],
+              "severity": "hard"
+            },
+            "recorded_event": "event_a13fdd42a0e3dc096793cbff0329ca96",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "location",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "place_id": "place_border_town"
+            },
+            "recorded_event": "event_690996dbca4c9b4eb08799b69e1e7897",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "facet_type": "status",
+            "facet_version": 1,
+            "object_id": "char_master",
+            "payload": {
+              "state": "missing"
+            },
+            "recorded_event": "event_78c7458485a11b5a7053494567140e5f",
+            "source_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master"
+            ],
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "facts": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun"
+            ],
+            "fact_id": "fact_bootstrap_eb9403118610d3d2",
+            "predicate": "age",
+            "recorded_event": "event_eb9403118610d3d2eb994b6ac3388d67",
+            "status": "asserted",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null,
+            "value": 19
+          }
+        ],
+        "objects": [
+          {
+            "aliases": [],
+            "canonical_name": "arc_main_01",
+            "created_event": "event_618b441ff311bd245894eaeb32d50a18",
+            "object_id": "arc_main_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "arc"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "beat_001_01",
+            "created_event": "event_3b9d0cab42ed5f6cac1d5f1377e2a712",
+            "object_id": "beat_001_01",
+            "status": "active",
+            "supersedes": null,
+            "type": "beat"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "ch_001",
+            "created_event": "event_bd34e975a590def580c5413da4237352",
+            "object_id": "ch_001",
+            "status": "active",
+            "supersedes": null,
+            "type": "chapter"
+          },
+          {
+            "aliases": [
+              "云舟"
+            ],
+            "canonical_name": "凌云",
+            "created_event": "event_83a633af426247f8f6c8d5fd1947baa7",
+            "object_id": "char_lin_yun",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师父",
+            "created_event": "event_ff44495f18aa5b8c1a7bc4bb00b64442",
+            "object_id": "char_master",
+            "status": "active",
+            "supersedes": null,
+            "type": "character"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "剑宗",
+            "created_event": "event_aedfe7567e2e544c05e7f37bbd4fa27b",
+            "object_id": "faction_sword_sect",
+            "status": "active",
+            "supersedes": null,
+            "type": "faction"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "掌门印",
+            "created_event": "event_f30f538ceafcfe39719ca16a497c0dd8",
+            "object_id": "item_seal",
+            "status": "active",
+            "supersedes": null,
+            "type": "item"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "边城",
+            "created_event": "event_e82287f2dab800da55bdd66abdf4f4f3",
+            "object_id": "place_border_town",
+            "status": "active",
+            "supersedes": null,
+            "type": "place"
+          },
+          {
+            "aliases": [],
+            "canonical_name": "师门真相",
+            "created_event": "event_08f5cdd488bada9761d3a609b829d395",
+            "object_id": "thread_master_betrayal",
+            "status": "active",
+            "supersedes": null,
+            "type": "thread"
+          }
+        ],
+        "ok": true,
+        "relations": [
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal"
+            ],
+            "object_id": "item_seal",
+            "predicate": "possesses",
+            "recorded_event": "event_0244d5ea33ede9306b7bca2378b37fde",
+            "relation_id": "rel_bootstrap_0244d5ea33ede930",
+            "subject_id": "char_lin_yun",
+            "valid_from": "story:initial",
+            "valid_to": null
+          },
+          {
+            "confidence": "confirmed",
+            "evidence_refs": [
+              "compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect"
+            ],
+            "object_id": "faction_sword_sect",
+            "predicate": "belongs_to",
+            "recorded_event": "event_b0b10e149b1fbdfe542d3f70c10dc58f",
+            "relation_id": "rel_bootstrap_b0b10e149b1fbdfe",
+            "subject_id": "place_border_town",
+            "valid_from": "story:initial",
+            "valid_to": null
+          }
+        ],
+        "retired_object_count": 0,
+        "schema_version": "temporal-state.v1",
+        "state_hash": "sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5",
+        "valid_at": null
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"book_id\": \"book_demo\", \"branch_id\": \"main\", \"cutoff\": {\"event_id\": \"event_f2bd16e723c370b6d8e295af7410a8a2\", \"lineage_index\": 26, \"selector\": \"head\", \"story_seq\": 0}, \"facets\": [{\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_39beaff501b6aaccbb1d8973a303d758\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"capabilities\": [\"sword_basic\"], \"limitations\": [\"cannot_read_ancient_script\"]}, \"recorded_event\": \"event_5c61f5aba4540cacb5f10069c476a7b1\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"rules\": [\"cannot_read_ancient_script\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_30833f294b06741dcb6f768405a0d2fc\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_036625f7bad01875ef4c0f4e1672ffda\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"psychology\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"current_motive\": \"找回师父遗骨\", \"fear\": \"发现自己被利用\", \"want\": \"找回师父遗骨\"}, \"recorded_event\": \"event_f81328810733fa6611175d8f7a5d334a\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_lin_yun\", \"payload\": {\"state\": \"unknown_disciple\"}, \"recorded_event\": \"event_56878a3fb160dbffcdd4100d8cf873a4\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"arc\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"stage\": \"arc_main_01\"}, \"recorded_event\": \"event_7001ffb733238bbb51abcba890ce9949\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"capability\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"capabilities\": [\"sword_mastery\"], \"limitations\": [\"cannot_return_openly\"]}, \"recorded_event\": \"event_1d6a5b9d3b76d321489eb93858edf5e0\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"constraint\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"rules\": [\"cannot_return_openly\"], \"severity\": \"hard\"}, \"recorded_event\": \"event_a13fdd42a0e3dc096793cbff0329ca96\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"location\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"place_id\": \"place_border_town\"}, \"recorded_event\": \"event_690996dbca4c9b4eb08799b69e1e7897\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"facet_type\": \"status\", \"facet_version\": 1, \"object_id\": \"char_master\", \"payload\": {\"state\": \"missing\"}, \"recorded_event\": \"event_78c7458485a11b5a7053494567140e5f\", \"source_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_master\"], \"valid_from\": \"story:initial\", \"valid_to\": null}], \"facts\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun\"], \"fact_id\": \"fact_bootstrap_eb9403118610d3d2\", \"predicate\": \"age\", \"recorded_event\": \"event_eb9403118610d3d2eb994b6ac3388d67\", \"status\": \"asserted\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null, \"value\": 19}], \"objects\": [{\"aliases\": [], \"canonical_name\": \"arc_main_01\", \"created_event\": \"event_618b441ff311bd245894eaeb32d50a18\", \"object_id\": \"arc_main_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"arc\"}, {\"aliases\": [], \"canonical_name\": \"beat_001_01\", \"created_event\": \"event_3b9d0cab42ed5f6cac1d5f1377e2a712\", \"object_id\": \"beat_001_01\", \"status\": \"active\", \"supersedes\": null, \"type\": \"beat\"}, {\"aliases\": [], \"canonical_name\": \"ch_001\", \"created_event\": \"event_bd34e975a590def580c5413da4237352\", \"object_id\": \"ch_001\", \"status\": \"active\", \"supersedes\": null, \"type\": \"chapter\"}, {\"aliases\": [\"云舟\"], \"canonical_name\": \"凌云\", \"created_event\": \"event_83a633af426247f8f6c8d5fd1947baa7\", \"object_id\": \"char_lin_yun\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"师父\", \"created_event\": \"event_ff44495f18aa5b8c1a7bc4bb00b64442\", \"object_id\": \"char_master\", \"status\": \"active\", \"supersedes\": null, \"type\": \"character\"}, {\"aliases\": [], \"canonical_name\": \"剑宗\", \"created_event\": \"event_aedfe7567e2e544c05e7f37bbd4fa27b\", \"object_id\": \"faction_sword_sect\", \"status\": \"active\", \"supersedes\": null, \"type\": \"faction\"}, {\"aliases\": [], \"canonical_name\": \"掌门印\", \"created_event\": \"event_f30f538ceafcfe39719ca16a497c0dd8\", \"object_id\": \"item_seal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"item\"}, {\"aliases\": [], \"canonical_name\": \"边城\", \"created_event\": \"event_e82287f2dab800da55bdd66abdf4f4f3\", \"object_id\": \"place_border_town\", \"status\": \"active\", \"supersedes\": null, \"type\": \"place\"}, {\"aliases\": [], \"canonical_name\": \"师门真相\", \"created_event\": \"event_08f5cdd488bada9761d3a609b829d395\", \"object_id\": \"thread_master_betrayal\", \"status\": \"active\", \"supersedes\": null, \"type\": \"thread\"}], \"ok\": true, \"relations\": [{\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#char_lin_yun:possesses:item_seal\"], \"object_id\": \"item_seal\", \"predicate\": \"possesses\", \"recorded_event\": \"event_0244d5ea33ede9306b7bca2378b37fde\", \"relation_id\": \"rel_bootstrap_0244d5ea33ede930\", \"subject_id\": \"char_lin_yun\", \"valid_from\": \"story:initial\", \"valid_to\": null}, {\"confidence\": \"confirmed\", \"evidence_refs\": [\"compiled:sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3/initial-state.json#place_border_town:belongs_to:faction_sword_sect\"], \"object_id\": \"faction_sword_sect\", \"predicate\": \"belongs_to\", \"recorded_event\": \"event_b0b10e149b1fbdfe542d3f70c10dc58f\", \"relation_id\": \"rel_bootstrap_b0b10e149b1fbdfe\", \"subject_id\": \"place_border_town\", \"valid_from\": \"story:initial\", \"valid_to\": null}], \"retired_object_count\": 0, \"schema_version\": \"temporal-state.v1\", \"state_hash\": \"sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5\", \"valid_at\": null}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "filesystem/protocol observation"
+      ],
+      "duration_seconds": 0,
+      "expected_exit_code": 0,
+      "name": "strict_read_only_and_stable_bytes",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "before=sha256:81a79f8adc121f4d4929c996f60f62fd87e640cd2a88b195a3239cac6eeec32f after=sha256:81a79f8adc121f4d4929c996f60f62fd87e640cd2a88b195a3239cac6eeec32f stable=True\n"
+    },
+    {
+      "actual_exit_code": 1,
+      "command": [
+        "/usr/bin/python",
+        "/home/user/gallant-mendel/v2/studio.py",
+        "state",
+        "query",
+        "--path",
+        "/tmp/m3-1-y749a16_/book_acceptance",
+        "--as-of",
+        "ch_0",
+        "--json"
+      ],
+      "duration_seconds": 0.059534,
+      "expected_exit_code": 1,
+      "name": "invalid_selector_exit_1",
+      "parsed": {
+        "error": "chapter selector must be positive",
+        "exit_code": 1,
+        "ok": false
+      },
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"error\": \"chapter selector must be positive\", \"exit_code\": 1, \"ok\": false}\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "filesystem/protocol observation"
+      ],
+      "duration_seconds": 0,
+      "expected_exit_code": 0,
+      "name": "canonical_report_shape",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "head, chapter, and valid-at report temporal-state.v1\n"
+    },
+    {
+      "actual_exit_code": 0,
+      "command": [
+        "filesystem/protocol observation"
+      ],
+      "duration_seconds": 0,
+      "expected_exit_code": 0,
+      "name": "m3_2_plus_scope_absent",
+      "parsed": null,
+      "passed": true,
+      "stderr": "",
+      "stdout": "[]\n"
+    }
+  ],
+  "completed_at": "2026-09-29T12:25:18.695969+00:00",
+  "milestone": "M3.1",
+  "observations": {
+    "authority_event_count": 26,
+    "book_tree_hash": "sha256:81a79f8adc121f4d4929c996f60f62fd87e640cd2a88b195a3239cac6eeec32f",
+    "output_schema": "temporal-state.v1",
+    "state_hash": "sha256:49b7b5dc0bc8953e9f788284c8bddce212abba2c6176ca7e79c4f375a0dadbb5",
+    "unit_tests": 196
+  },
+  "schema_version": "m3.1.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 15,
+    "total": 15
+  }
+}
