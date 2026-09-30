@@ -1,0 +1,11 @@
+{
+  "baseline": {
+    "fn": 3,
+    "fp": 0,
+    "tn": 10,
+    "tp": 7
+  },
+  "cases_passed": 17,
+  "cases_total": 17,
+  "milestone": "M6.2"
+}

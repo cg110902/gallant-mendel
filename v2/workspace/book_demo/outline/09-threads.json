@@ -1,0 +1,27 @@
+[
+  {
+    "id": "thread_master_betrayal",
+    "name": "师门真相",
+    "kind": "mystery",
+    "owner": "char_lin_yun",
+    "start_condition": "主角取得掌门印",
+    "progress_metric": "已验证线索数量",
+    "turning_points": [
+      {
+        "id": "tp_01",
+        "target_chapter": 30,
+        "action": "发现伪造档案",
+        "irreversible_change": "宗门公开追捕主角"
+      }
+    ],
+    "resolution_condition": "公开师父死亡真相",
+    "forbidden_resolution": "无证据口述真相",
+    "related_characters": [
+      "char_lin_yun",
+      "char_master"
+    ],
+    "related_obligations": [
+      "ob_master_betrayal"
+    ]
+  }
+]

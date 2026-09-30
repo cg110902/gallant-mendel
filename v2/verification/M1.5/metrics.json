@@ -1,0 +1,9 @@
+{
+  "cases_passed": 7,
+  "cases_total": 7,
+  "milestone": "M1.5",
+  "snapshot_restore_same_state_hash": true,
+  "tamper_rejected": true,
+  "third_party_dependencies": 0,
+  "unexpected_failures": 0
+}

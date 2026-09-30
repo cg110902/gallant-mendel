@@ -1,0 +1,14 @@
+[py_compile] 0 PASS
+[extraction_units] 0 PASS
+[full_units] 0 PASS
+[extract_help] 0 PASS
+[strict_extraction_schemas] 0 PASS
+[approved_input_only] 0 PASS
+[exact_entity_mentions] 0 PASS
+[explicit_claim_protocol] 0 PASS
+[evidence_reverse_binding] 0 PASS
+[candidate_not_authority] 0 PASS
+[semantic_incompleteness_declared] 0 PASS
+[deterministic_ids] 0 PASS
+[idempotent_publication] 0 PASS
+[m5_later_scope_absent] 0 PASS
