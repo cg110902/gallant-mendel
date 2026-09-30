@@ -1,0 +1,12 @@
+{
+  "expected_rejections": [
+    "missing_manifest",
+    "invalid_json",
+    "missing_field",
+    "unknown_command",
+    "duplicate_init",
+    "readonly_probe"
+  ],
+  "milestone": "M0",
+  "unexpected_failures": []
+}

@@ -1,0 +1,294 @@
+{
+  "$defs": {
+    "classification": {
+      "additionalProperties": false,
+      "properties": {
+        "approval_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "intent_fulfilled",
+            "intent_missing",
+            "intent_changed_with_approval",
+            "emergent_valid",
+            "emergent_unregistered",
+            "contradiction",
+            "hard_violation"
+          ]
+        },
+        "domain": {
+          "enum": [
+            "action",
+            "change",
+            "reveal",
+            "obligation",
+            "contradiction"
+          ]
+        },
+        "item": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "item",
+        "classification",
+        "approval_event_id"
+      ],
+      "type": "object"
+    },
+    "intent": {
+      "additionalProperties": false,
+      "properties": {
+        "forbidden_changes": {
+          "$ref": "#/$defs/strings"
+        },
+        "registered_event": {
+          "type": "string"
+        },
+        "required_actions": {
+          "$ref": "#/$defs/strings"
+        },
+        "required_changes": {
+          "$ref": "#/$defs/strings"
+        },
+        "required_obligations": {
+          "$ref": "#/$defs/strings"
+        },
+        "required_reveals": {
+          "$ref": "#/$defs/strings"
+        },
+        "scope_id": {
+          "type": "string"
+        },
+        "scope_type": {
+          "enum": [
+            "chapter",
+            "beat"
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "required": [
+        "scope_id",
+        "scope_type",
+        "required_actions",
+        "required_changes",
+        "required_reveals",
+        "required_obligations",
+        "forbidden_changes",
+        "source_refs",
+        "registered_event"
+      ],
+      "type": "object"
+    },
+    "reality": {
+      "additionalProperties": false,
+      "properties": {
+        "approved_extras": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "approved_missing": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "contradictions": {
+          "$ref": "#/$defs/strings"
+        },
+        "observed_actions": {
+          "$ref": "#/$defs/strings"
+        },
+        "observed_changes": {
+          "$ref": "#/$defs/strings"
+        },
+        "observed_entities": {
+          "$ref": "#/$defs/strings"
+        },
+        "observed_event": {
+          "type": "string"
+        },
+        "observed_obligations": {
+          "$ref": "#/$defs/strings"
+        },
+        "observed_reveals": {
+          "$ref": "#/$defs/strings"
+        },
+        "scope_id": {
+          "type": "string"
+        },
+        "source_event_id": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "required": [
+        "scope_id",
+        "observed_actions",
+        "observed_changes",
+        "observed_reveals",
+        "observed_obligations",
+        "observed_entities",
+        "contradictions",
+        "approved_missing",
+        "approved_extras",
+        "source_event_id",
+        "source_refs",
+        "observed_event"
+      ],
+      "type": "object"
+    },
+    "strings": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "$id": "https://novel-production-os.local/schemas/intent-reality-diff.v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "book_id": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "classifications": {
+      "items": {
+        "$ref": "#/$defs/classification"
+      },
+      "type": "array"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "contradiction": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "emergent_unregistered": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "emergent_valid": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "hard_violation": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "intent_changed_with_approval": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "intent_fulfilled": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "intent_missing": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "intent_fulfilled",
+        "intent_missing",
+        "intent_changed_with_approval",
+        "emergent_valid",
+        "emergent_unregistered",
+        "contradiction",
+        "hard_violation"
+      ],
+      "type": "object"
+    },
+    "cutoff": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "pattern": "^event_[0-9a-f]{32}$",
+          "type": "string"
+        },
+        "lineage_index": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "selector": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "story_seq": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "selector",
+        "event_id",
+        "lineage_index",
+        "story_seq"
+      ],
+      "type": "object"
+    },
+    "diff_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "has_hard_violation": {
+      "type": "boolean"
+    },
+    "intent": {
+      "$ref": "#/$defs/intent"
+    },
+    "ok": {
+      "const": true
+    },
+    "reality": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/reality"
+        }
+      ]
+    },
+    "schema_version": {
+      "const": "intent-reality-diff.v1"
+    },
+    "scope_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "ok",
+    "schema_version",
+    "book_id",
+    "branch_id",
+    "cutoff",
+    "scope_id",
+    "intent",
+    "reality",
+    "classifications",
+    "counts",
+    "has_hard_violation",
+    "diff_hash"
+  ],
+  "type": "object"
+}

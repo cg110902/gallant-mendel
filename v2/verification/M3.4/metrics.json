@@ -1,0 +1,10 @@
+{
+  "bootstrap_events": 26,
+  "cases_passed": 16,
+  "cases_total": 16,
+  "diff_hash": "sha256:22cc720bbd46e580de3f659f65f9c5e2d2298fba3dcb8cce335d9c26ae3b5f57",
+  "milestone": "M3.4",
+  "schema": "intent-reality-diff.v1",
+  "unexpected_failures": 0,
+  "unit_tests": 196
+}

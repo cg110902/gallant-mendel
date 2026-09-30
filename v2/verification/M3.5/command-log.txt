@@ -1,0 +1,12 @@
+[py_compile] 0 PASS
+[analytics_units] 0 PASS
+[full_units] 0 PASS
+[reader_help] 0 PASS
+[impact_help] 0 PASS
+[strict_schemas] 0 PASS
+[tension_is_set_metric] 0 PASS
+[impact_is_structural] 0 PASS
+[no_quality_claim] 0 PASS
+[depth_guard] 0 PASS
+[read_only_contract] 0 PASS
+[m4_scope_absent] 0 PASS
