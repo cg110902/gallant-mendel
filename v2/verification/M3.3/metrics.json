@@ -1,0 +1,12 @@
+{
+  "canonical_obligations": 1,
+  "cases_passed": 15,
+  "cases_total": 15,
+  "lifecycle_events": 7,
+  "milestone": "M3.3",
+  "obligation_hash": "sha256:156cb9a77be93fc4aedf23459a27fec096dadf84485c8208243ff9bb4b5b8dec",
+  "output_schema": "obligation-state.v1",
+  "temporary_database_created_by_query": false,
+  "unexpected_failures": 0,
+  "unit_tests": 196
+}

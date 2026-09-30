@@ -1,0 +1,6 @@
+{
+  "schema_version": "m0.fixture.v1",
+  "project": "novel-production-os",
+  "kind": "permission-probe",
+  "fixture_id": "broken_readonly_probe"
+}
