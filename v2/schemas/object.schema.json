@@ -1,0 +1,60 @@
+{
+  "$id": "https://novel-production-os.local/schemas/object.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "aliases": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "canonical_name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_event": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "object_id": {
+      "pattern": "^(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "retired",
+        "superseded"
+      ]
+    },
+    "supersedes": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^(?:book|vol|arc|ch|scene|beat|char|place|item|faction|thread|ob|obj)_[a-z0-9][a-z0-9_-]{0,95}$",
+          "type": "string"
+        }
+      ]
+    },
+    "type": {
+      "pattern": "^[a-z][a-z0-9_]{0,63}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "object_id",
+    "type",
+    "canonical_name",
+    "aliases",
+    "status",
+    "created_event",
+    "supersedes"
+  ],
+  "title": "core.v3 Object v1",
+  "type": "object"
+}

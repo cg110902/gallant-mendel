@@ -1,0 +1,23 @@
+[
+  {
+    "id": "arc_main_01",
+    "volume": "vol_01",
+    "range": [
+      1,
+      50
+    ],
+    "entry_state": "主角仍信任宗门",
+    "exit_state": "主角被宗门追捕",
+    "core_question": "师父为何失踪",
+    "required_turns": [
+      "seal_found",
+      "archive_forgery_found"
+    ],
+    "obligations_created": [
+      "ob_master_betrayal"
+    ],
+    "obligations_resolved": [
+      "ob_master_betrayal"
+    ]
+  }
+]
