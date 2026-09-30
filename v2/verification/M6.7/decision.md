@@ -7,5 +7,5 @@
 - Chapter-twenty commit-prefix interruption recovered
 - Three fixed ten-chapter CED windows: 0 hard errors; advisory findings excluded
 - Silent data loss: false
-- Elapsed 10.296s is observational only, not a performance threshold
+- Elapsed 10.305s is observational only, not a performance threshold
 - Concurrency and production reliability are not claimed
