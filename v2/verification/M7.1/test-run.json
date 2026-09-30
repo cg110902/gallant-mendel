@@ -1,21 +1,21 @@
 {
   "cases": [
     {
-      "detail": "exit=0 duration=0.087s",
+      "detail": "exit=0 duration=0.036s",
       "name": "py_compile",
       "passed": true,
       "stderr": "",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.129s",
+      "detail": "exit=0 duration=0.105s",
       "name": "agent_layout_units",
       "passed": true,
-      "stderr": "test_doctor_agent_layout_is_no_api_key_and_machine_readable (tests.test_agent_layout.AgentLayoutTests.test_doctor_agent_layout_is_no_api_key_and_machine_readable) ... ok\ntest_four_layouts_have_at_least_ten_passing_checks (tests.test_agent_layout.AgentLayoutTests.test_four_layouts_have_at_least_ten_passing_checks) ... ok\ntest_stale_reference_and_symlink_are_rejected (tests.test_agent_layout.AgentLayoutTests.test_stale_reference_and_symlink_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.069s\n\nOK\n",
+      "stderr": "test_doctor_agent_layout_is_no_api_key_and_machine_readable (tests.test_agent_layout.AgentLayoutTests.test_doctor_agent_layout_is_no_api_key_and_machine_readable) ... ok\ntest_four_layouts_have_at_least_ten_passing_checks (tests.test_agent_layout.AgentLayoutTests.test_four_layouts_have_at_least_ten_passing_checks) ... ok\ntest_stale_reference_and_symlink_are_rejected (tests.test_agent_layout.AgentLayoutTests.test_stale_reference_and_symlink_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.054s\n\nOK\n",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.054s",
+      "detail": "exit=0 duration=0.051s",
       "name": "doctor_agent_layout_no_api",
       "passed": true,
       "stderr": "",
@@ -92,7 +92,7 @@
       "passed": true
     }
   ],
-  "completed_at": "2026-09-30T07:59:11.218095+00:00",
+  "completed_at": "2026-09-30T08:00:02.916450+00:00",
   "milestone": "M7.1",
   "schema_version": "m7.1.verification.v1",
   "summary": {
