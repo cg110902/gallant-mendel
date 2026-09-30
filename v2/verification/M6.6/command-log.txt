@@ -1,0 +1,20 @@
+[three_chapters_published] PASS 
+[authority_parent_head_contiguous] PASS 
+[authority_event_count_conserved] PASS 
+[chapter_count_and_ids_conserved] PASS 
+[facts_conserved] PASS 
+[projection_head_conserved] PASS 
+[run_receipts_conserved] PASS 
+[snapshot_restored_before_chapter_three] PASS 
+[journal_prefix_interruption_observed] PASS 
+[journal_retry_recovered] PASS 
+[no_silent_data_loss] PASS 
+[fixed_three_chapter_ced] PASS 
+[ced_zero_for_control_window] PASS 
+[advisory_evidence_excluded_from_ced] PASS 
+[report_hash_valid] PASS 
+[challenge_false_negatives_unchanged] PASS 
+[hard_gate_not_promoted] PASS 
+[challenge_receipt_still_9_fn] PASS {'fn': 9, 'fp': 0, 'tn': 18, 'tp': 9}
+[threshold_bundle_hash_unchanged] PASS 
+[schema_present_and_parseable] PASS 

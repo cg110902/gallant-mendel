@@ -1,0 +1,17 @@
+[py_compile] 0 PASS
+[calibration_units] 0 PASS
+[full_units] 0 PASS
+[calibrate_help] 0 PASS
+[strict_calibration_schemas] 0 PASS
+[frozen_ten_mutators] 0 PASS
+[paired_clean_controls] 0 PASS
+[offline_oracle_no_api] 0 PASS
+[corpus_hash_sealed] 0 PASS
+[complete_observations_required] 0 PASS
+[per_gate_confusion_matrix] 0 PASS
+[soft_false_negatives_visible] 0 PASS
+[fixed_window_ced] 0 PASS
+[threshold_provenance_required] 0 PASS
+[threshold_not_activated] 0 PASS
+[authority_write_absent] 0 PASS
+[scope_boundary] 0 PASS
