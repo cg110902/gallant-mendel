@@ -1,0 +1,11 @@
+{
+  "cases_passed": 22,
+  "cases_total": 22,
+  "challenge": {
+    "fn": 9,
+    "fp": 0,
+    "tn": 18,
+    "tp": 9
+  },
+  "milestone": "M6.5"
+}

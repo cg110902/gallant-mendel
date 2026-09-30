@@ -1,0 +1,11 @@
+{
+  "cases": {
+    "failed": 0,
+    "passed": 11,
+    "total": 11
+  },
+  "frozen_checks": 11,
+  "live_status": "pending",
+  "milestone": "M7.4-tooling",
+  "vendor_runtime_executed": false
+}

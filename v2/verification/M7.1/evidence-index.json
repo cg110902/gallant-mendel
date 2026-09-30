@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "path": "agent-layout-report.json",
+      "sha256": "sha256:1d6b9f8b4a67e3282c86a8c7ea83622a2d5c733ef6335019bb9c645ca4fe362f"
+    },
+    {
+      "path": "test-run.json",
+      "sha256": "sha256:414ae249cddbd1792f03354362582a842d7396a80a0a8d4d8c3918094886b276"
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "sha256:28f4b9cbceff0d62b7f1600bb539d17c591d8512c6a08c18c86aabba55e05763"
+    },
+    {
+      "path": "failures.json",
+      "sha256": "sha256:329066e1d60cbce56774531e6250e85df6754ecca9191d99bf3d14fe51e4ddf5"
+    },
+    {
+      "path": "command-log.txt",
+      "sha256": "sha256:9b57208d14b90414a4e36379535db7f7f0093dc76e8668cbdf6e5c5d6137967f"
+    },
+    {
+      "path": "decision.md",
+      "sha256": "sha256:c4b5dee73509b004222b187f5fab31841ab9e8c405c2493c332491f427fbe731"
+    }
+  ],
+  "milestone": "M7.1",
+  "schema_version": "evidence-index.v1"
+}

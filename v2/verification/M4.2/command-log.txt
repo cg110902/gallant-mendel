@@ -1,0 +1,13 @@
+[py_compile] 0 PASS
+[writer_runtime_units] 0 PASS
+[full_units] 0 PASS
+[run_help] 0 PASS
+[strict_writer_schemas] 0 PASS
+[context_only_runtime_input] 0 PASS
+[attempt_evidence] 0 PASS
+[recoverable_retry] 0 PASS
+[authority_sentinel] 0 PASS
+[run_directory_scope] 0 PASS
+[no_os_sandbox_claim] 0 PASS
+[no_quality_claim] 0 PASS
+[m5_scope_absent] 0 PASS

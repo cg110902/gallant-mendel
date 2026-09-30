@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "sha256:6dee64b947d0fcc40ed85ef2f2b49904da87b182b066e230fbc1f60bebbad87b"
+    },
+    {
+      "path": "antigravity-live-input.template.json",
+      "sha256": "sha256:2c870a2bf91aa2e0d61ea508b846ed967a2d58cfdb5f36391b5a01f57414bb2d"
+    },
+    {
+      "path": "test-run.json",
+      "sha256": "sha256:0666ff5bb15b682c157ab0d9c50f140b126b2b7185dfbec0661f5dd22966f6f0"
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "sha256:7083a21cc72444992bfc66135d7fbf2e5e271694f1287ff61645f3e327a137e1"
+    },
+    {
+      "path": "failures.json",
+      "sha256": "sha256:4caff98dae0d4a1afa11e8166d59edccdca2def59304c7eb4c65a689321cd670"
+    },
+    {
+      "path": "command-log.txt",
+      "sha256": "sha256:e49e120291274873880d657c569989a13618dded643f8ce147f4164e271c85b3"
+    },
+    {
+      "path": "decision.md",
+      "sha256": "sha256:0982d7752e0f0b5b21c8d84a6b5e09d566f8f240803f41087cf35c802c46fb92"
+    }
+  ],
+  "milestone": "M7.4-tooling",
+  "schema_version": "evidence-index.v1"
+}

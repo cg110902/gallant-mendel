@@ -1,0 +1,12 @@
+{
+  "authority_read_only_export": true,
+  "branch_modes": 2,
+  "cases": {
+    "failed": 0,
+    "passed": 12,
+    "total": 12
+  },
+  "deterministic_epub": true,
+  "export_formats": 3,
+  "milestone": "M7.3"
+}

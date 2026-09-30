@@ -1,0 +1,4 @@
+# Thin Codex adapter; business contracts remain in studio.py and .agents/skills.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+developer_instructions = "Read AGENTS.md and .agents/skills. Use python studio.py. Never directly write ledger, state, snapshots, compiled artifacts, or chapters."

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-production-os.local/schemas/three-chapter-smoke-report.v1.schema.json",
+  "title": "M6.6 three-chapter smoke report",
+  "type": "object",
+  "required": [
+    "schema_version", "book_id", "chapters", "chapter_count",
+    "initial_authority_event_count", "authority_event_count", "authority_head",
+    "fact_count", "snapshot", "transaction_recovery", "ced", "loss_checks",
+    "silent_data_loss", "scope", "report_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "three-chapter-smoke-report.v1"},
+    "book_id": {"type": "string", "pattern": "^book_[a-z0-9][a-z0-9_-]{0,62}$"},
+    "chapters": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "object"}},
+    "chapter_count": {"const": 3},
+    "initial_authority_event_count": {"type": "integer", "minimum": 1},
+    "authority_event_count": {"type": "integer", "minimum": 1},
+    "authority_head": {"type": "string", "pattern": "^event_[0-9a-f]{32}$"},
+    "fact_count": {"type": "integer", "minimum": 3},
+    "snapshot": {
+      "type": "object",
+      "required": ["snapshot_id", "head_event_id", "lineage_event_count", "projection_state_hash", "restored_before_chapter_three"]
+    },
+    "transaction_recovery": {
+      "type": "object",
+      "required": ["interruption_injected", "interruption_observed", "recovered"]
+    },
+    "ced": {
+      "type": "object",
+      "required": ["definition", "window_size", "start", "end", "chapter_count", "error_count", "density", "advisory_findings_excluded"],
+      "properties": {
+        "window_size": {"const": 3},
+        "start": {"const": "ch_001"},
+        "end": {"const": "ch_003"},
+        "chapter_count": {"const": 3},
+        "error_count": {"type": "integer", "minimum": 0},
+        "density": {"type": "number", "minimum": 0},
+        "advisory_findings_excluded": {"type": "integer", "minimum": 0}
+      }
+    },
+    "loss_checks": {"type": "object", "minProperties": 8, "additionalProperties": {"type": "boolean"}},
+    "silent_data_loss": {"type": "boolean"},
+    "scope": {
+      "type": "object",
+      "required": ["challenge_false_negatives_changed", "hard_gate_promoted", "reliability_claim"]
+    },
+    "report_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

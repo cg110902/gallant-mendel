@@ -1,0 +1,65 @@
+{
+  "$id": "https://novel-production-os.local/schemas/outline-artifact-index.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifacts": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "bytes": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "path": {
+            "enum": [
+              "objects.json",
+              "initial-state.json",
+              "obligations.json",
+              "timeline.json",
+              "intent-ledger.json",
+              "production-manifest.yaml",
+              "compile-report.md"
+            ]
+          },
+          "sha256": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "type": "array"
+    },
+    "book_id": {
+      "type": "string"
+    },
+    "compile_id": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "outline.artifact-index.v1"
+    },
+    "source_package_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "book_id",
+    "compile_id",
+    "source_package_hash",
+    "artifacts"
+  ],
+  "title": "Outline compiled artifact index v1",
+  "type": "object"
+}

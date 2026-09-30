@@ -1,0 +1,130 @@
+{
+  "$id": "https://novel-production-os.local/schemas/event.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actor_id": {
+      "pattern": "^[a-z][a-z0-9_.-]{0,127}$",
+      "type": "string"
+    },
+    "actor_type": {
+      "pattern": "^[a-z][a-z0-9_.-]{0,127}$",
+      "type": "string"
+    },
+    "book_id": {
+      "pattern": "^book_[a-z0-9][a-z0-9_-]{0,62}$",
+      "type": "string"
+    },
+    "branch_id": {
+      "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+      "type": "string"
+    },
+    "event_id": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "event_type": {
+      "enum": [
+        "object.created",
+        "object.renamed",
+        "object.retired",
+        "facet.asserted",
+        "facet.superseded",
+        "relation.asserted",
+        "relation.invalidated",
+        "fact.asserted",
+        "fact.disputed",
+        "obligation.created",
+        "obligation.touched",
+        "obligation.fulfilled",
+        "obligation.deferred",
+        "obligation.subverted",
+        "obligation.retired",
+        "knowledge.granted",
+        "knowledge.retracted",
+        "intent.registered",
+        "reality.observed",
+        "scene.committed",
+        "chapter.committed",
+        "state.reconciled",
+        "audit.completed",
+        "snapshot.created",
+        "branch.created",
+        "branch.merged"
+      ]
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "parent_event_id": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^event_[0-9a-f]{32}$",
+          "type": "string"
+        }
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "source_run_id": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^run_[a-zA-Z0-9_.-]{1,120}$",
+          "type": "string"
+        }
+      ]
+    },
+    "story_seq": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "supersedes": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^event_[0-9a-f]{32}$",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "event_id",
+    "event_type",
+    "book_id",
+    "branch_id",
+    "parent_event_id",
+    "story_seq",
+    "recorded_at",
+    "actor_type",
+    "actor_id",
+    "source_run_id",
+    "payload_hash",
+    "payload",
+    "evidence_refs",
+    "supersedes"
+  ],
+  "title": "core.v3 Event Envelope",
+  "type": "object"
+}

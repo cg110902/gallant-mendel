@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-production-os.local/schemas/concurrency-guard-report.v1.schema.json",
+  "title": "M6.8 concurrency guard report",
+  "type": "object",
+  "required": ["schema_version", "book_id", "lock_contention", "same_parent_race", "authority", "projection", "silent_overwrite", "scope", "report_hash"],
+  "properties": {
+    "schema_version": {"const": "concurrency-guard-report.v1"},
+    "book_id": {"const": "book_concurrency"},
+    "lock_contention": {
+      "type": "object",
+      "required": ["timeout_seconds", "outcome", "exit_code", "authority_bytes_unchanged", "error"],
+      "properties": {"outcome": {"const": "resource_guard"}, "exit_code": {"const": 7}, "authority_bytes_unchanged": {"type": "boolean"}}
+    },
+    "same_parent_race": {
+      "type": "object",
+      "required": ["parent_event_id", "contenders", "outcomes", "winner_count", "conflict_count", "winner_event_id"],
+      "properties": {"winner_count": {"const": 1}, "conflict_count": {"const": 1}}
+    },
+    "authority": {"type": "object", "required": ["event_count", "head_event_id", "log_hash"]},
+    "projection": {"type": "object", "required": ["last_applied_event_id", "state_hash", "head_matches_authority"]},
+    "silent_overwrite": {"type": "boolean"},
+    "scope": {"type": "object"},
+    "report_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+[py_compile] PASS exit=0 duration=0.050s
+[attestation_units] PASS exit=0 duration=0.212s
+[template_pending] PASS 
+[template_has_eleven_checks] PASS 
+[template_does_not_claim_runtime] PASS 
+[schema_ide-live-attestation-input.v1.schema.json] PASS 
+[schema_ide-live-attestation.v1.schema.json] PASS 
+[pending_template_rejected] PASS exit=1 duration=0.058s
+[rejection_claims_no_runtime] PASS 
+[guide_marks_live_pending] PASS 
+[surrogate_stays_false] PASS 

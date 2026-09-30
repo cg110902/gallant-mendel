@@ -1,0 +1,75 @@
+{
+  "cases": [
+    {
+      "detail": "exit=0 duration=0.050s",
+      "name": "py_compile",
+      "passed": true,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=0.212s",
+      "name": "attestation_units",
+      "passed": true,
+      "stderr": "test_cli_prepare_and_attest (tests.test_live_attestation.LiveAttestationTests.test_cli_prepare_and_attest) ... ok\ntest_complete_bundle_is_hash_bound_and_accepted (tests.test_live_attestation.LiveAttestationTests.test_complete_bundle_is_hash_bound_and_accepted) ... ok\ntest_pending_failed_missing_and_unsafe_evidence_are_rejected (tests.test_live_attestation.LiveAttestationTests.test_pending_failed_missing_and_unsafe_evidence_are_rejected) ... ok\ntest_template_is_pending_and_never_claims_runtime_execution (tests.test_live_attestation.LiveAttestationTests.test_template_is_pending_and_never_claims_runtime_execution) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.148s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "detail": "",
+      "name": "template_pending",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "template_has_eleven_checks",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "template_does_not_claim_runtime",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_ide-live-attestation-input.v1.schema.json",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_ide-live-attestation.v1.schema.json",
+      "passed": true
+    },
+    {
+      "detail": "exit=1 duration=0.058s",
+      "name": "pending_template_rejected",
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"error\": \"ide_version must be completed\", \"exit_code\": 1, \"ok\": false, \"vendor_runtime_executed\": false}\n"
+    },
+    {
+      "detail": "",
+      "name": "rejection_claims_no_runtime",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "guide_marks_live_pending",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "surrogate_stays_false",
+      "passed": true
+    }
+  ],
+  "completed_at": "2026-09-30T08:16:12.447406+00:00",
+  "live_status": "pending",
+  "milestone": "M7.4-tooling",
+  "schema_version": "m7.4.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 11,
+    "total": 11
+  },
+  "vendor_runtime_executed": false
+}

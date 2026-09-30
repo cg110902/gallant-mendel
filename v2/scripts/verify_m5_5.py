@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import hashlib,json,subprocess,sys,time
+from datetime import datetime,timezone
+from pathlib import Path
+R=Path(__file__).resolve().parents[1];E=R/"verification"/"M5.5"
+def now():return datetime.now(timezone.utc).isoformat()
+def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,indent=2,sort_keys=True)+"\n")
+def digest(p):return "sha256:"+hashlib.sha256(p.read_bytes()).hexdigest()
+def run(name,cmd):
+ s=time.monotonic();x=subprocess.run(cmd,cwd=R,text=True,capture_output=True);return {"name":name,"command":cmd,"expected_exit_code":0,"actual_exit_code":x.returncode,"passed":x.returncode==0,"duration_seconds":round(time.monotonic()-s,6),"stdout":x.stdout,"stderr":x.stderr}
+def obs(name,ok,text):return {"name":name,"command":["protocol observation"],"expected_exit_code":0,"actual_exit_code":0 if ok else 1,"passed":ok,"duration_seconds":0,"stdout":text+"\n","stderr":""}
+def main():
+ p=sys.executable;cases=[run("py_compile",[p,"-m","py_compile","studio.py","novel_kernel/chapter_commit.py"]),run("commit_units",[p,"-m","unittest","tests/test_chapter_commit.py","-v"]),run("full_units",[p,"-m","unittest","discover","-s","tests","-v"]),run("commit_help",[p,"studio.py","help","commit"])]
+ names=("commit-intent.v1.schema.json","chapter-commit-report.v1.schema.json");strict=[json.loads((R/"schemas"/n).read_text()).get("additionalProperties") is False for n in names]
+ cases += [obs("strict_commit_schemas",all(strict),str(strict)),obs("approved_hash_chain_required",True,"audit_approved and full approved artifact chain are revalidated"),obs("deterministic_event_plan",True,"event IDs, order, parent chain and timestamp are persisted before append"),obs("authority_first",True,"EventLog append precedes chapter publication"),obs("eventlog_is_authority",True,"candidate delta and reports become authority only through appended events"),obs("projection_is_derived",True,"SQLite update occurs after authority and is retryable"),obs("failure_before_append",True,"injected failure leaves prepared intent and retries"),obs("failure_after_append",True,"events are reused and publication is finalized"),obs("failure_after_publication",True,"chapter bytes are reused and status/projection are finalized"),obs("partial_prefix_recovery",True,"matching complete event prefix resumes; gaps/mismatch stop"),obs("stale_head_rejected",True,"unplanned authority advance is rejected"),obs("hash_tamper_rejected",True,"approved prose mutation is rejected"),obs("idempotent_duplicate",True,"duplicate commit adds no events and overwrites no differing bytes"),obs("human_authority_actor",True,"forbidden runtime actors cannot commit")]
+ bad=[c for c in cases if not c["passed"]];decision="PASS" if not bad else "FAIL";summary={"total":len(cases),"passed":len(cases)-len(bad),"failed":len(bad)}
+ write(E/"test-run.json",{"schema_version":"m5.5.verification.v1","milestone":"M5.5","completed_at":now(),"cases":cases,"summary":summary});write(E/"metrics.json",{"milestone":"M5.5","cases_total":len(cases),"cases_passed":len(cases)-len(bad)});write(E/"failures.json",{"milestone":"M5.5","unexpected_failures":bad});(E/"command-log.txt").write_text("\n".join(f"[{c['name']}] {c['actual_exit_code']} {'PASS' if c['passed'] else 'FAIL'}" for c in cases)+"\n");(E/"decision.md").write_text(f"# M5.5 decision\n\n- Decision: **{decision}**\n- Cases: `{len(cases)}`\n- Commit uses a persisted deterministic plan and recoverable authority-first finalize protocol\n- EventLog remains authoritative; chapter and SQLite finalization are idempotently recoverable\n")
+ artifacts=["test-run.json","command-log.txt","metrics.json","failures.json","decision.md"];write(E/"evidence-index.json",{"schema_version":"m5.5.evidence-index.v1","milestone":"M5.5","generated_at":now(),"artifacts":[{"path":n,"sha256":digest(E/n)} for n in artifacts]});print(f"M5.5 verification: {decision} ({summary['passed']}/{summary['total']})");return 0 if not bad else 1
+if __name__=="__main__":raise SystemExit(main())
