@@ -1,0 +1,18 @@
+[
+  {
+    "id": "item_seal",
+    "name": "掌门印",
+    "current_holder": "char_lin_yun",
+    "source": "师父遗留",
+    "capabilities": [
+      "opens_archive"
+    ],
+    "limitations": [
+      "usable_once"
+    ],
+    "transfer_rules": [
+      "physical_handover"
+    ],
+    "foreshadowing_carrier": true
+  }
+]

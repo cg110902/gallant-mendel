@@ -1,0 +1,45 @@
+{
+  "$id": "https://novel-production-os.local/schemas/production-manifest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_index": {
+      "const": "artifact-index.json"
+    },
+    "book_id": {
+      "type": "string"
+    },
+    "compile_id": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "compiler_schema": {
+      "const": "outline.compiled.v1"
+    },
+    "compiler_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "production-manifest.v1"
+    },
+    "source_package_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "status": {
+      "const": "compiled"
+    }
+  },
+  "required": [
+    "schema_version",
+    "compiler_schema",
+    "compiler_version",
+    "book_id",
+    "source_package_hash",
+    "compile_id",
+    "status",
+    "artifact_index"
+  ],
+  "title": "Production manifest v1",
+  "type": "object"
+}

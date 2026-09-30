@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://novel-production-os.local/schemas/mutation-harness-report.v1.schema.json",
+  "type":"object","additionalProperties":false,
+  "required":["schema_version","corpus_hash","observations_hash","calibration_report_hash","observation_count","detected_count","false_negative_count","authority_unchanged","runs","harness_hash"],
+  "properties":{
+    "schema_version":{"const":"mutation-harness-report.v1"},
+    "corpus_hash":{"$ref":"#/$defs/hash"},"observations_hash":{"$ref":"#/$defs/hash"},"calibration_report_hash":{"$ref":"#/$defs/hash"},"harness_hash":{"$ref":"#/$defs/hash"},
+    "observation_count":{"const":20},"detected_count":{"type":"integer","minimum":0,"maximum":20},"false_negative_count":{"type":"integer","minimum":0,"maximum":10},"authority_unchanged":{"const":true},
+    "runs":{"type":"array","minItems":20,"maxItems":20,"items":{"$ref":"#/$defs/run"}}
+  },
+  "$defs":{
+    "hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"},
+    "run":{"type":"object","additionalProperties":false,"required":["sample_id","mutator_id","variant","expected_gate","expected_rule","detected","detector_id","detector_version","terminal","authority_unchanged","evidence_refs"],"properties":{
+      "sample_id":{"type":"string"},"mutator_id":{"type":"string"},"variant":{"enum":["clean","mutated"]},"expected_gate":{"type":"string"},"expected_rule":{"type":"string"},"detected":{"type":"boolean"},"detector_id":{"type":"string"},"detector_version":{"type":"string"},"terminal":{"type":"string"},"authority_unchanged":{"const":true},"evidence_refs":{"type":"array","items":{"type":"string"}}
+    }}
+  }
+}
