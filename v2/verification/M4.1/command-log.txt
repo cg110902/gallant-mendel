@@ -1,0 +1,12 @@
+[py_compile] 0 PASS
+[production_units] 0 PASS
+[full_units] 0 PASS
+[plan_help] 0 PASS
+[context_help] 0 PASS
+[strict_artifact_schemas] 0 PASS
+[deterministic_identity] 0 PASS
+[frozen_dag] 0 PASS
+[stale_plan_guard] 0 PASS
+[no_future_leak] 0 PASS
+[write_scope] 0 PASS
+[no_model_or_prose] 0 PASS

@@ -1,0 +1,24 @@
+# Human-readable engineering contract. M0 does not parse YAML.
+project: novel-production-os
+version: 0.1.0-dev
+phase: M5.4
+language:
+  name: python
+  minimum: "3.11"
+core_dependencies: standard-library-only
+storage:
+  authority: append-only-jsonl
+  projection: sqlite
+  evidence:
+    - markdown
+    - json
+model_runtime:
+  default: offline
+  optional_provider: openai-compatible
+  api_key_required: false
+  provider_api_key_required: true
+  provider_timeout_seconds: 120
+services:
+  persistent_web_server: false
+  vector_database_required: false
+  graph_database_required: false

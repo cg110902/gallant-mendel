@@ -1,0 +1,17 @@
+[
+  {
+    "id": "place_border_town",
+    "name": "边城",
+    "location": "northern_border",
+    "accessibility": "main_road",
+    "environment_constraints": [
+      "winter_storm"
+    ],
+    "faction": "faction_sword_sect",
+    "allowed_actions": [
+      "trade",
+      "investigate"
+    ],
+    "first_appearance_chapter": 1
+  }
+]

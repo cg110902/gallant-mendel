@@ -1,0 +1,27 @@
+{
+  "artifacts": [
+    {
+      "path": "test-run.json",
+      "sha256": "sha256:b3525a1f79e55452c2444131914ace7ccd41ddf2f6f7c52a8d77cc42d747915e"
+    },
+    {
+      "path": "command-log.txt",
+      "sha256": "sha256:cb54b2417369fc20a38c990f0e0df24cb88956fb48f8b51d72e739e95be0e89b"
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "sha256:802f9e07c36111d194077c55b9cce454c2bb20e98dc5fc7dec5b65b91a0410fc"
+    },
+    {
+      "path": "failures.json",
+      "sha256": "sha256:373fe2fbe47ea117542cb0ffb609962a370483ae081f3816c0319394bd885f86"
+    },
+    {
+      "path": "decision.md",
+      "sha256": "sha256:a5eb49a39c2287112acda854664180b18e4bc71d63862e3275c8a749d408c08d"
+    }
+  ],
+  "generated_at": "2026-09-30T05:39:10.437691+00:00",
+  "milestone": "M0",
+  "schema_version": "m0.evidence-index.v1"
+}

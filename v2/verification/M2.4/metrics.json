@@ -1,0 +1,11 @@
+{
+  "atomic_pointer": true,
+  "authority_files_created": 0,
+  "cases_passed": 9,
+  "cases_total": 9,
+  "core_third_party_dependencies": 0,
+  "idempotent_generation": true,
+  "logical_artifacts": 7,
+  "milestone": "M2.4",
+  "unexpected_failures": 0
+}
