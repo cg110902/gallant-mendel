@@ -1,0 +1,15 @@
+[py_compile] 0 PASS
+[provider_units] 0 PASS
+[writer_checkpoint_units] 0 PASS
+[full_units] 0 PASS
+[run_help] 0 PASS
+[strict_m4_3_schemas] 0 PASS
+[https_provider_boundary] 0 PASS
+[credential_isolation] 0 PASS
+[bounded_context] 0 PASS
+[bounded_response] 0 PASS
+[no_automatic_paid_retry] 0 PASS
+[human_checkpoint_hash_binding] 0 PASS
+[human_rework_path] 0 PASS
+[offline_verification] 0 PASS
+[m5_scope_absent] 0 PASS

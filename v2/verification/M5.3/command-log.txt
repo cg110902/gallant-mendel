@@ -1,0 +1,15 @@
+[py_compile] 0 PASS
+[hard_audit_units] 0 PASS
+[full_units] 0 PASS
+[audit_help] 0 PASS
+[strict_audit_schema] 0 PASS
+[revalidated_hash_chain] 0 PASS
+[reconcile_hard_inheritance] 0 PASS
+[dead_actor_rule] 0 PASS
+[time_and_location_rules] 0 PASS
+[knowledge_capability_resource_rules] 0 PASS
+[obligation_rule] 0 PASS
+[review_not_promoted_to_hard] 0 PASS
+[stable_findings_and_exit_codes] 0 PASS
+[authority_write_absent] 0 PASS
+[semantic_style_commit_absent] 0 PASS

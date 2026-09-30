@@ -1,0 +1,16 @@
+{
+  "authority_head": "event_f2bd16e723c370b6d8e295af7410a8a2",
+  "cases_passed": 15,
+  "cases_total": 15,
+  "chapter_id": "ch_001",
+  "compile_id": "sha256:e37e95726154669ddde52beab37b2e13cf56b233034b1ec2d8cff318ed4506a3",
+  "contextpack_generated": false,
+  "core_third_party_dependencies": 0,
+  "error_corpus_count": 27,
+  "event_count": 26,
+  "event_log_hash": "sha256:70a6c1bcda6e7fa4c493f4ae644652e28c809c1420e4688f486a05e56268d751",
+  "milestone": "M2",
+  "projection_state_hash": "sha256:0872cbdf96fb71af7e3955eb276fb9d4f2d6514acf4c2456fefa0b090fb6a986",
+  "substage_evidence_hashes": 25,
+  "unexpected_failures": 0
+}

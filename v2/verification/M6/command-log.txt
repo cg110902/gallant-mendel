@@ -1,0 +1,35 @@
+[py_compile] PASS exit=0 duration=0.192s
+[full_units_284] PASS exit=0 duration=41.269s
+[m5_end_to_end_boundary] PASS exit=0 duration=0.997s
+[m6_1_decision_pass] PASS 
+[m6_1_evidence_hashes] PASS []
+[m6_2_decision_pass] PASS 
+[m6_2_evidence_hashes] PASS []
+[m6_3_decision_pass] PASS 
+[m6_3_evidence_hashes] PASS []
+[m6_4_decision_pass] PASS 
+[m6_4_evidence_hashes] PASS []
+[m6_5_decision_pass] PASS 
+[m6_5_evidence_hashes] PASS []
+[m6_6_decision_pass] PASS 
+[m6_6_evidence_hashes] PASS []
+[m6_7_decision_pass] PASS 
+[m6_7_evidence_hashes] PASS []
+[m6_8_decision_pass] PASS 
+[m6_8_evidence_hashes] PASS []
+[m6_2_historical_baseline_preserved] PASS {'tp': 7, 'fp': 0, 'tn': 10, 'fn': 3}
+[historical_three_fn_explicit] PASS ['mutation_05_personadrift', 'mutation_09_troperepeat', 'mutation_10_wordcountcheat']
+[threshold_bundle_frozen] PASS 
+[template_holdout_preserved] PASS {'fn': 0, 'fp': 0, 'tn': 12, 'tp': 12}
+[challenge_separate_and_nine_fn] PASS {'fn': 9, 'fp': 0, 'tn': 18, 'tp': 9}
+[challenge_hash_frozen] PASS 
+[three_chapter_no_loss] PASS 
+[thirty_chapter_recovery_no_loss] PASS 
+[fixed_ced_zero_but_not_quality_claim] PASS 
+[concurrency_one_winner_one_conflict] PASS 
+[resource_guard_exit_seven] PASS 
+[twelve_false_negative_postmortems] PASS 
+[postmortem_binds_frozen_reports] PASS 
+[warning_only_policy_preserved] PASS 
+[all_schemas_parse] PASS count=56 bad=[]
+[m6_exit_conditions_mapped] PASS 

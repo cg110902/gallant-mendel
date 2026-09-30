@@ -1,0 +1,73 @@
+{
+  "$id": "https://novel-production-os.local/schemas/evidence.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "evidence_id": {
+      "pattern": "^evidence_[a-z0-9][a-z0-9_-]{0,95}$",
+      "type": "string"
+    },
+    "excerpt": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "minLength": 1,
+          "type": "string"
+        }
+      ]
+    },
+    "locator": {
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "end": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "section": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "recorded_event": {
+      "pattern": "^event_[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "source_ref": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "outline",
+        "chapter",
+        "run",
+        "human",
+        "event"
+      ]
+    }
+  },
+  "required": [
+    "evidence_id",
+    "source_type",
+    "source_ref",
+    "locator",
+    "content_hash",
+    "excerpt",
+    "recorded_event"
+  ],
+  "title": "core.v3 Evidence v1",
+  "type": "object"
+}

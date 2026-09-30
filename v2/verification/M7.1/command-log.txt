@@ -1,0 +1,17 @@
+[py_compile] PASS exit=0 duration=0.087s
+[agent_layout_units] PASS exit=0 duration=0.129s
+[doctor_agent_layout_no_api] PASS exit=0 duration=0.054s
+[doctor_report_ok] PASS 
+[four_platforms_present] PASS ['antigravity', 'claude', 'codex', 'cursor']
+[antigravity_at_least_ten_checks] PASS {'failed': 0, 'passed': 10, 'total': 10}
+[claude_at_least_ten_checks] PASS {'failed': 0, 'passed': 11, 'total': 11}
+[cursor_at_least_ten_checks] PASS {'failed': 0, 'passed': 11, 'total': 11}
+[codex_at_least_ten_checks] PASS {'failed': 0, 'passed': 11, 'total': 11}
+[all_layout_checks_pass] PASS count=43
+[no_api_key_required] PASS 
+[all_adapter_files_regular] PASS 
+[no_machine_absolute_paths] PASS 
+[authority_roots_named] PASS 
+[studio_is_only_execution_surface] PASS 
+[six_antigravity_workflows] PASS 
+[legacy_doctor_compatible] PASS 

@@ -1,0 +1,12 @@
+{
+  "authority_files_created": 0,
+  "cases_passed": 10,
+  "cases_total": 10,
+  "core_third_party_dependencies": 0,
+  "format_rejection_cases": 3,
+  "layout_rejection_cases": 4,
+  "milestone": "M2.1",
+  "required_structured_documents": 14,
+  "unexpected_failures": 0,
+  "yaml_dependency_boundary_verified": true
+}
