@@ -1,0 +1,7 @@
+---
+description: Thin Cursor adapter for Novel Production OS
+globs: ["**/*"]
+alwaysApply: true
+---
+Read AGENTS.md and `.agents/skills/`. Invoke `python studio.py`; never directly write ledger, state, snapshots,
+compiled artifacts, or chapters. Candidate writer output belongs only in the active Run through the harness.

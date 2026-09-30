@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-production-os.local/schemas/m6-known-limitations.v1.schema.json",
+  "title": "M6 frozen false-negative postmortems",
+  "type": "object",
+  "required": ["schema_version", "baseline_report_hash", "challenge_report_hash", "false_negatives", "non_claims", "gate_policy", "postmortem_hash"],
+  "properties": {
+    "schema_version": {"const": "m6-known-limitations.v1"},
+    "baseline_report_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "challenge_report_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "false_negatives": {
+      "type": "array", "minItems": 12, "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["source", "sample_id", "detector", "cause", "disposition"],
+        "additionalProperties": false
+      }
+    },
+    "non_claims": {"type": "array", "minItems": 4, "items": {"type": "string"}},
+    "gate_policy": {"type": "string"},
+    "postmortem_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

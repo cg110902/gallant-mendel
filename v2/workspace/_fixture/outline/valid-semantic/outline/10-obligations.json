@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ob_master_betrayal",
+    "kind": "foreshadowing",
+    "source_thread": "thread_master_betrayal",
+    "planted_chapter": 1,
+    "expected_window": [
+      80,
+      140
+    ],
+    "weight": 0.9,
+    "allowed_resolution": [
+      "fulfilled",
+      "subverted",
+      "deferred"
+    ],
+    "reader_visibility": "concealed",
+    "character_visibility": {
+      "char_lin_yun": "unknown",
+      "char_master": "confirmed"
+    },
+    "evidence_requirement": {
+      "min_clues": 2,
+      "payoff_requires": [
+        "event_master_truth_revealed"
+      ]
+    }
+  }
+]

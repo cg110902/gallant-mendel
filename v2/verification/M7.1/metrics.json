@@ -1,0 +1,32 @@
+{
+  "cases": {
+    "failed": 0,
+    "passed": 17,
+    "total": 17
+  },
+  "layout_check_count": 43,
+  "milestone": "M7.1",
+  "no_api_key": true,
+  "platform_totals": {
+    "antigravity": {
+      "failed": 0,
+      "passed": 10,
+      "total": 10
+    },
+    "claude": {
+      "failed": 0,
+      "passed": 11,
+      "total": 11
+    },
+    "codex": {
+      "failed": 0,
+      "passed": 11,
+      "total": 11
+    },
+    "cursor": {
+      "failed": 0,
+      "passed": 11,
+      "total": 11
+    }
+  }
+}

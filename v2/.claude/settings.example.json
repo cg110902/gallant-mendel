@@ -1,0 +1,1 @@
+{"hooks":{"PostToolUse":[{"command":"python studio.py doctor --agent-layout --no-api-key --json"}]},"permissions":{"deny":["Write(ledger/**)","Write(state/**)","Write(snapshots/**)","Write(chapters/**)"]}}

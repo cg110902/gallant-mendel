@@ -1,0 +1,11 @@
+[py_compile] PASS exit=0 duration=0.032s
+[matrix_units] PASS exit=0 duration=2.415s
+[matrix_cli] PASS exit=0 duration=2.318s
+[matrix_report_ok] PASS 
+[four_by_ten] PASS 
+[forty_mapping_rows] PASS 
+[all_mappings_pass] PASS 
+[vendor_runtime_not_claimed] PASS 
+[live_attestation_required] PASS 
+[antigravity_live_pending] PASS 
+[schema_present] PASS 

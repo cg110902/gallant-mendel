@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "fn": 3,
+    "fp": 0,
+    "tn": 10,
+    "tp": 7
+  },
+  "cases": {
+    "failed": 0,
+    "passed": 35,
+    "total": 35
+  },
+  "challenge": {
+    "fn": 9,
+    "fp": 0,
+    "tn": 18,
+    "tp": 9
+  },
+  "concurrency_conflicts": 1,
+  "concurrency_winners": 1,
+  "known_false_negatives": 12,
+  "milestone": "M6",
+  "schemas": 56,
+  "template_holdout": {
+    "fn": 0,
+    "fp": 0,
+    "tn": 12,
+    "tp": 12
+  },
+  "thirty_chapter_ced": 0.0,
+  "thirty_chapter_silent_data_loss": false,
+  "three_chapter_silent_data_loss": false,
+  "unit_tests": 284
+}

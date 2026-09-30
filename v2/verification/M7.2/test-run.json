@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "detail": "exit=0 duration=0.032s",
+      "name": "py_compile",
+      "passed": true,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=2.415s",
+      "name": "matrix_units",
+      "passed": true,
+      "stderr": "test_four_surrogate_matrices_execute_ten_portable_capabilities (tests.test_compatibility_matrix.CompatibilityMatrixTests.test_four_surrogate_matrices_execute_ten_portable_capabilities) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 2.351s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=2.318s",
+      "name": "matrix_cli",
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"ok\": true, \"output\": \"/home/user/gallant-mendel/v2/verification/M7.2/compatibility-matrix.json\", \"portable_cases_passed\": 10, \"vendor_runtime_executed\": false}\n"
+    },
+    {
+      "detail": "",
+      "name": "matrix_report_ok",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "four_by_ten",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "forty_mapping_rows",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "all_mappings_pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "vendor_runtime_not_claimed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "live_attestation_required",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "antigravity_live_pending",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_present",
+      "passed": true
+    }
+  ],
+  "completed_at": "2026-09-30T08:04:29.810661+00:00",
+  "milestone": "M7.2",
+  "schema_version": "m7.2.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 11,
+    "total": 11
+  }
+}

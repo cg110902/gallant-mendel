@@ -1,0 +1,103 @@
+{
+  "cases": [
+    {
+      "detail": "exit=0 duration=0.036s",
+      "name": "py_compile",
+      "passed": true,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=0.105s",
+      "name": "agent_layout_units",
+      "passed": true,
+      "stderr": "test_doctor_agent_layout_is_no_api_key_and_machine_readable (tests.test_agent_layout.AgentLayoutTests.test_doctor_agent_layout_is_no_api_key_and_machine_readable) ... ok\ntest_four_layouts_have_at_least_ten_passing_checks (tests.test_agent_layout.AgentLayoutTests.test_four_layouts_have_at_least_ten_passing_checks) ... ok\ntest_stale_reference_and_symlink_are_rejected (tests.test_agent_layout.AgentLayoutTests.test_stale_reference_and_symlink_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.054s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=0.051s",
+      "name": "doctor_agent_layout_no_api",
+      "passed": true,
+      "stderr": "",
+      "stdout": "{\"agent_layout\": {\"ok\": true, \"platform_totals\": {\"antigravity\": {\"failed\": 0, \"passed\": 10, \"total\": 10}, \"claude\": {\"failed\": 0, \"passed\": 11, \"total\": 11}, \"codex\": {\"failed\": 0, \"passed\": 11, \"total\": 11}, \"cursor\": {\"failed\": 0, \"passed\": 11, \"total\": 11}}}, \"api_key_required\": false, \"checks\": [{\"exit_code_if_failed\": 5, \"id\": \"python_version\", \"message\": \"Python 3.11; minimum is 3.11\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"engineering_root\", \"message\": \"current directory is /home/user/gallant-mendel/v2; expected /home/user/gallant-mendel/v2\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agents_file\", \"message\": \"AGENTS.md exists\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"base_directories\", \"message\": \"all M0 base directories exist\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 2, \"id\": \"version_metadata\", \"message\": \"version metadata is readable\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"temporary_write\", \"message\": \"write probe passed: /home/user/gallant-mendel/v2\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"stdlib_json\", \"message\": \"standard-library JSON is available\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 5, \"id\": \"api_key\", \"message\": \"no-api-key-ready\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.canonical_doctor_skill\", \"message\": \".agents/skills/novel-doctor/SKILL.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.canonical_writer_skill\", \"message\": \".agents/skills/write-beat/SKILL.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.authority_rule\", \"message\": \".agents/rules/authority.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.workflow_set\", \"message\": \"six /novel-* thin workflows exist\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.skill_frontmatter\", \"message\": \"canonical skills have discovery frontmatter\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.studio_delegation\", \"message\": \"all workflows delegate to studio.py\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.authority_denied\", \"message\": \"authority rule names protected roots\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.candidate_boundary\", \"message\": \"writer skill preserves candidate boundary\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.no_api_key_core\", \"message\": \"core remains no-API-key capable\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.antigravity.portable_paths\", \"message\": \"canonical adapter uses no machine-specific absolute path\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.adapter_instructions\", \"message\": \".claude/CLAUDE.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.auditor_agent\", \"message\": \".claude/agents/auditor.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.settings_example\", \"message\": \".claude/settings.example.json is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.settings_json\", \"message\": \"settings example parses as JSON\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.canonical_reference\", \"message\": \"adapter references canonical skills\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.agents_reference\", \"message\": \"adapter references shared AGENTS.md\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.studio_hook\", \"message\": \"hook delegates to doctor\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.protected_roots\", \"message\": \"settings deny four authority roots\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.auditor_read_only\", \"message\": \"auditor adapter is authority read-only\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.thin_adapter\", \"message\": \"adapter files remain thin\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.claude.portable_paths\", \"message\": \"adapter uses no machine-specific absolute path\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.scoped_rule\", \"message\": \".cursor/rules/novel-production.mdc is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.writer_agent\", \"message\": \".cursor/agents/writer.md is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.hooks_example\", \"message\": \".cursor/hooks.example.json is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.hooks_json\", \"message\": \"hooks example parses as JSON\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.canonical_reference\", \"message\": \"Cursor references canonical skills\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.agents_reference\", \"message\": \"Cursor references shared AGENTS.md\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.studio_delegation\", \"message\": \"rules, agent, and hook delegate to studio.py\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.protected_roots\", \"message\": \"hooks list four protected roots\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.context_pack_only\", \"message\": \"writer receives bounded context\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.thin_adapter\", \"message\": \"adapter files remain thin\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.cursor.portable_paths\", \"message\": \"adapter uses no machine-specific absolute path\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.config_example\", \"message\": \".codex/config.example.toml is a regular non-symlink file\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.approval_policy\", \"message\": \"approval is explicit\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.workspace_sandbox\", \"message\": \"workspace sandbox is declared\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.canonical_reference\", \"message\": \"config references canonical skills\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.agents_reference\", \"message\": \"config references shared AGENTS.md\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.studio_delegation\", \"message\": \"config delegates to studio.py\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.ledger_denied\", \"message\": \"ledger direct writes denied\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.state_denied\", \"message\": \"state direct writes denied\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.chapter_denied\", \"message\": \"chapter direct writes denied\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.thin_adapter\", \"message\": \"config remains thin\", \"status\": \"pass\"}, {\"exit_code_if_failed\": 1, \"id\": \"agent_layout.codex.portable_paths\", \"message\": \"adapter uses no machine-specific absolute path\", \"status\": \"pass\"}], \"ok\": true, \"phase\": \"M7.1\"}\n"
+    },
+    {
+      "detail": "",
+      "name": "doctor_report_ok",
+      "passed": true
+    },
+    {
+      "detail": "['antigravity', 'claude', 'codex', 'cursor']",
+      "name": "four_platforms_present",
+      "passed": true
+    },
+    {
+      "detail": "{'failed': 0, 'passed': 10, 'total': 10}",
+      "name": "antigravity_at_least_ten_checks",
+      "passed": true
+    },
+    {
+      "detail": "{'failed': 0, 'passed': 11, 'total': 11}",
+      "name": "claude_at_least_ten_checks",
+      "passed": true
+    },
+    {
+      "detail": "{'failed': 0, 'passed': 11, 'total': 11}",
+      "name": "cursor_at_least_ten_checks",
+      "passed": true
+    },
+    {
+      "detail": "{'failed': 0, 'passed': 11, 'total': 11}",
+      "name": "codex_at_least_ten_checks",
+      "passed": true
+    },
+    {
+      "detail": "count=43",
+      "name": "all_layout_checks_pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no_api_key_required",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "all_adapter_files_regular",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no_machine_absolute_paths",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "authority_roots_named",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "studio_is_only_execution_surface",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "six_antigravity_workflows",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "legacy_doctor_compatible",
+      "passed": true
+    }
+  ],
+  "completed_at": "2026-09-30T08:00:02.916450+00:00",
+  "milestone": "M7.1",
+  "schema_version": "m7.1.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 17,
+    "total": 17
+  }
+}
