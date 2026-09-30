@@ -1,21 +1,21 @@
 {
   "cases": [
     {
-      "detail": "exit=0 duration=0.070s",
+      "detail": "exit=0 duration=0.041s",
       "name": "py_compile",
       "passed": true,
       "stderr": "",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.302s",
+      "detail": "exit=0 duration=0.280s",
       "name": "branch_export_units",
       "passed": true,
-      "stderr": "test_branch_fork_and_rollback_are_non_destructive (tests.test_branch_export.BranchExportTests.test_branch_fork_and_rollback_are_non_destructive) ... ok\ntest_cli_branch_and_export (tests.test_branch_export.BranchExportTests.test_cli_branch_and_export) ... ok\ntest_export_is_deterministic_and_rejects_tamper (tests.test_branch_export.BranchExportTests.test_export_is_deterministic_and_rejects_tamper) ... ok\ntest_export_rejects_symlinked_authority_input (tests.test_branch_export.BranchExportTests.test_export_rejects_symlinked_authority_input) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.212s\n\nOK\n",
+      "stderr": "test_branch_fork_and_rollback_are_non_destructive (tests.test_branch_export.BranchExportTests.test_branch_fork_and_rollback_are_non_destructive) ... ok\ntest_cli_branch_and_export (tests.test_branch_export.BranchExportTests.test_cli_branch_and_export) ... ok\ntest_export_is_deterministic_and_rejects_tamper (tests.test_branch_export.BranchExportTests.test_export_is_deterministic_and_rejects_tamper) ... ok\ntest_export_rejects_symlinked_authority_input (tests.test_branch_export.BranchExportTests.test_export_rejects_symlinked_authority_input) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.204s\n\nOK\n",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.058s",
+      "detail": "exit=0 duration=0.054s",
       "name": "cli_help",
       "passed": true,
       "stderr": "",
@@ -67,7 +67,7 @@
       "passed": true
     }
   ],
-  "completed_at": "2026-09-30T08:10:59.107894+00:00",
+  "completed_at": "2026-09-30T08:12:06.041175+00:00",
   "milestone": "M7.3",
   "schema_version": "m7.3.verification.v1",
   "summary": {

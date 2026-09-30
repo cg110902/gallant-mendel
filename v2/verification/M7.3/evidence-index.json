@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "test-run.json",
-      "sha256": "sha256:afc15b46588bd691fa1d396fda9f21dc4dcc5bc56857c03e4d490af47340f5aa"
+      "sha256": "sha256:147048cae113d2db6008b855fb78042ae425226cd6760dd7236f266c92801e00"
     },
     {
       "path": "metrics.json",
@@ -14,7 +14,7 @@
     },
     {
       "path": "command-log.txt",
-      "sha256": "sha256:542a74cbc333e60b01008df6d4572dba15699bf7c910f318ce0151440f393c81"
+      "sha256": "sha256:d342efcfa92a461ba2ec211405fa08752b4c1f659246352f651719f376e6f82f"
     },
     {
       "path": "decision.md",

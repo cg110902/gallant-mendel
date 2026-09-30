@@ -1,21 +1,21 @@
 {
   "cases": [
     {
-      "detail": "exit=0 duration=0.045s",
+      "detail": "exit=0 duration=0.043s",
       "name": "py_compile",
       "passed": true,
       "stderr": "",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=2.552s",
+      "detail": "exit=0 duration=2.343s",
       "name": "matrix_units",
       "passed": true,
-      "stderr": "test_four_surrogate_matrices_execute_ten_portable_capabilities (tests.test_compatibility_matrix.CompatibilityMatrixTests.test_four_surrogate_matrices_execute_ten_portable_capabilities) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 2.446s\n\nOK\n",
+      "stderr": "test_four_surrogate_matrices_execute_ten_portable_capabilities (tests.test_compatibility_matrix.CompatibilityMatrixTests.test_four_surrogate_matrices_execute_ten_portable_capabilities) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 2.274s\n\nOK\n",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=2.569s",
+      "detail": "exit=0 duration=2.260s",
       "name": "matrix_cli",
       "passed": true,
       "stderr": "",
@@ -62,7 +62,7 @@
       "passed": true
     }
   ],
-  "completed_at": "2026-09-30T08:10:06.890643+00:00",
+  "completed_at": "2026-09-30T08:12:05.623518+00:00",
   "milestone": "M7.2",
   "schema_version": "m7.2.verification.v1",
   "summary": {
