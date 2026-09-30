@@ -1,6 +1,6 @@
-[py_compile] PASS exit=0 duration=0.032s
-[matrix_units] PASS exit=0 duration=2.415s
-[matrix_cli] PASS exit=0 duration=2.318s
+[py_compile] PASS exit=0 duration=0.034s
+[matrix_units] PASS exit=0 duration=2.545s
+[matrix_cli] PASS exit=0 duration=2.185s
 [matrix_report_ok] PASS 
 [four_by_ten] PASS 
 [forty_mapping_rows] PASS 

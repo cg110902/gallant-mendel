@@ -1,6 +1,6 @@
-[py_compile] PASS exit=0 duration=0.036s
-[agent_layout_units] PASS exit=0 duration=0.105s
-[doctor_agent_layout_no_api] PASS exit=0 duration=0.051s
+[py_compile] PASS exit=0 duration=0.061s
+[agent_layout_units] PASS exit=0 duration=0.196s
+[doctor_agent_layout_no_api] PASS exit=0 duration=0.061s
 [doctor_report_ok] PASS 
 [four_platforms_present] PASS ['antigravity', 'claude', 'codex', 'cursor']
 [antigravity_at_least_ten_checks] PASS {'failed': 0, 'passed': 10, 'total': 10}
