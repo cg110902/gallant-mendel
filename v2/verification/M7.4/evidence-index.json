@@ -10,7 +10,7 @@
     },
     {
       "path": "test-run.json",
-      "sha256": "sha256:0666ff5bb15b682c157ab0d9c50f140b126b2b7185dfbec0661f5dd22966f6f0"
+      "sha256": "sha256:1bb7db56820781290bd9ed5a03c72abdc2808afb0d9931900997c32b6e7d5989"
     },
     {
       "path": "metrics.json",
@@ -22,7 +22,7 @@
     },
     {
       "path": "command-log.txt",
-      "sha256": "sha256:e49e120291274873880d657c569989a13618dded643f8ce147f4164e271c85b3"
+      "sha256": "sha256:8d2aaa55412320cc733330d08b35adec4d6e3de32a91e6ed9712ff1aaa7d9b42"
     },
     {
       "path": "decision.md",

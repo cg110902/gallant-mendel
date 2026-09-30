@@ -1,17 +1,17 @@
 {
   "cases": [
     {
-      "detail": "exit=0 duration=0.050s",
+      "detail": "exit=0 duration=0.038s",
       "name": "py_compile",
       "passed": true,
       "stderr": "",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.212s",
+      "detail": "exit=0 duration=0.198s",
       "name": "attestation_units",
       "passed": true,
-      "stderr": "test_cli_prepare_and_attest (tests.test_live_attestation.LiveAttestationTests.test_cli_prepare_and_attest) ... ok\ntest_complete_bundle_is_hash_bound_and_accepted (tests.test_live_attestation.LiveAttestationTests.test_complete_bundle_is_hash_bound_and_accepted) ... ok\ntest_pending_failed_missing_and_unsafe_evidence_are_rejected (tests.test_live_attestation.LiveAttestationTests.test_pending_failed_missing_and_unsafe_evidence_are_rejected) ... ok\ntest_template_is_pending_and_never_claims_runtime_execution (tests.test_live_attestation.LiveAttestationTests.test_template_is_pending_and_never_claims_runtime_execution) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.148s\n\nOK\n",
+      "stderr": "test_cli_prepare_and_attest (tests.test_live_attestation.LiveAttestationTests.test_cli_prepare_and_attest) ... ok\ntest_complete_bundle_is_hash_bound_and_accepted (tests.test_live_attestation.LiveAttestationTests.test_complete_bundle_is_hash_bound_and_accepted) ... ok\ntest_pending_failed_missing_and_unsafe_evidence_are_rejected (tests.test_live_attestation.LiveAttestationTests.test_pending_failed_missing_and_unsafe_evidence_are_rejected) ... ok\ntest_template_is_pending_and_never_claims_runtime_execution (tests.test_live_attestation.LiveAttestationTests.test_template_is_pending_and_never_claims_runtime_execution) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.135s\n\nOK\n",
       "stdout": ""
     },
     {
@@ -62,7 +62,7 @@
       "passed": true
     }
   ],
-  "completed_at": "2026-09-30T08:16:12.447406+00:00",
+  "completed_at": "2026-09-30T08:17:23.658297+00:00",
   "live_status": "pending",
   "milestone": "M7.4-tooling",
   "schema_version": "m7.4.verification.v1",

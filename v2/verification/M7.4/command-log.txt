@@ -1,5 +1,5 @@
-[py_compile] PASS exit=0 duration=0.050s
-[attestation_units] PASS exit=0 duration=0.212s
+[py_compile] PASS exit=0 duration=0.038s
+[attestation_units] PASS exit=0 duration=0.198s
 [template_pending] PASS 
 [template_has_eleven_checks] PASS 
 [template_does_not_claim_runtime] PASS 

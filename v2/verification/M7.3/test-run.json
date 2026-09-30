@@ -1,17 +1,17 @@
 {
   "cases": [
     {
-      "detail": "exit=0 duration=0.051s",
+      "detail": "exit=0 duration=0.040s",
       "name": "py_compile",
       "passed": true,
       "stderr": "",
       "stdout": ""
     },
     {
-      "detail": "exit=0 duration=0.271s",
+      "detail": "exit=0 duration=0.238s",
       "name": "branch_export_units",
       "passed": true,
-      "stderr": "test_branch_fork_and_rollback_are_non_destructive (tests.test_branch_export.BranchExportTests.test_branch_fork_and_rollback_are_non_destructive) ... ok\ntest_cli_branch_and_export (tests.test_branch_export.BranchExportTests.test_cli_branch_and_export) ... ok\ntest_export_is_deterministic_and_rejects_tamper (tests.test_branch_export.BranchExportTests.test_export_is_deterministic_and_rejects_tamper) ... ok\ntest_export_rejects_symlinked_authority_input (tests.test_branch_export.BranchExportTests.test_export_rejects_symlinked_authority_input) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.179s\n\nOK\n",
+      "stderr": "test_branch_fork_and_rollback_are_non_destructive (tests.test_branch_export.BranchExportTests.test_branch_fork_and_rollback_are_non_destructive) ... ok\ntest_cli_branch_and_export (tests.test_branch_export.BranchExportTests.test_cli_branch_and_export) ... ok\ntest_export_is_deterministic_and_rejects_tamper (tests.test_branch_export.BranchExportTests.test_export_is_deterministic_and_rejects_tamper) ... ok\ntest_export_rejects_symlinked_authority_input (tests.test_branch_export.BranchExportTests.test_export_rejects_symlinked_authority_input) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.168s\n\nOK\n",
       "stdout": ""
     },
     {
@@ -67,7 +67,7 @@
       "passed": true
     }
   ],
-  "completed_at": "2026-09-30T08:16:12.088261+00:00",
+  "completed_at": "2026-09-30T08:17:23.323005+00:00",
   "milestone": "M7.3",
   "schema_version": "m7.3.verification.v1",
   "summary": {

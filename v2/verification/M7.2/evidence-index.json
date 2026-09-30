@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "compatibility-matrix.json",
-      "sha256": "sha256:595b631537091a95bd90bcb08d427a02f8944a1761b11905e5cb8fddafba4a00"
+      "sha256": "sha256:d4beb176e2d6e6ed4e27dfb7227da6639b5d6da8eb2de65f25d34bda146dd3a8"
     },
     {
       "path": "test-run.json",
-      "sha256": "sha256:9b4c2443414cd38a68a04ed8fa7c5ec9d17f432c2d91c28b2281355950a9f3b4"
+      "sha256": "sha256:337e731574839c29c78d1d4801b70315da96664d3531e46c27291babb34d4b60"
     },
     {
       "path": "metrics.json",
@@ -18,7 +18,7 @@
     },
     {
       "path": "command-log.txt",
-      "sha256": "sha256:cd4f96e52e9aa6021bb94906bfcea1ce5761eb23ba86ad4ad770f87eb3ea7544"
+      "sha256": "sha256:55b0c507b214b43909e7e2d1a0a8884d5d549e7e0c16e85e3c42086fe726c71c"
     },
     {
       "path": "decision.md",
