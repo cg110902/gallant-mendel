@@ -1,0 +1,14 @@
+[py_compile] 0 PASS
+[candidate_reconcile_units] 0 PASS
+[full_units] 0 PASS
+[reconcile_help] 0 PASS
+[strict_reconcile_schema] 0 PASS
+[frozen_authority_cutoff] 0 PASS
+[evidence_chain_integrity] 0 PASS
+[canonical_value_comparison] 0 PASS
+[hard_preclassification] 0 PASS
+[review_preclassification] 0 PASS
+[stable_exit_codes] 0 PASS
+[idempotent_candidate_output] 0 PASS
+[authority_write_absent] 0 PASS
+[auditor_scope_absent] 0 PASS

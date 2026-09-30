@@ -1,0 +1,13 @@
+{
+  "capabilities": 10,
+  "cases": {
+    "failed": 0,
+    "passed": 11,
+    "total": 11
+  },
+  "mapping_rows": 40,
+  "milestone": "M7.2",
+  "platforms": 4,
+  "portable_core_passed": 0,
+  "vendor_runtime_executed": false
+}

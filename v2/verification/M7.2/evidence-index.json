@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "compatibility-matrix.json",
+      "sha256": "sha256:4a8fcb69b2578beca7ac4800cd268858faa5c49e3c7bd251d38e0b03d5d3b8d3"
+    },
+    {
+      "path": "test-run.json",
+      "sha256": "sha256:8f4f16aafcc9242bd4d6450b58cb5afe36857d6a1158b2ee5228d9b6140502f4"
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "sha256:d5eceae342781a52ab092aa710d27d576d138d25e2307188f505640bbbd9d64f"
+    },
+    {
+      "path": "failures.json",
+      "sha256": "sha256:fdf0364affb58331b1c41590f30511d76a72ad50a35714af1c62a509ba17875d"
+    },
+    {
+      "path": "command-log.txt",
+      "sha256": "sha256:c043a15f3d55b3ada219b1a8cc8e91275e464e28b359cfb19920210fa206e411"
+    },
+    {
+      "path": "decision.md",
+      "sha256": "sha256:ae6018bb7b1051b5782d2d0fa9b5051f49e68113d42a624dfd24f083fcd5fc1f"
+    },
+    {
+      "path": "ANTIGRAVITY-LIVE-ACCEPTANCE.md",
+      "sha256": "sha256:dd2aa505223023140e5f7e1985dbe4318b0d59121db06a41ce9fb8dbf00fe2a9"
+    }
+  ],
+  "milestone": "M7.2",
+  "schema_version": "evidence-index.v1"
+}

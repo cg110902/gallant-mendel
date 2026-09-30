@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-production-os.local/schemas/thirty-chapter-soak-report.v1.schema.json",
+  "title": "M6.7 controlled thirty-chapter soak report",
+  "type": "object",
+  "required": ["schema_version", "book_id", "chapter_count", "chapters", "initial_authority_event_count", "authority_event_count", "authority_head", "fact_count", "snapshots", "snapshot_count", "outage_recovery", "transaction_recovery", "ced", "loss_checks", "silent_data_loss", "elapsed_seconds_observed", "scope", "report_hash"],
+  "properties": {
+    "schema_version": {"const": "thirty-chapter-soak-report.v1"},
+    "book_id": {"type": "string", "pattern": "^book_[a-z0-9][a-z0-9_-]{0,62}$"},
+    "chapter_count": {"const": 30},
+    "chapters": {"type": "array", "minItems": 30, "maxItems": 30, "items": {"type": "object"}},
+    "initial_authority_event_count": {"type": "integer", "minimum": 1},
+    "authority_event_count": {"type": "integer", "minimum": 1},
+    "authority_head": {"type": "string", "pattern": "^event_[0-9a-f]{32}$"},
+    "fact_count": {"type": "integer", "minimum": 30},
+    "snapshots": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "object"}},
+    "snapshot_count": {"const": 2},
+    "outage_recovery": {"type": "object"},
+    "transaction_recovery": {"type": "object"},
+    "ced": {
+      "type": "object",
+      "required": ["definition", "window_size", "windows", "total_error_count", "overall_density", "advisory_findings_excluded"],
+      "properties": {
+        "window_size": {"const": 10},
+        "windows": {"type": "array", "minItems": 3, "maxItems": 3},
+        "total_error_count": {"type": "integer", "minimum": 0},
+        "overall_density": {"type": "number", "minimum": 0},
+        "advisory_findings_excluded": {"type": "integer", "minimum": 0}
+      }
+    },
+    "loss_checks": {"type": "object", "minProperties": 10, "additionalProperties": {"type": "boolean"}},
+    "silent_data_loss": {"type": "boolean"},
+    "elapsed_seconds_observed": {"type": "number", "minimum": 0},
+    "scope": {"type": "object"},
+    "report_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

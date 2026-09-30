@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "detail": "exit=0 duration=0.070s",
+      "name": "py_compile",
+      "passed": true,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=0.302s",
+      "name": "branch_export_units",
+      "passed": true,
+      "stderr": "test_branch_fork_and_rollback_are_non_destructive (tests.test_branch_export.BranchExportTests.test_branch_fork_and_rollback_are_non_destructive) ... ok\ntest_cli_branch_and_export (tests.test_branch_export.BranchExportTests.test_cli_branch_and_export) ... ok\ntest_export_is_deterministic_and_rejects_tamper (tests.test_branch_export.BranchExportTests.test_export_is_deterministic_and_rejects_tamper) ... ok\ntest_export_rejects_symlinked_authority_input (tests.test_branch_export.BranchExportTests.test_export_rejects_symlinked_authority_input) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.212s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "detail": "exit=0 duration=0.058s",
+      "name": "cli_help",
+      "passed": true,
+      "stderr": "",
+      "stdout": "Novel Production OS — deterministic CLI\n\nUsage:\n  python studio.py <command> [options]\n\nAvailable commands:\n  version [--json]                  Show engineering version metadata\n  help [command]                    Show this help or command help\n  doctor [--no-api-key] [--json]    Diagnose the deterministic environment\n         [--fixture PATH] [--write-probe PATH] [--agent-layout]\n  init --path PATH [--force]        Create an M0 workspace skeleton\n  outline validate (--book ID | --path PATH) [--json]\n                                      Validate M2.1–M2.3 outline contracts\n  outline compile (--book ID | --path PATH) [--json]\n                                      Publish an M2.4 compiled generation\n  outline bootstrap (--book ID | --path PATH) [--json]\n                                      Commit an approved M2.5 initial authority batch\n  outline readiness (--book ID | --path PATH) [--json]\n                                      Assess M2.6 first-chapter prerequisites\n  state query (--book ID | --path PATH) --as-of SELECTOR\n              [--valid-at STORY_TIME] [--branch ID] [--json]\n                                      Query M3.1 bitemporal authority state\n  knowledge diff (--book ID | --path PATH) --holder CHARACTER --as-of SELECTOR\n                 [--valid-at STORY_TIME] [--branch ID] [--json]\n                                      Query M3.2 character/reader knowledge boundaries\n  obligation list (--book ID | --path PATH) --as-of SELECTOR\n                  [--status FILTER] [--branch ID] [--json]\n                                      Query M3.3 Future Obligation lifecycle\n  reconcile diff (--book ID | --path PATH) --scope ID --as-of SELECTOR\n                 [--branch ID] [--json]\n                                      Query M3.4 Intent/Reality classifications\n  reader tension (--book ID | --path PATH) --holder ID --as-of CHAPTER --window N [--json]\n  impact analyze (--book ID | --path PATH) --object ID --as-of SELECTOR [--depth N] [--json]\n                                      Query M3.5 deterministic analytics\n  branch create|rollback ...         Fork without rewriting authority history\n  export ... --format LIST           Deterministic Markdown/JSON/EPUB export\n\nExamples:\n  python studio.py version --json\n  python studio.py doctor --no-api-key\n  python studio.py init --path workspace/book_demo\n  python studio.py outline validate --book book_demo\n  python studio.py outline compile --book book_demo\n  python studio.py outline bootstrap --book book_demo\n  python studio.py outline readiness --book book_demo\n  python studio.py state query --book book_demo --as-of ch_001\n  python studio.py knowledge diff --book book_demo --holder char_hero --as-of ch_001\n  python studio.py obligation list --book book_demo --as-of ch_001 --status active\n\nM3.1–M3.3 queries are read-only and keep truth, knowledge, obligations, and time axes separate.\n\n"
+    },
+    {
+      "detail": "",
+      "name": "help_names_branch",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "help_names_export",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_branch-operation-report.v1.schema.json",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_export-manifest.v1.schema.json",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "schema_novel-export.v1.schema.json",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "export_authority_read_only",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "rollback_is_new_branch",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "epub_fixed_timestamp",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "unit_count_three",
+      "passed": true
+    }
+  ],
+  "completed_at": "2026-09-30T08:10:59.107894+00:00",
+  "milestone": "M7.3",
+  "schema_version": "m7.3.verification.v1",
+  "summary": {
+    "failed": 0,
+    "passed": 12,
+    "total": 12
+  }
+}

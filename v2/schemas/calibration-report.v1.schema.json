@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-production-os.local/schemas/calibration-report.v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "corpus_hash", "observation_count", "confusion_matrices", "ced", "detections", "evaluation_hash"],
+  "properties": {
+    "schema_version": {"const": "calibration-report.v1"},
+    "corpus_hash": {"$ref": "#/$defs/hash"},
+    "observation_count": {"type": "integer", "minimum": 1},
+    "confusion_matrices": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["gate", "sample_count", "tp", "fp", "tn", "fn", "precision", "recall"],
+        "properties": {
+          "gate": {"type": "string"}, "sample_count": {"type": "integer"},
+          "tp": {"type": "integer"}, "fp": {"type": "integer"}, "tn": {"type": "integer"}, "fn": {"type": "integer"},
+          "precision": {"type": ["number", "null"]}, "recall": {"type": ["number", "null"]}
+        }
+      }
+    },
+    "ced": {
+      "type": "object", "additionalProperties": false, "required": ["definition", "window_size", "windows"],
+      "properties": {
+        "definition": {"type": "string"}, "window_size": {"type": "integer", "minimum": 1},
+        "windows": {"type": "array", "items": {"$ref": "#/$defs/window"}}
+      }
+    },
+    "detections": {"type": "array", "items": {"$ref": "#/$defs/detection"}},
+    "evaluation_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "window": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start_chapter", "end_chapter", "chapter_count", "consistency_error_count", "ced"],
+      "properties": {
+        "start_chapter": {"type": "integer"}, "end_chapter": {"type": "integer"}, "chapter_count": {"type": "integer"},
+        "consistency_error_count": {"type": "integer"}, "ced": {"type": "number"}
+      }
+    },
+    "detection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sample_id", "variant", "gate", "expected_detected", "actual_detected", "outcome", "detector_id", "detector_version", "evidence_refs"],
+      "properties": {
+        "sample_id": {"type": "string"}, "variant": {"enum": ["clean", "mutated"]}, "gate": {"type": "string"},
+        "expected_detected": {"type": "boolean"}, "actual_detected": {"type": "boolean"}, "outcome": {"enum": ["tp", "fp", "tn", "fn"]},
+        "detector_id": {"type": "string"}, "detector_version": {"type": "string"}, "evidence_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

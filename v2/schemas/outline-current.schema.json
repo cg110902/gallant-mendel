@@ -1,0 +1,40 @@
+{
+  "$id": "https://novel-production-os.local/schemas/outline-current.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_index_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "book_id": {
+      "pattern": "^book_[a-z0-9][a-z0-9_-]{0,62}$",
+      "type": "string"
+    },
+    "compile_id": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "generation": {
+      "pattern": "^generations/[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "outline.current.v1"
+    },
+    "source_package_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "book_id",
+    "compile_id",
+    "source_package_hash",
+    "generation",
+    "artifact_index_hash"
+  ],
+  "title": "Outline compiled current pointer v1",
+  "type": "object"
+}
